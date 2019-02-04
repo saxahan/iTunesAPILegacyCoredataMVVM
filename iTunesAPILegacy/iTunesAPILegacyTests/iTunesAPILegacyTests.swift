@@ -31,4 +31,27 @@ class iTunesAPILegacyTests: XCTestCase {
         }
     }
 
+    // MARK: Media API
+
+//    func parseItems(_ data: Response) -> [Media]? {
+//        return try? data.map([Media].self, atKeyPath: "results")
+//    }
+//
+//    func testMediaAPI() {
+//        let provider = API.mediaProvider
+//        let target = MediaService.searchItunes
+//        var mediaList = [Media]()
+//
+//        provider.request(target("matrix", .all)) { result in
+//            switch result {
+//            case .failure(let error):
+//                debugPrint(error.localizedDescription)
+//
+//            case .success(let response):
+//                mediaList = self.parseItems(response) ?? []
+//            }
+//
+//        }
+//    }
+
 }

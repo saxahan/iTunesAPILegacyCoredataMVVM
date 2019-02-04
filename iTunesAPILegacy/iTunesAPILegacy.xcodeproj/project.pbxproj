@@ -14,6 +14,72 @@
 		B6C458032208BE4F00153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
 		B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
 		B6C458092208BF4100153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
+		B6C4581C2208C1DA00153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
+		B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */; };
+		B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
+		B6C458242208CF8200153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
+		B6C458262208CFB900153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
+		B6C458282208CFF100153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
+		B6C4582A2208D00100153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
+		B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
+		B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
+		B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
+		B6C458302208D07500153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
+		B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */; };
+		B6C458322208D07500153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
+		B6C458342208D07500153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
+		B6C458362208D07500153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
+		B6C458372208D07500153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
+		B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
+		B6C458392208D07500153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
+		B6C4583A2208D07500153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
+		B6C4583B2208D07500153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
+		B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
+		B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
+		B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
+		B6C458462208D0DD00153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
+		B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */; };
+		B6C458482208D0DD00153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
+		B6C4584A2208D0DD00153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
+		B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
+		B6C4584D2208D0DD00153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
+		B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
+		B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
+		B6C458502208D0DD00153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
+		B6C458512208D0DD00153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
+		B6C458592208D1FE00153920 /* ServiceDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458582208D1FE00153920 /* ServiceDefinable.swift */; };
+		B6C4585A2208D1FE00153920 /* ServiceDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458582208D1FE00153920 /* ServiceDefinable.swift */; };
+		B6C4585B2208D1FE00153920 /* ServiceDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458582208D1FE00153920 /* ServiceDefinable.swift */; };
+		B6C4585D2208D38100153920 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4585C2208D38100153920 /* Result.swift */; };
+		B6C4585E2208D38100153920 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4585C2208D38100153920 /* Result.swift */; };
+		B6C4585F2208D38100153920 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4585C2208D38100153920 /* Result.swift */; };
+		B6C458622208D3EB00153920 /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458612208D3EB00153920 /* MediaService.swift */; };
+		B6C458632208D3EB00153920 /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458612208D3EB00153920 /* MediaService.swift */; };
+		B6C458642208D3EB00153920 /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458612208D3EB00153920 /* MediaService.swift */; };
+		B6C458662208D6F300153920 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458652208D6F300153920 /* Request.swift */; };
+		B6C458672208D6F300153920 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458652208D6F300153920 /* Request.swift */; };
+		B6C458682208D6F300153920 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458652208D6F300153920 /* Request.swift */; };
+		B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458692208D7BD00153920 /* APIProvider.swift */; };
+		B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458692208D7BD00153920 /* APIProvider.swift */; };
+		B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458692208D7BD00153920 /* APIProvider.swift */; };
+		B6C4586E2208D83F00153920 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4586D2208D83F00153920 /* Response.swift */; };
+		B6C4586F2208D83F00153920 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4586D2208D83F00153920 /* Response.swift */; };
+		B6C458702208D83F00153920 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4586D2208D83F00153920 /* Response.swift */; };
+		B6C458722208D84D00153920 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458712208D84D00153920 /* APIError.swift */; };
+		B6C458732208D84D00153920 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458712208D84D00153920 /* APIError.swift */; };
+		B6C458742208D84D00153920 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458712208D84D00153920 /* APIError.swift */; };
+		B6C4587A2208EB7900153920 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458792208EB7900153920 /* API.swift */; };
+		B6C4587B2208EB7900153920 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458792208EB7900153920 /* API.swift */; };
+		B6C4587C2208EB7900153920 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458792208EB7900153920 /* API.swift */; };
+		B6C4587E2208FE6100153920 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4587D2208FE6100153920 /* String+.swift */; };
+		B6C4587F2208FE6100153920 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4587D2208FE6100153920 /* String+.swift */; };
+		B6C458802208FE6100153920 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4587D2208FE6100153920 /* String+.swift */; };
+		B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458812208FEA300153920 /* DateFormatter+.swift */; };
+		B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458812208FEA300153920 /* DateFormatter+.swift */; };
+		B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458812208FEA300153920 /* DateFormatter+.swift */; };
+		B6C458862208FEB000153920 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458852208FEB000153920 /* Date+.swift */; };
+		B6C458872208FEB000153920 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458852208FEB000153920 /* Date+.swift */; };
+		B6C458882208FEB000153920 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458852208FEB000153920 /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +104,28 @@
 		B6C458022208BE4F00153920 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B6C458052208BE7100153920 /* iTunesAPILegacy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAPILegacy.xcdatamodel; sourceTree = "<group>"; };
 		B6C458082208BF4100153920 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		B6C4581B2208C1DA00153920 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+.swift"; sourceTree = "<group>"; };
+		B6C458202208CAA500153920 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B6C458232208CF8200153920 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		B6C458252208CFB900153920 /* Config-Develop.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Develop.plist"; sourceTree = "<group>"; };
+		B6C458272208CFF100153920 /* Config-Staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Staging.plist"; sourceTree = "<group>"; };
+		B6C458292208D00100153920 /* Config-Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Release.plist"; sourceTree = "<group>"; };
+		B6C4583F2208D07500153920 /* iTunesAPILegacy-Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunesAPILegacy-Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C458402208D07600153920 /* Staging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Staging-Info.plist"; sourceTree = "<group>"; };
+		B6C458552208D0DD00153920 /* iTunesAPILegacy-Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunesAPILegacy-Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C458562208D0DD00153920 /* Release-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Release-Info.plist"; sourceTree = "<group>"; };
+		B6C458582208D1FE00153920 /* ServiceDefinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDefinable.swift; sourceTree = "<group>"; };
+		B6C4585C2208D38100153920 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B6C458612208D3EB00153920 /* MediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaService.swift; sourceTree = "<group>"; };
+		B6C458652208D6F300153920 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B6C458692208D7BD00153920 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		B6C4586D2208D83F00153920 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B6C458712208D84D00153920 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B6C458792208EB7900153920 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B6C4587D2208FE6100153920 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		B6C458812208FEA300153920 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
+		B6C458852208FEB000153920 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +141,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C458332208D07500153920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C458342208D07500153920 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C458492208D0DD00153920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C4584A2208D0DD00153920 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +178,8 @@
 			children = (
 				B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */,
 				B6C457F22208BD4100153920 /* iTunesAPILegacyTests.xctest */,
+				B6C4583F2208D07500153920 /* iTunesAPILegacy-Staging.app */,
+				B6C458552208D0DD00153920 /* iTunesAPILegacy-Release.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +192,6 @@
 				B6C4580E2208BF6F00153920 /* Helpers */,
 				B6C4580D2208BF6800153920 /* Networking */,
 				B6C4580C2208BF5C00153920 /* Resources */,
-				B6C4580B2208BF4E00153920 /* Helpers */,
 				B6C4580A2208BF4900153920 /* View */,
 				B6C458072208BF0700153920 /* ViewModel */,
 				B6C457DE2208BD4000153920 /* AppDelegate.swift */,
@@ -125,19 +230,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B6C4580B2208BF4E00153920 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		B6C4580C2208BF5C00153920 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6C457ED2208BD4100153920 /* Info.plist */,
+				B6C458562208D0DD00153920 /* Release-Info.plist */,
+				B6C458402208D07600153920 /* Staging-Info.plist */,
 				B6C457E82208BD4100153920 /* Assets.xcassets */,
 				B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */,
-				B6C457ED2208BD4100153920 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -145,6 +245,10 @@
 		B6C4580D2208BF6800153920 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B6C458602208D3E000153920 /* Services */,
+				B6C458572208D1D200153920 /* Common */,
+				B6C4581A2208C1B700153920 /* Models */,
+				B6C458792208EB7900153920 /* API.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -152,6 +256,8 @@
 		B6C4580E2208BF6F00153920 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B6C4581D2208C69100153920 /* Extensions */,
+				B6C458222208CF7300153920 /* Config */,
 			);
 			name = Helpers;
 			path = "New Group";
@@ -161,8 +267,62 @@
 			isa = PBXGroup;
 			children = (
 				B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */,
+				B6C458202208CAA500153920 /* CoreDataStack.swift */,
 			);
 			path = Db;
+			sourceTree = "<group>";
+		};
+		B6C4581A2208C1B700153920 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4581B2208C1DA00153920 /* Media.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6C4581D2208C69100153920 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */,
+				B6C4587D2208FE6100153920 /* String+.swift */,
+				B6C458812208FEA300153920 /* DateFormatter+.swift */,
+				B6C458852208FEB000153920 /* Date+.swift */,
+			);
+			name = Extensions;
+			path = ../Helpers/Extensions;
+			sourceTree = "<group>";
+		};
+		B6C458222208CF7300153920 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B6C458232208CF8200153920 /* AppConfig.swift */,
+				B6C458252208CFB900153920 /* Config-Develop.plist */,
+				B6C458272208CFF100153920 /* Config-Staging.plist */,
+				B6C458292208D00100153920 /* Config-Release.plist */,
+			);
+			name = Config;
+			path = ../Helpers/Config;
+			sourceTree = "<group>";
+		};
+		B6C458572208D1D200153920 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B6C458712208D84D00153920 /* APIError.swift */,
+				B6C458692208D7BD00153920 /* APIProvider.swift */,
+				B6C458652208D6F300153920 /* Request.swift */,
+				B6C4586D2208D83F00153920 /* Response.swift */,
+				B6C4585C2208D38100153920 /* Result.swift */,
+				B6C458582208D1FE00153920 /* ServiceDefinable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B6C458602208D3E000153920 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B6C458612208D3EB00153920 /* MediaService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +363,40 @@
 			productReference = B6C457F22208BD4100153920 /* iTunesAPILegacyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B6C4582B2208D07500153920 /* iTunesAPILegacy-Staging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C4583C2208D07500153920 /* Build configuration list for PBXNativeTarget "iTunesAPILegacy-Staging" */;
+			buildPhases = (
+				B6C4582C2208D07500153920 /* Sources */,
+				B6C458332208D07500153920 /* Frameworks */,
+				B6C458352208D07500153920 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iTunesAPILegacy-Staging";
+			productName = iTunesAPILegacy;
+			productReference = B6C4583F2208D07500153920 /* iTunesAPILegacy-Staging.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6C458412208D0DD00153920 /* iTunesAPILegacy-Release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C458522208D0DD00153920 /* Build configuration list for PBXNativeTarget "iTunesAPILegacy-Release" */;
+			buildPhases = (
+				B6C458422208D0DD00153920 /* Sources */,
+				B6C458492208D0DD00153920 /* Frameworks */,
+				B6C4584B2208D0DD00153920 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iTunesAPILegacy-Release";
+			productName = iTunesAPILegacy;
+			productReference = B6C458552208D0DD00153920 /* iTunesAPILegacy-Release.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,6 +431,8 @@
 			targets = (
 				B6C457DA2208BD4000153920 /* iTunesAPILegacy */,
 				B6C457F12208BD4100153920 /* iTunesAPILegacyTests */,
+				B6C4582B2208D07500153920 /* iTunesAPILegacy-Staging */,
+				B6C458412208D0DD00153920 /* iTunesAPILegacy-Release */,
 			);
 		};
 /* End PBXProject section */
@@ -246,8 +442,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
 				B6C458092208BF4100153920 /* .gitkeep in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
+				B6C458282208CFF100153920 /* Config-Staging.plist in Resources */,
+				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +458,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6C458352208D07500153920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
+				B6C458372208D07500153920 /* .gitkeep in Resources */,
+				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
+				B6C458392208D07500153920 /* Config-Staging.plist in Resources */,
+				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
+				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C4584B2208D0DD00153920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
+				B6C4584D2208D0DD00153920 /* .gitkeep in Resources */,
+				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
+				B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */,
+				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
+				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,8 +491,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
+				B6C458592208D1FE00153920 /* ServiceDefinable.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
+				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
+				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B6C4587A2208EB7900153920 /* API.swift in Sources */,
+				B6C4587E2208FE6100153920 /* String+.swift in Sources */,
+				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
+				B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6C458662208D6F300153920 /* Request.swift in Sources */,
+				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6C458862208FEB000153920 /* Date+.swift in Sources */,
+				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
+				B6C4585D2208D38100153920 /* Result.swift in Sources */,
+				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
+				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +516,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C457F72208BD4100153920 /* iTunesAPILegacyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C4582C2208D07500153920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
+				B6C4585A2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
+				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
+				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
+				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
+				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B6C4587B2208EB7900153920 /* API.swift in Sources */,
+				B6C4587F2208FE6100153920 /* String+.swift in Sources */,
+				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
+				B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6C458672208D6F300153920 /* Request.swift in Sources */,
+				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6C458872208FEB000153920 /* Date+.swift in Sources */,
+				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
+				B6C4585E2208D38100153920 /* Result.swift in Sources */,
+				B6C458322208D07500153920 /* Media.swift in Sources */,
+				B6C458732208D84D00153920 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C458422208D0DD00153920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
+				B6C4585B2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
+				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
+				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
+				B6C458702208D83F00153920 /* Response.swift in Sources */,
+				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B6C4587C2208EB7900153920 /* API.swift in Sources */,
+				B6C458802208FE6100153920 /* String+.swift in Sources */,
+				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
+				B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6C458682208D6F300153920 /* Request.swift in Sources */,
+				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6C458882208FEB000153920 /* Date+.swift in Sources */,
+				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,
+				B6C4585F2208D38100153920 /* Result.swift in Sources */,
+				B6C458482208D0DD00153920 /* Media.swift in Sources */,
+				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +785,86 @@
 			};
 			name = Release;
 		};
+		B6C4583D2208D07500153920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Staging-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunusalkan.iTunesAPILegacy-Staging";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C4583E2208D07500153920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Staging-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunusalkan.iTunesAPILegacy-Staging";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B6C458532208D0DD00153920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Release-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunusalkan.iTunesAPILegacy-Release";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C458542208D0DD00153920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Release-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunusalkan.iTunesAPILegacy-Release";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +891,24 @@
 			buildConfigurations = (
 				B6C457FF2208BD4100153920 /* Debug */,
 				B6C458002208BD4100153920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C4583C2208D07500153920 /* Build configuration list for PBXNativeTarget "iTunesAPILegacy-Staging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C4583D2208D07500153920 /* Debug */,
+				B6C4583E2208D07500153920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C458522208D0DD00153920 /* Build configuration list for PBXNativeTarget "iTunesAPILegacy-Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C458532208D0DD00153920 /* Debug */,
+				B6C458542208D0DD00153920 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
