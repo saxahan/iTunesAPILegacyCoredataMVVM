@@ -17,14 +17,21 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
-        viewModel.search("matrix", entity: .podcast)
+        viewModel.isLoading.value = true
+        viewModel.search("matrix", entity: .musicVideo)
         bindings()
     }
 
     func bindings() {
         collectionView.register(MediaCollectionViewCell.self)
-
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
+            if isLoading {
+                self?.collectionView.showIndicator()
+            }
+            else {
+                self?.collectionView.hideIndicator()
+            }
+
             self?.collectionView.reloadData()
         }
 

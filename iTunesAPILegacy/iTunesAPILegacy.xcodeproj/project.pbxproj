@@ -73,6 +73,12 @@
 		B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F52209CBDE0034C01B /* UIView+.swift */; };
 		B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F52209CBDE0034C01B /* UIView+.swift */; };
 		B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F52209CBDE0034C01B /* UIView+.swift */; };
+		B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F92209D2E50034C01B /* UIScrollView+.swift */; };
+		B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F92209D2E50034C01B /* UIScrollView+.swift */; };
+		B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25F92209D2E50034C01B /* UIScrollView+.swift */; };
+		B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
+		B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
+		B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
@@ -181,6 +187,8 @@
 		B64C25EB2209B6BE0034C01B /* MediaCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCellViewModel.swift; sourceTree = "<group>"; };
 		B64C25EF2209BAC80034C01B /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
 		B64C25F52209CBDE0034C01B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		B64C25F92209D2E50034C01B /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
+		B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,6 +311,7 @@
 		B64C25F42209CBC20034C01B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 				B64C25BD220994240034C01B /* UITableView+.swift */,
 				B64C25DF2209B1810034C01B /* UIImageView+.swift */,
 				B64C25F52209CBDE0034C01B /* UIView+.swift */,
+				B64C25F92209D2E50034C01B /* UIScrollView+.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -665,6 +675,7 @@
 				B64C25E02209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
+				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587A2208EB7900153920 /* API.swift in Sources */,
 				B6C4587E2208FE6100153920 /* String+.swift in Sources */,
 				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
@@ -691,6 +702,7 @@
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
+				B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +729,7 @@
 				B64C25E12209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
+				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587B2208EB7900153920 /* API.swift in Sources */,
 				B6C4587F2208FE6100153920 /* String+.swift in Sources */,
 				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
@@ -743,6 +756,7 @@
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
+				B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +775,7 @@
 				B64C25E22209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
+				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587C2208EB7900153920 /* API.swift in Sources */,
 				B6C458802208FE6100153920 /* String+.swift in Sources */,
 				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
@@ -787,6 +802,7 @@
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
+				B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

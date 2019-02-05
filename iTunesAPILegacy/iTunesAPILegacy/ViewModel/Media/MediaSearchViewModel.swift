@@ -11,7 +11,7 @@ import Foundation
 class MediaSearchViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
-
+    
     func search(_ term: String, entity: MediaType, limit: Int = 100) {
         provider.request(.searchItunes(term: term, entity: entity, limit: limit)) { [weak self] (result) in
             self?.isLoading.value = false

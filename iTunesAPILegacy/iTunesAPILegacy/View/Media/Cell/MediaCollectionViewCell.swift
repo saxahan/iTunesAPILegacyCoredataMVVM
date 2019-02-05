@@ -8,16 +8,16 @@
 
 import UIKit
 
-class MediaCollectionViewCell: UICollectionViewCell, Settable {
+class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
 
     var viewModel: MediaCellViewModel?
 
     @IBOutlet weak var imgViewPreview: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func prepareForReuse() {
+        self.viewModel?.previewUrl = nil
+        self.viewModel?.name = nil
     }
 
     func setup(_ viewModel: CellViewModel) {
