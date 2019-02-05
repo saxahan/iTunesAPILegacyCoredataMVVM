@@ -17,13 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         initTools(application, didFinishLaunchingWithOptions: launchOptions)
-
-        if window == nil {
-            window = UIWindow(frame: UIScreen.main.bounds)
-        }
-
-        window?.rootViewController = MediaSearchViewController.instantiate(with: MediaSearchViewModel(), storyboardName: Constants.storyboardMedia)
-        window?.makeKeyAndVisible()
+        setupRootViewController()
         
         return true
     }
@@ -59,7 +53,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppConfig.configure()
 
         // reachability
-        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()
+//        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()
+    }
+
+    func setupRootViewController(_ vc: UIViewController? = nil) {
+        if window == nil {
+            window = UIWindow(frame: UIScreen.main.bounds)
+        }
+
+        if let rootVc = vc {
+            window?.rootViewController = rootVc
+        }
+        else {
+            window?.rootViewController = SplashViewController.instantiate()
+        }
+
+        window?.makeKeyAndVisible()
+    }
+
+    func startTabBased() {
+//        let searchVc = MediaSearchViewController.instantiate(with: MediaSearchViewModel())
+        let searchVc = MediaSearchViewController.instantiate(with: MediaSearchViewModel(), title: "Search", tabImage: #imageLiteral(resourceName: "search"))
+        let settingsVc = SettingsViewController.instantiate(with: MediaSearchViewModel(), title: "Settings", tabImage: #imageLiteral(resourceName: "settings"))
+        let tabVc = TabController.createTabBased([searchVc, settingsVc])
+
+        setupRootViewController(tabVc)
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 extension UICollectionView: Identifiable {
     func register(_ cellClass: Identifiable.Type) {
-        register(UINib(nibName: cellClass.identifier, bundle: Bundle.main), forCellWithReuseIdentifier: cellClass.identifier)
+        register(UINib(nibName: cellClass.identifier, bundle: nil), forCellWithReuseIdentifier: cellClass.identifier)
     }
 
     func dequeueReusableCell<T: Identifiable>(at indexPath: IndexPath) -> T {

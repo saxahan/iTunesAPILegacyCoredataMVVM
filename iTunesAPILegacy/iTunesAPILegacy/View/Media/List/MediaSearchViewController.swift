@@ -70,7 +70,7 @@ extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.identifier, for: indexPath) as! MediaCollectionViewCell
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
         let cellViewModel = sectionViewModel.cellViewModels[indexPath.row]
-        
+
         cell.setup(cellViewModel)
         cell.setNeedsDisplay()
         cell.layoutIfNeeded()

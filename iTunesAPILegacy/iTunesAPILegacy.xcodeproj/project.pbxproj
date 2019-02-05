@@ -34,12 +34,6 @@
 		B64C25BE220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
 		B64C25BF220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
 		B64C25C0220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
-		B64C25C3220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
-		B64C25C4220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
-		B64C25C5220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
-		B64C25C7220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
-		B64C25C8220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
-		B64C25C9220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
 		B64C25CB220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
 		B64C25CC220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
 		B64C25CD220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
@@ -88,6 +82,39 @@
 		B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
 		B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
 		B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
+		B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6179D220A275700E7F372 /* NavigationController.swift */; };
+		B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6179D220A275700E7F372 /* NavigationController.swift */; };
+		B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6179D220A275700E7F372 /* NavigationController.swift */; };
+		B6B617A2220A295B00E7F372 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617A1220A295B00E7F372 /* TabController.swift */; };
+		B6B617A3220A295B00E7F372 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617A1220A295B00E7F372 /* TabController.swift */; };
+		B6B617A4220A295B00E7F372 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617A1220A295B00E7F372 /* TabController.swift */; };
+		B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617AE220A2B8800E7F372 /* UIApplication+.swift */; };
+		B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617AE220A2B8800E7F372 /* UIApplication+.swift */; };
+		B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617AE220A2B8800E7F372 /* UIApplication+.swift */; };
+		B6B617BF220A320300E7F372 /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617BD220A320300E7F372 /* MediaSearchViewController.swift */; };
+		B6B617C0220A320300E7F372 /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617BD220A320300E7F372 /* MediaSearchViewController.swift */; };
+		B6B617C1220A320300E7F372 /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617BD220A320300E7F372 /* MediaSearchViewController.swift */; };
+		B6B617C2220A320300E7F372 /* MediaSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617BE220A320300E7F372 /* MediaSearchViewController.xib */; };
+		B6B617C3220A320300E7F372 /* MediaSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617BE220A320300E7F372 /* MediaSearchViewController.xib */; };
+		B6B617C4220A320300E7F372 /* MediaSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617BE220A320300E7F372 /* MediaSearchViewController.xib */; };
+		B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C5220A332700E7F372 /* UInterfaceBased.swift */; };
+		B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C5220A332700E7F372 /* UInterfaceBased.swift */; };
+		B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C5220A332700E7F372 /* UInterfaceBased.swift */; };
+		B6B617CA220A337500E7F372 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C9220A337500E7F372 /* UIViewController+.swift */; };
+		B6B617CB220A337500E7F372 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C9220A337500E7F372 /* UIViewController+.swift */; };
+		B6B617CC220A337500E7F372 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617C9220A337500E7F372 /* UIViewController+.swift */; };
+		B6B617CF220A364F00E7F372 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617CD220A364F00E7F372 /* SettingsViewController.swift */; };
+		B6B617D0220A364F00E7F372 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617CD220A364F00E7F372 /* SettingsViewController.swift */; };
+		B6B617D1220A364F00E7F372 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617CD220A364F00E7F372 /* SettingsViewController.swift */; };
+		B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617CE220A364F00E7F372 /* SettingsViewController.xib */; };
+		B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617CE220A364F00E7F372 /* SettingsViewController.xib */; };
+		B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617CE220A364F00E7F372 /* SettingsViewController.xib */; };
+		B6B617D7220A36D100E7F372 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617D5220A36D100E7F372 /* SplashViewController.swift */; };
+		B6B617D8220A36D100E7F372 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617D5220A36D100E7F372 /* SplashViewController.swift */; };
+		B6B617D9220A36D100E7F372 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B617D5220A36D100E7F372 /* SplashViewController.swift */; };
+		B6B617DA220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
+		B6B617DB220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
+		B6B617DC220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
@@ -183,8 +210,6 @@
 		B64C25A9220993080034C01B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B64C25B9220994190034C01B /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		B64C25BD220994240034C01B /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
-		B64C25C2220996960034C01B /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
-		B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchViewController.swift; sourceTree = "<group>"; };
 		B64C25CA220999240034C01B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B64C25CE2209A4570034C01B /* BaseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewModel.swift; sourceTree = "<group>"; };
 		B64C25D32209AF480034C01B /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +227,17 @@
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B6B61790220A0E6700E7F372 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B6B61799220A21AF00E7F372 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		B6B6179D220A275700E7F372 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B6B617A1220A295B00E7F372 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		B6B617AE220A2B8800E7F372 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		B6B617BD220A320300E7F372 /* MediaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchViewController.swift; sourceTree = "<group>"; };
+		B6B617BE220A320300E7F372 /* MediaSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaSearchViewController.xib; sourceTree = "<group>"; };
+		B6B617C5220A332700E7F372 /* UInterfaceBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInterfaceBased.swift; sourceTree = "<group>"; };
+		B6B617C9220A337500E7F372 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		B6B617CD220A364F00E7F372 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B6B617CE220A364F00E7F372 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		B6B617D5220A36D100E7F372 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B6B617D6220A36D100E7F372 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,9 +334,7 @@
 		B64C25C1220996890034C01B /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				B64C25D22209AF260034C01B /* Cell */,
-				B64C25C2220996960034C01B /* Media.storyboard */,
-				B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */,
+				B6B617BC220A31C100E7F372 /* List */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -338,6 +372,34 @@
 				B6B61799220A21AF00E7F372 /* DeviceManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6B617A5220A2AC900E7F372 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B6B617D5220A36D100E7F372 /* SplashViewController.swift */,
+				B6B617D6220A36D100E7F372 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B6B617B2220A2E4100E7F372 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B6B617CD220A364F00E7F372 /* SettingsViewController.swift */,
+				B6B617CE220A364F00E7F372 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B6B617BC220A31C100E7F372 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B64C25D22209AF260034C01B /* Cell */,
+				B6B617BD220A320300E7F372 /* MediaSearchViewController.swift */,
+				B6B617BE220A320300E7F372 /* MediaSearchViewController.xib */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		B6C457D22208BD4000153920 = {
@@ -408,9 +470,14 @@
 		B6C4580A2208BF4900153920 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6B617B2220A2E4100E7F372 /* Settings */,
+				B6B617A5220A2AC900E7F372 /* Splash */,
 				B64C25C1220996890034C01B /* Media */,
 				B64C259C220988DB0034C01B /* StoryboardBased.swift */,
 				B64C25CA220999240034C01B /* BaseViewController.swift */,
+				B6B6179D220A275700E7F372 /* NavigationController.swift */,
+				B6B617A1220A295B00E7F372 /* TabController.swift */,
+				B6B617C5220A332700E7F372 /* UInterfaceBased.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +547,8 @@
 				B64C25DF2209B1810034C01B /* UIImageView+.swift */,
 				B64C25F52209CBDE0034C01B /* UIView+.swift */,
 				B64C25F92209D2E50034C01B /* UIScrollView+.swift */,
+				B6B617AE220A2B8800E7F372 /* UIApplication+.swift */,
+				B6B617C9220A337500E7F372 /* UIViewController+.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -639,11 +708,13 @@
 			files = (
 				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
 				B6C458092208BF4100153920 /* .gitkeep in Resources */,
+				B6B617C2220A320300E7F372 /* MediaSearchViewController.xib in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D82209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */,
+				B6B617DA220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61786220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458282208CFF100153920 /* Config-Staging.plist in Resources */,
-				B64C25C3220996960034C01B /* Media.storyboard in Resources */,
 				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 			);
@@ -662,11 +733,13 @@
 			files = (
 				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
 				B6C458372208D07500153920 /* .gitkeep in Resources */,
+				B6B617C3220A320300E7F372 /* MediaSearchViewController.xib in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D92209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */,
+				B6B617DB220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61787220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458392208D07500153920 /* Config-Staging.plist in Resources */,
-				B64C25C4220996960034C01B /* Media.storyboard in Resources */,
 				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 			);
@@ -678,11 +751,13 @@
 			files = (
 				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
 				B6C4584D2208D0DD00153920 /* .gitkeep in Resources */,
+				B6B617C4220A320300E7F372 /* MediaSearchViewController.xib in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25DA2209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */,
+				B6B617DC220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61788220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */,
-				B64C25C5220996960034C01B /* Media.storyboard in Resources */,
 				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 			);
@@ -697,12 +772,17 @@
 			files = (
 				B64C25AA220993080034C01B /* Observable.swift in Sources */,
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
+				B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C458592208D1FE00153920 /* ServiceDefinable.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
+				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
+				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
+				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
+				B6B617BF220A320300E7F372 /* MediaSearchViewController.swift in Sources */,
 				B64C25E02209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
@@ -715,7 +795,9 @@
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
 				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
+				B6B617CF220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6B617CA220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C259D220988DB0034C01B /* StoryboardBased.swift in Sources */,
 				B64C25F02209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
@@ -729,7 +811,7 @@
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
 				B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */,
-				B64C25C7220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
+				B6B617D7220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
@@ -752,12 +834,17 @@
 			files = (
 				B64C25AB220993080034C01B /* Observable.swift in Sources */,
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
+				B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
+				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
+				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
+				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
+				B6B617C0220A320300E7F372 /* MediaSearchViewController.swift in Sources */,
 				B64C25E12209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
@@ -770,7 +857,9 @@
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
 				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
+				B6B617D0220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6B617CB220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C259E220988DB0034C01B /* StoryboardBased.swift in Sources */,
 				B64C25F12209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
@@ -784,7 +873,7 @@
 				B6C458322208D07500153920 /* Media.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
 				B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */,
-				B64C25C8220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
+				B6B617D8220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
@@ -799,12 +888,17 @@
 			files = (
 				B64C25AC220993080034C01B /* Observable.swift in Sources */,
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
+				B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
+				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
+				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
+				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C458702208D83F00153920 /* Response.swift in Sources */,
+				B6B617C1220A320300E7F372 /* MediaSearchViewController.swift in Sources */,
 				B64C25E22209B1810034C01B /* UIImageView+.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
@@ -817,7 +911,9 @@
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
 				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
+				B6B617D1220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B6B617CC220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C259F220988DB0034C01B /* StoryboardBased.swift in Sources */,
 				B64C25F22209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
@@ -831,7 +927,7 @@
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
 				B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */,
-				B64C25C9220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
+				B6B617D9220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
