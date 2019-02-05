@@ -34,7 +34,7 @@ class MediaSearchViewModel: BaseListViewModel<Media, MediaService> {
 
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
                 let sections = SectionViewModel(cellViewModels: mediaList.map {
-                    let tmp = MediaCellViewModel(trackId: $0.trackId, name: $0.trackName, previewUrl: $0.artworkUrl60, price: $0.trackPrice)
+                    let tmp = MediaCellViewModel(trackId: $0.trackId, name: $0.trackName, previewUrl: $0.artworkUrl600 ?? $0.artworkUrl100, price: $0.trackPrice)
                     tmp.cellTouched = {
                         debugPrint("tapped \(tmp.name ?? "cell")")
                     }

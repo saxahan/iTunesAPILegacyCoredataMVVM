@@ -74,6 +74,7 @@ class Media: NSManagedObject, Codable {
     @NSManaged var artworkUrl30: String?
     @NSManaged var artworkUrl60: String?
     @NSManaged var artworkUrl100: String?
+    @NSManaged var artworkUrl600: String?
     @NSManaged var collectionPrice: NSNumber?
     @NSManaged var trackPrice: NSNumber?
     @NSManaged var releaseDate: Date?
@@ -88,7 +89,7 @@ class Media: NSManagedObject, Codable {
         case wrapperType, kind, artistId, trackId,
         artistName, trackName, trackCensoredName,
         artistViewUrl, trackViewUrl, previewUrl,
-        artworkUrl30, artworkUrl60, artworkUrl100,
+        artworkUrl30, artworkUrl60, artworkUrl100, artworkUrl600,
         collectionPrice, trackPrice, releaseDate,
         collectionExplicitness, trackExplicitness,
         trackTimeMillis, country, currency, primaryGenreName
@@ -119,6 +120,7 @@ class Media: NSManagedObject, Codable {
         self.artworkUrl30 = try container.decodeIfPresent(String.self, forKey: .artworkUrl30)
         self.artworkUrl60 = try container.decodeIfPresent(String.self, forKey: .artworkUrl60)
         self.artworkUrl100 = try container.decodeIfPresent(String.self, forKey: .artworkUrl100)
+        self.artworkUrl600 = try container.decodeIfPresent(String.self, forKey: .artworkUrl600)
         self.collectionPrice = try container.decodeIfPresent(Double.self, forKey: .collectionPrice) as NSNumber?
         self.trackPrice = try container.decodeIfPresent(Double.self, forKey: .trackPrice) as NSNumber?
         self.releaseDate = try container.decodeIfPresent(String.self, forKey: .releaseDate)?.toDate()
@@ -149,6 +151,7 @@ class Media: NSManagedObject, Codable {
         try container.encodeIfPresent(artworkUrl30, forKey: .artworkUrl30)
         try container.encodeIfPresent(artworkUrl60, forKey: .artworkUrl60)
         try container.encodeIfPresent(artworkUrl100, forKey: .artworkUrl100)
+        try container.encodeIfPresent(artworkUrl600, forKey: .artworkUrl600)
         try container.encodeIfPresent(Double(exactly: collectionPrice ?? 0), forKey: .collectionPrice)
         try container.encodeIfPresent(Double(exactly: trackPrice ?? 0), forKey: .trackPrice)
         try container.encodeIfPresent(releaseDate, forKey: .releaseDate)

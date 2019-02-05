@@ -24,12 +24,13 @@ extension ViewModelBased where Self: StoryboardBased & UIViewController {
 
 class BaseViewModel<T, S: ServiceDefinable> {
     // view states
-    let isLoading = Observable<Bool>(false)
-    var error: Observable<Error>?
-    let refreshTrigger = Observable<Void>(())
+    internal let isLoading = Observable<Bool>(false)
+    internal let refreshTrigger = Observable<Void>(())
+    internal var element: Observable<T>?
+    internal var error: Observable<Error>?
     
     // data provider
-    internal var provider: APIProvider<S>
+    internal let provider: APIProvider<S>
 
     init() {
         provider = APIProvider<S>()

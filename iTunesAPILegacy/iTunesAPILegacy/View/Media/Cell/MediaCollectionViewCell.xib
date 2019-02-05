@@ -13,43 +13,58 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="MediaCollectionViewCell" customModule="iTunesAPILegacy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="128" height="157"/>
+            <rect key="frame" x="0.0" y="0.0" width="238" height="292"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="128" height="157"/>
+                <rect key="frame" x="0.0" y="0.0" width="238" height="292"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPy-QI-hFX">
-                        <rect key="frame" x="10" y="10" width="108" height="137"/>
+                        <rect key="frame" x="15" y="15" width="208" height="262"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnC-a4-9OJ">
-                                <rect key="frame" x="5" y="5" width="98" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="4eR-ma-05b"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="208" height="262"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-Gx-Jki">
-                                <rect key="frame" x="5" y="104" width="98" height="25"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="1" green="0.2349596555" blue="0.46219568820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-up-ZH9">
+                                <rect key="frame" x="0.0" y="200" width="208" height="62"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="seI-dy-pAw">
+                                    <rect key="frame" x="0.0" y="0.0" width="208" height="62"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-Gx-Jki">
+                                            <rect key="frame" x="5" y="5" width="198" height="52"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" red="1" green="0.2349596555" blue="0.46219568820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="h9Y-Gx-Jki" secondAttribute="bottom" constant="5" id="8Kz-aV-Y8i"/>
+                                        <constraint firstItem="h9Y-Gx-Jki" firstAttribute="leading" secondItem="seI-dy-pAw" secondAttribute="leading" constant="5" id="FBE-xP-LC8"/>
+                                        <constraint firstAttribute="trailing" secondItem="h9Y-Gx-Jki" secondAttribute="trailing" constant="5" id="JrX-rB-1en"/>
+                                        <constraint firstItem="h9Y-Gx-Jki" firstAttribute="top" secondItem="seI-dy-pAw" secondAttribute="top" constant="5" id="zT8-Ak-Pcz"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="sny-7z-9e1"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NnC-a4-9OJ" firstAttribute="top" secondItem="IPy-QI-hFX" secondAttribute="top" constant="5" id="1pm-mj-4ah"/>
-                            <constraint firstItem="h9Y-Gx-Jki" firstAttribute="leading" secondItem="IPy-QI-hFX" secondAttribute="leading" constant="5" id="9cp-i3-n8f"/>
-                            <constraint firstAttribute="bottom" secondItem="h9Y-Gx-Jki" secondAttribute="bottom" constant="8" id="EgF-Wr-33w"/>
-                            <constraint firstAttribute="trailing" secondItem="NnC-a4-9OJ" secondAttribute="trailing" constant="5" id="Sg1-wJ-gZF"/>
-                            <constraint firstAttribute="trailing" secondItem="h9Y-Gx-Jki" secondAttribute="trailing" constant="5" id="U74-Zl-qYW"/>
-                            <constraint firstAttribute="trailing" secondItem="NnC-a4-9OJ" secondAttribute="trailing" constant="5" id="XNw-HF-BmU"/>
-                            <constraint firstItem="h9Y-Gx-Jki" firstAttribute="top" secondItem="NnC-a4-9OJ" secondAttribute="bottom" constant="-1" id="dgg-5h-1YW"/>
-                            <constraint firstItem="NnC-a4-9OJ" firstAttribute="leading" secondItem="IPy-QI-hFX" secondAttribute="leading" constant="5" id="glh-jH-60O"/>
+                            <constraint firstItem="6s5-up-ZH9" firstAttribute="leading" secondItem="IPy-QI-hFX" secondAttribute="leading" id="4bs-Xo-nzb"/>
+                            <constraint firstAttribute="trailing" secondItem="NnC-a4-9OJ" secondAttribute="trailing" id="5vr-X2-3vO"/>
+                            <constraint firstAttribute="bottom" secondItem="6s5-up-ZH9" secondAttribute="bottom" id="Eld-OR-MZ1"/>
+                            <constraint firstAttribute="bottom" secondItem="NnC-a4-9OJ" secondAttribute="bottom" id="Esz-RR-MTL"/>
+                            <constraint firstItem="NnC-a4-9OJ" firstAttribute="top" secondItem="IPy-QI-hFX" secondAttribute="top" id="ZFr-Lq-IMi"/>
+                            <constraint firstAttribute="trailing" secondItem="6s5-up-ZH9" secondAttribute="trailing" id="Zrq-Uq-7Pr"/>
+                            <constraint firstItem="NnC-a4-9OJ" firstAttribute="leading" secondItem="IPy-QI-hFX" secondAttribute="leading" id="jzU-up-BwT"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -62,10 +77,10 @@
                                 <color key="value" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                <size key="value" width="0.0" height="1"/>
+                                <size key="value" width="0.0" height="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="5"/>
+                                <real key="value" value="7"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                 <real key="value" value="0.34999999999999998"/>
@@ -76,18 +91,19 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="IPy-QI-hFX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="NRW-Pp-4YO"/>
-                <constraint firstAttribute="trailing" secondItem="IPy-QI-hFX" secondAttribute="trailing" constant="10" id="SAd-F8-AJJ"/>
-                <constraint firstAttribute="bottom" secondItem="IPy-QI-hFX" secondAttribute="bottom" constant="10" id="YGa-00-Jv4"/>
-                <constraint firstItem="IPy-QI-hFX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="oMH-J9-ZN7"/>
+                <constraint firstItem="IPy-QI-hFX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="NRW-Pp-4YO"/>
+                <constraint firstAttribute="trailing" secondItem="IPy-QI-hFX" secondAttribute="trailing" constant="15" id="SAd-F8-AJJ"/>
+                <constraint firstAttribute="bottom" secondItem="IPy-QI-hFX" secondAttribute="bottom" constant="15" id="YGa-00-Jv4"/>
+                <constraint firstItem="IPy-QI-hFX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="oMH-J9-ZN7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="128" height="157"/>
+            <size key="customSize" width="238" height="292"/>
             <connections>
+                <outlet property="bottomVisualEffectView" destination="6s5-up-ZH9" id="vmF-CG-yEB"/>
                 <outlet property="imgViewPreview" destination="NnC-a4-9OJ" id="u9c-6x-QeD"/>
                 <outlet property="lblTitle" destination="h9Y-Gx-Jki" id="EZa-bg-8u1"/>
             </connections>
-            <point key="canvasLocation" x="200" y="202.84857571214394"/>
+            <point key="canvasLocation" x="288" y="142.1289355322339"/>
         </collectionViewCell>
     </objects>
 </document>

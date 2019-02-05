@@ -10,6 +10,13 @@ import UIKit
 
 extension UIView {
 
+    func roundCorners(_ corners: UIRectCorner = [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: CGFloat = 15) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+
     @IBInspectable
     var cornerRadius: CGFloat {
         get {
@@ -17,6 +24,10 @@ extension UIView {
         }
         set {
             layer.cornerRadius = newValue
+
+            if self.isKind(of: UIImageView.self) {
+                layer.masksToBounds = true
+            }
         }
     }
     

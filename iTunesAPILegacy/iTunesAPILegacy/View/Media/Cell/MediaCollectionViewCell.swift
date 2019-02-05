@@ -14,11 +14,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
 
     @IBOutlet weak var imgViewPreview: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
-
-    override func prepareForReuse() {
-        self.viewModel?.previewUrl = nil
-        self.viewModel?.name = nil
-    }
+    @IBOutlet weak var bottomVisualEffectView: UIVisualEffectView!
 
     func setup(_ viewModel: CellViewModel) {
         guard let viewModel = viewModel as? MediaCellViewModel else { return }
@@ -29,5 +25,9 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
         }
 
         lblTitle?.text = self.viewModel?.name
+    }
+
+    override func draw(_ rect: CGRect) {
+        bottomVisualEffectView?.roundCorners([.bottomLeft, .bottomRight])
     }
 }
