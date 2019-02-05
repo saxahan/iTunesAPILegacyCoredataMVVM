@@ -57,6 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initTools(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
         // enviroment
         AppConfig.configure()
+
+        // reachability
+        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()
     }
 }
 

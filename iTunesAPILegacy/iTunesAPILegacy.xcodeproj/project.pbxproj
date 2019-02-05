@@ -79,6 +79,12 @@
 		B6B61786220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61787220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61788220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
+		B6B6178D220A0E4800E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
+		B6B6178E220A0E5000E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
+		B6B6178F220A0E5600E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
+		B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
+		B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
+		B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
@@ -190,6 +196,8 @@
 		B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6B61789220A030200E7F372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B6B61790220A0E6700E7F372 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B6178D220A0E4800E7F372 /* SystemConfiguration.framework in Frameworks */,
 				B6C458032208BE4F00153920 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B6178E220A0E5000E7F372 /* SystemConfiguration.framework in Frameworks */,
 				B6C458342208D07500153920 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B6178F220A0E5600E7F372 /* SystemConfiguration.framework in Frameworks */,
 				B6C4584A2208D0DD00153920 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +376,7 @@
 		B6C458012208BE4F00153920 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */,
 				B6C458022208BE4F00153920 /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -481,6 +493,7 @@
 				B6C4586D2208D83F00153920 /* Response.swift */,
 				B6C4585C2208D38100153920 /* Result.swift */,
 				B6C458582208D1FE00153920 /* ServiceDefinable.swift */,
+				B6B61790220A0E6700E7F372 /* Reachability.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -707,6 +720,7 @@
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +774,7 @@
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +820,7 @@
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
