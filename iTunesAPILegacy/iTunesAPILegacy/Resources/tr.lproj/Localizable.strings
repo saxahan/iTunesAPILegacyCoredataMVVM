@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  iTunesAPILegacy
+
+  Created by Yunus Alkan on 5.02.2019.
+  Copyright © 2019 Yunus Alkan. All rights reserved.
+*/
+"ERROR_UNKNOWN" = "Bilinmeyen hata";
+"ERROR_SERVER_WITH_STATUS_CODE" = "%d server hatası";
+"ERROR_INVALID_URL" = "Hatalı url";
+"ERROR_INVALID_SEARCH_TERM" = "Hatalı arama kelimesi";
+"ERROR_INVALID_SERVER_RESPONSE" = "Hatalı server cevabı";
+"ERROR_MISSING_DATA" = "Eksik veri";
+"ERROR_INVALID_JSON_WITH_DESC" = "Hatalı json: %@";
+"ERROR_MAP_JSON" = "Json çeviri hatası";
+"ERROR_MAP_OBJECT" = "Obje çeviri hatası";
+"EXCEPTION_WRONG_BASE_URL" = "Hatalı base url tanımlanmış";
+"EXCEPTION_CANNOT_CREATE_REQUEST_URL" = "İstek url' i oluşturulamadı";

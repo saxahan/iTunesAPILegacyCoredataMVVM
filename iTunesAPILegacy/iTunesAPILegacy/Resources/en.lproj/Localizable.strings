@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  iTunesAPILegacy
+
+  Created by Yunus Alkan on 5.02.2019.
+  Copyright © 2019 Yunus Alkan. All rights reserved.
+*/
+"ERROR_UNKNOWN" = "Unknown error";
+"ERROR_SERVER_WITH_STATUS_CODE" = "Server error code with %d";
+"ERROR_INVALID_URL" = "Invalid url";
+"ERROR_INVALID_SEARCH_TERM" = "Invalid search term";
+"ERROR_INVALID_SERVER_RESPONSE" = "Invalid server response";
+"ERROR_MISSING_DATA" = "Missing data";
+"ERROR_INVALID_JSON_WITH_DESC" = "Invalid json error: %@";
+"ERROR_MAP_JSON" = "Conversion json error";
+"ERROR_MAP_OBJECT" = "Conversion object error";
+"EXCEPTION_WRONG_BASE_URL" = "Wrong base url is defined";
+"EXCEPTION_CANNOT_CREATE_REQUEST_URL" = "Request url cannot be created";
+
+
+

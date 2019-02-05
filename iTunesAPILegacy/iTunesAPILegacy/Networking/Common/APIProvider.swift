@@ -23,9 +23,9 @@ extension APIProviderException {
     var localizedDescription: String {
         switch self {
         case .wrongBaseUrlDefined:
-            return "API base url is not correct."
+            return "EXCEPTION_WRONG_BASE_URL".localized
         case .cannotCreateRequestUrl:
-            return "Can not be created request url while getting from url components."
+            return "EXCEPTION_CANNOT_CREATE_REQUEST_URL".localized
         }
     }
 }
@@ -71,30 +71,52 @@ class APIProvider<Service: ServiceType>: APIProviderType {
 
         debugPrint(request)
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode, error == nil else {
-                // FIXME: in order to indicate right type of error, at least we must know web service status codes, or error messages etc...
-//                var apiErr: APIError = .unknown
-//                switch response.statusCode {
-//                case 500:
-//                    apiErr = .serverError
-//                    break
-//
-//                default:
-//                    break
-//                }
-                debugPrint(error?.localizedDescription ?? "")
-                let err = error ?? APIError.unknown
+        URLSession.shared.dataTask(with: request) { [unowned self] data, response, error in
+            guard let dat = data else {
+                let err = APIError.missingData
                 completion(Result<Response, Error>.failure(err))
+                debugPrint()
                 return
             }
 
-            let resp = (Response(statusCode: response.statusCode, data: data, request: request, response: response))
+            guard let respon = response as? HTTPURLResponse,
+                self.isSuccessCode(respon.statusCode), error == nil else {
+
+                    if let err = error {
+                        debugPrint(err.localizedDescription)
+                        completion(Result<Response, Error>.failure(err))
+                        return
+                    }
+
+                    do {
+                        let errResponse = try JSONSerialization.jsonObject(with: dat, options: .allowFragments) as? [String: AnyObject]
+                        let errMsg = errResponse?["errorMessage"] as? String ?? ""
+                        completion(Result<Response, Error>.failure(APIError.errorMessageFromBackend(errMsg)))
+                        debugPrint(errMsg)
+                        return
+                    } catch let errr {
+                        debugPrint(errr)
+                        completion(Result<Response, Error>.failure(errr))
+                        return
+                    }
+            }
+
+            let resp = (Response(statusCode: respon.statusCode, data: dat, request: request, response: respon))
             debugPrint(resp)
             completion(Result<Response, Error>.success(resp))
-        }
 
-        task.resume()
+        }.resume()
+    }
+
+    private func isSuccessCode(_ statusCode: Int) -> Bool {
+        return statusCode >= 200 && statusCode < 300
+    }
+
+    private func isSuccessCode(_ response: URLResponse?) -> Bool {
+        guard let urlResponse = response as? HTTPURLResponse else {
+            return false
+        }
+        return isSuccessCode(urlResponse.statusCode)
     }
 
 }

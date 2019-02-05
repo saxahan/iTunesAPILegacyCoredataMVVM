@@ -25,7 +25,7 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
         let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
 
         viewModel.isLoading.value = true
-        viewModel.search("matrix", entity: .musicVideo)
+        viewModel.search("matrix", entity: .all)
 
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {

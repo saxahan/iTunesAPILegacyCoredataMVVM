@@ -18,29 +18,32 @@ enum APIError: Swift.Error {
     case invalidJSON(Swift.Error)
     case jsonMapping
     case objectMapping(Swift.Error)
+    case errorMessageFromBackend(String)
 }
 
 extension APIError {
     var localizedDescription: String {
         switch self {
         case .unknown:
-            return "Unknown error"
+            return "ERROR_UNKNOWN".localized
         case .invalidSearchTerm:
-            return "Invalid search term"
+            return "ERROR_INVALID_SEARCH_TERM".localized
         case .invalidURL:
-            return "Invalid url"
+            return "ERROR_INVALID_URL".localized
         case .invalidServerResponse:
-            return "Invalid server response"
-        case .serverError(_):
-            return "Server error"
+            return "ERROR_INVALID_SERVER_RESPONSE".localized
+        case .serverError(let statusCode):
+            return String(format: "ERROR_SERVER_WITH_STATUS_CODE".localized, statusCode)
         case .missingData:
-            return "Missing data"
-        case .invalidJSON(_):
-            return "Invalid json"
+            return "ERROR_MISSING_DATA".localized
+        case .invalidJSON(let err):
+            return String(format: "ERROR_INVALID_JSON_WITH_DESC".localized, err.localizedDescription)
         case .jsonMapping:
-            return "Failed mapping to json"
+            return "ERROR_MAP_JSON".localized
         case .objectMapping(_):
-            return "Failed mapping to object"
+            return "ERROR_MAP_OBJECT".localized
+        case .errorMessageFromBackend(let errorMessage):
+            return errorMessage
         }
     }
 }
