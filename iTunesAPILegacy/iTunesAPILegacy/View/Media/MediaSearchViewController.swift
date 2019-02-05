@@ -12,6 +12,9 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    let padding: CGFloat = 10
+    var numOfColumns: Int = DeviceManager.shared.isPhone() ? 1 : 2
+
     var viewModel: MediaSearchViewModel!
 
     override func setup() {
@@ -51,12 +54,16 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
 
 extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.sectionViewModels.value.count
+        return viewModel.sectionViewModels.value.count > 0 ? viewModel.sectionViewModels.value.count : 1
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let sectionViewModel = viewModel.sectionViewModels.value[section]
-        return sectionViewModel.cellViewModels.count
+        if viewModel.sectionViewModels.value.count > section {
+            let sectionViewModel = viewModel.sectionViewModels.value[section]
+            return sectionViewModel.cellViewModels.count
+        }
+
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,6 +72,7 @@ extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewD
         let cellViewModel = sectionViewModel.cellViewModels[indexPath.row]
         
         cell.setup(cellViewModel)
+        cell.setNeedsDisplay()
         cell.layoutIfNeeded()
 
         return cell
@@ -75,5 +83,36 @@ extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewD
         if let cellViewModel = sectionViewModel.cellViewModels[indexPath.row] as? CellViewModelTouchable {
             cellViewModel.cellTouched?()
         }
+    }
+}
+
+// MARK: UICollectionView dynamic columns layout
+
+extension MediaSearchViewController: UICollectionViewDelegateFlowLayout {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            debugPrint("Landscape")
+            numOfColumns = 2
+        }
+        else {
+            debugPrint("Portrait")
+            numOfColumns = DeviceManager.shared.isPhone() ? 1 : 2
+        }
+
+        collectionView?.collectionViewLayout.invalidateLayout()
+        super.viewWillTransition(to: size, with: coordinator)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var margins: CGFloat = padding * 2 + padding * CGFloat(numOfColumns - 1)
+
+        if #available(iOS 11.0, *) {
+            margins += collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right
+        }
+
+        let itemWidth = ((collectionView.bounds.size.width - margins) / CGFloat(numOfColumns)).rounded(.down)
+        let itemHeight = itemWidth
+
+        return CGSize(width: itemWidth, height: itemHeight)
     }
 }

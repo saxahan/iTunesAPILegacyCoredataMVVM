@@ -85,6 +85,9 @@
 		B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
 		B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
 		B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
+		B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
+		B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
+		B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
@@ -198,6 +201,7 @@
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B6B61790220A0E6700E7F372 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B6B61799220A21AF00E7F372 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -328,6 +332,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B6B61798220A219D00E7F372 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6B61799220A21AF00E7F372 /* DeviceManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B6C457D22208BD4000153920 = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +442,7 @@
 		B6C4580E2208BF6F00153920 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B6B61798220A219D00E7F372 /* Utils */,
 				B64C25F42209CBC20034C01B /* Views */,
 				B64C257A220975D30034C01B /* Common */,
 				B6C4581D2208C69100153920 /* Extensions */,
@@ -715,6 +728,7 @@
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
+				B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B64C25C7220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
@@ -769,6 +783,7 @@
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
+				B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B64C25C8220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
@@ -815,6 +830,7 @@
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
+				B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B64C25C9220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,

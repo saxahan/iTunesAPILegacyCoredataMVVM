@@ -16,6 +16,15 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var bottomVisualEffectView: UIVisualEffectView!
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        DispatchQueue.main.async { [weak self] in
+            self?.bottomVisualEffectView?.roundCorners([.bottomLeft, .bottomRight])
+        }
+        self.layoutIfNeeded()
+    }
+
     func setup(_ viewModel: CellViewModel) {
         guard let viewModel = viewModel as? MediaCellViewModel else { return }
         self.viewModel = viewModel
@@ -25,9 +34,5 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
         }
 
         lblTitle?.text = self.viewModel?.name
-    }
-
-    override func draw(_ rect: CGRect) {
-        bottomVisualEffectView?.roundCorners([.bottomLeft, .bottomRight])
     }
 }

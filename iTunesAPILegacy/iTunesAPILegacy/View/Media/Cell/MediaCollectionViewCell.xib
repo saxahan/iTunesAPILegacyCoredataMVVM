@@ -31,15 +31,15 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-up-ZH9">
-                                <rect key="frame" x="0.0" y="200" width="208" height="62"/>
+                                <rect key="frame" x="0.0" y="183.5" width="208" height="78.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="seI-dy-pAw">
-                                    <rect key="frame" x="0.0" y="0.0" width="208" height="62"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="208" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-Gx-Jki">
-                                            <rect key="frame" x="5" y="5" width="198" height="52"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            <color key="textColor" red="1" green="0.2349596555" blue="0.46219568820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="frame" x="5" y="5" width="198" height="69"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -50,14 +50,12 @@
                                         <constraint firstItem="h9Y-Gx-Jki" firstAttribute="top" secondItem="seI-dy-pAw" secondAttribute="top" constant="5" id="zT8-Ak-Pcz"/>
                                     </constraints>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="sny-7z-9e1"/>
-                                </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6s5-up-ZH9" firstAttribute="height" secondItem="IPy-QI-hFX" secondAttribute="height" multiplier="0.3" id="3Oh-MH-w4G"/>
                             <constraint firstItem="6s5-up-ZH9" firstAttribute="leading" secondItem="IPy-QI-hFX" secondAttribute="leading" id="4bs-Xo-nzb"/>
                             <constraint firstAttribute="trailing" secondItem="NnC-a4-9OJ" secondAttribute="trailing" id="5vr-X2-3vO"/>
                             <constraint firstAttribute="bottom" secondItem="6s5-up-ZH9" secondAttribute="bottom" id="Eld-OR-MZ1"/>
