@@ -98,11 +98,11 @@ class Media: NSManagedObject, Codable {
 
     required convenience init(from decoder: Decoder) throws {
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: "Media", in: CoreDataStack.shared.managedObjectContext) else {
+            let entity = NSEntityDescription.entity(forEntityName: "Media", in: CoreDataStack.managedObjectContext) else {
                 fatalError("Failed to decode Media")
         }
 
-        self.init(entity: entity, insertInto: CoreDataStack.shared.managedObjectContext)
+        self.init(entity: entity, insertInto: CoreDataStack.managedObjectContext)
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
 

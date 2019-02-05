@@ -18,21 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         initTools(application, didFinishLaunchingWithOptions: launchOptions)
 
-        let provider = API.mediaProvider
-        let target = MediaService.searchItunes
-        var mediaList = [Media]()
-
-        provider.request(target("matrix", .musicVideo)) { result in
-            switch result {
-            case .failure(let error):
-                debugPrint(error.localizedDescription)
-
-            case .success(let response):
-                mediaList = (try? response.map([Media].self, atKeyPath: "results")) ?? []
-                debugPrint(mediaList)
-            }
-
+        if window == nil {
+            window = UIWindow(frame: UIScreen.main.bounds)
         }
+
+        window?.rootViewController = MediaSearchViewController.instantiate(with: MediaSearchViewModel(), storyboardName: Constants.storyboardMedia)
+        window?.makeKeyAndVisible()
         
         return true
     }
@@ -58,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        CoreDataStack.shared.saveContext()
+        CoreDataStack.saveContext()
     }
 
     // MARK - Initializers
@@ -66,9 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initTools(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
         // enviroment
         AppConfig.configure()
-
-        // core data
-        _ = CoreDataStack.shared.applicationDocumentsDirectory
     }
 }
 

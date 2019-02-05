@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func toDate(format: String = "yyyy-MM-dd'T'HH:mm:ssZZZZZ") -> Date? {
+    func toDate(format: String = Constants.dateMappingFormat) -> Date? {
         return DateFormatter(format: format).date(from: self)
     }
 
@@ -18,5 +18,20 @@ extension String {
             return DateFormatter(format: outputFormat).string(from: date)
         }
         return nil
+    }
+
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+
+    func highlightWords(in highlightedWords: String, attributes: [[NSAttributedString.Key: Any]]) -> NSMutableAttributedString {
+        let range = (self as NSString).range(of: highlightedWords)
+        let result = NSMutableAttributedString(string: self)
+
+        for attribute in attributes {
+            result.addAttributes(attribute, range: range)
+        }
+
+        return result
     }
 }

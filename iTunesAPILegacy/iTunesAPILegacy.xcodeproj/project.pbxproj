@@ -7,6 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B64C257C220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
+		B64C257D220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
+		B64C257E220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
+		B64C2580220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
+		B64C2581220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
+		B64C2582220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
+		B64C2584220976530034C01B /* Settable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2583220976530034C01B /* Settable.swift */; };
+		B64C2585220976530034C01B /* Settable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2583220976530034C01B /* Settable.swift */; };
+		B64C2586220976530034C01B /* Settable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2583220976530034C01B /* Settable.swift */; };
+		B64C2588220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
+		B64C2589220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
+		B64C258A220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
+		B64C258C22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
+		B64C258D22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
+		B64C258E22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
+		B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
+		B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
+		B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
+		B64C259D220988DB0034C01B /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C259C220988DB0034C01B /* StoryboardBased.swift */; };
+		B64C259E220988DB0034C01B /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C259C220988DB0034C01B /* StoryboardBased.swift */; };
+		B64C259F220988DB0034C01B /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C259C220988DB0034C01B /* StoryboardBased.swift */; };
+		B64C25A622098BD40034C01B /* MediaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */; };
+		B64C25A722098BD40034C01B /* MediaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */; };
+		B64C25A822098BD40034C01B /* MediaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */; };
+		B64C25AA220993080034C01B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A9220993080034C01B /* Observable.swift */; };
+		B64C25AB220993080034C01B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A9220993080034C01B /* Observable.swift */; };
+		B64C25AC220993080034C01B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25A9220993080034C01B /* Observable.swift */; };
+		B64C25AE220993370034C01B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25AD220993370034C01B /* AsyncImage.swift */; };
+		B64C25AF220993370034C01B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25AD220993370034C01B /* AsyncImage.swift */; };
+		B64C25B0220993370034C01B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25AD220993370034C01B /* AsyncImage.swift */; };
+		B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25B9220994190034C01B /* UICollectionView+.swift */; };
+		B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25B9220994190034C01B /* UICollectionView+.swift */; };
+		B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25B9220994190034C01B /* UICollectionView+.swift */; };
+		B64C25BE220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
+		B64C25BF220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
+		B64C25C0220994240034C01B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25BD220994240034C01B /* UITableView+.swift */; };
+		B64C25C3220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
+		B64C25C4220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
+		B64C25C5220996960034C01B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64C25C2220996960034C01B /* Media.storyboard */; };
+		B64C25C7220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
+		B64C25C8220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
+		B64C25C9220996CC0034C01B /* MediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */; };
+		B64C25CB220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
+		B64C25CC220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
+		B64C25CD220999240034C01B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CA220999240034C01B /* BaseViewController.swift */; };
+		B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CE2209A4570034C01B /* BaseListViewModel.swift */; };
+		B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CE2209A4570034C01B /* BaseListViewModel.swift */; };
+		B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25CE2209A4570034C01B /* BaseListViewModel.swift */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
@@ -93,6 +141,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		B64C257F220976300034C01B /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
+		B64C2583220976530034C01B /* Settable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settable.swift; sourceTree = "<group>"; };
+		B64C2587220976D20034C01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B64C258B22097B2E0034C01B /* BindableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableViewController.swift; sourceTree = "<group>"; };
+		B64C258F22097DB90034C01B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B64C259C220988DB0034C01B /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchViewModel.swift; sourceTree = "<group>"; };
+		B64C25A9220993080034C01B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B64C25AD220993370034C01B /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		B64C25B9220994190034C01B /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		B64C25BD220994240034C01B /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		B64C25C2220996960034C01B /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
+		B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchViewController.swift; sourceTree = "<group>"; };
+		B64C25CA220999240034C01B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B64C25CE2209A4570034C01B /* BaseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewModel.swift; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +227,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B64C257A220975D30034C01B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B64C257F220976300034C01B /* Modelable.swift */,
+				B64C257B220975DE0034C01B /* Identifiable.swift */,
+				B64C2583220976530034C01B /* Settable.swift */,
+				B64C2587220976D20034C01B /* Constants.swift */,
+				B64C25A9220993080034C01B /* Observable.swift */,
+				B64C25AD220993370034C01B /* AsyncImage.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B64C25A422098BC30034C01B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		B64C25C1220996890034C01B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B64C25C2220996960034C01B /* Media.storyboard */,
+				B64C25C6220996CC0034C01B /* MediaSearchViewController.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		B6C457D22208BD4000153920 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +313,9 @@
 		B6C458072208BF0700153920 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B64C25A422098BC30034C01B /* Media */,
+				B64C258F22097DB90034C01B /* BaseViewModel.swift */,
+				B64C25CE2209A4570034C01B /* BaseListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +323,10 @@
 		B6C4580A2208BF4900153920 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B64C25C1220996890034C01B /* Media */,
+				B64C258B22097B2E0034C01B /* BindableViewController.swift */,
+				B64C259C220988DB0034C01B /* StoryboardBased.swift */,
+				B64C25CA220999240034C01B /* BaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,11 +357,11 @@
 		B6C4580E2208BF6F00153920 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B64C257A220975D30034C01B /* Common */,
 				B6C4581D2208C69100153920 /* Extensions */,
 				B6C458222208CF7300153920 /* Config */,
 			);
-			name = Helpers;
-			path = "New Group";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B6C458192208BFE200153920 /* Db */ = {
@@ -287,6 +388,8 @@
 				B6C4587D2208FE6100153920 /* String+.swift */,
 				B6C458812208FEA300153920 /* DateFormatter+.swift */,
 				B6C458852208FEB000153920 /* Date+.swift */,
+				B64C25B9220994190034C01B /* UICollectionView+.swift */,
+				B64C25BD220994240034C01B /* UITableView+.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -446,6 +549,7 @@
 				B6C458092208BF4100153920 /* .gitkeep in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B6C458282208CFF100153920 /* Config-Staging.plist in Resources */,
+				B64C25C3220996960034C01B /* Media.storyboard in Resources */,
 				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 			);
@@ -466,6 +570,7 @@
 				B6C458372208D07500153920 /* .gitkeep in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B6C458392208D07500153920 /* Config-Staging.plist in Resources */,
+				B64C25C4220996960034C01B /* Media.storyboard in Resources */,
 				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 			);
@@ -479,6 +584,7 @@
 				B6C4584D2208D0DD00153920 /* .gitkeep in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */,
+				B64C25C5220996960034C01B /* Media.storyboard in Resources */,
 				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 			);
@@ -491,23 +597,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64C25AA220993080034C01B /* Observable.swift in Sources */,
+				B64C25AE220993370034C01B /* AsyncImage.swift in Sources */,
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
 				B6C458592208D1FE00153920 /* ServiceDefinable.swift in Sources */,
+				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
+				B64C25A622098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
 				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
 				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B6C4587A2208EB7900153920 /* API.swift in Sources */,
 				B6C4587E2208FE6100153920 /* String+.swift in Sources */,
 				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
+				B64C2584220976530034C01B /* Settable.swift in Sources */,
 				B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
+				B64C258C22097B2E0034C01B /* BindableViewController.swift in Sources */,
+				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B64C259D220988DB0034C01B /* StoryboardBased.swift in Sources */,
+				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
+				B64C2580220976300034C01B /* Modelable.swift in Sources */,
+				B64C257C220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
+				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
+				B64C25C7220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
+				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,23 +644,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64C25AB220993080034C01B /* Observable.swift in Sources */,
+				B64C25AF220993370034C01B /* AsyncImage.swift in Sources */,
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
+				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
+				B64C25A722098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
 				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
 				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B6C4587B2208EB7900153920 /* API.swift in Sources */,
 				B6C4587F2208FE6100153920 /* String+.swift in Sources */,
 				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
+				B64C2585220976530034C01B /* Settable.swift in Sources */,
 				B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */,
+				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
+				B64C258D22097B2E0034C01B /* BindableViewController.swift in Sources */,
+				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B64C259E220988DB0034C01B /* StoryboardBased.swift in Sources */,
+				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
+				B64C2581220976300034C01B /* Modelable.swift in Sources */,
+				B64C257D220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
+				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
+				B64C25C8220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
+				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,23 +683,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64C25AC220993080034C01B /* Observable.swift in Sources */,
+				B64C25B0220993370034C01B /* AsyncImage.swift in Sources */,
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* ServiceDefinable.swift in Sources */,
+				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
+				B64C25A822098BD40034C01B /* MediaSearchViewModel.swift in Sources */,
 				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
 				B6C458702208D83F00153920 /* Response.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B6C4587C2208EB7900153920 /* API.swift in Sources */,
 				B6C458802208FE6100153920 /* String+.swift in Sources */,
 				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
+				B64C2586220976530034C01B /* Settable.swift in Sources */,
 				B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
+				B64C258E22097B2E0034C01B /* BindableViewController.swift in Sources */,
+				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
+				B64C259F220988DB0034C01B /* StoryboardBased.swift in Sources */,
+				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
+				B64C2582220976300034C01B /* Modelable.swift in Sources */,
+				B64C257E220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
+				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
+				B64C25C9220996CC0034C01B /* MediaSearchViewController.swift in Sources */,
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
+				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
