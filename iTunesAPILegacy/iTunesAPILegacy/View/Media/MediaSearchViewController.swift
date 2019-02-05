@@ -17,19 +17,23 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
-        viewModel.isLoading.value = true
-        viewModel.search("matrix", entity: .musicVideo)
+        collectionView.register(MediaCollectionViewCell.self)
         bindings()
     }
 
     func bindings() {
-        collectionView.register(MediaCollectionViewCell.self)
+        let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
+
+        viewModel.isLoading.value = true
+        viewModel.search("matrix", entity: .musicVideo)
+
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
                 self?.collectionView.showIndicator()
             }
             else {
                 self?.collectionView.hideIndicator()
+                refresher.endRefreshing()
             }
 
             self?.collectionView.reloadData()
@@ -38,6 +42,10 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
         viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
             self?.collectionView.reloadData()
         }
+    }
+
+    @objc func refreshed() {
+        viewModel.reload()
     }
 }
 

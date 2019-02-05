@@ -11,8 +11,20 @@ import Foundation
 class MediaSearchViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
+    let entity = Observable<MediaType>(.all)
+
+    override init() {
+        super.init()
+    }
+
+    override func reload() {
+        search(term.value, entity: entity.value)
+    }
     
     func search(_ term: String, entity: MediaType, limit: Int = 100) {
+        self.term.value = term
+        self.entity.value = entity
+
         provider.request(.searchItunes(term: term, entity: entity, limit: limit)) { [weak self] (result) in
             self?.isLoading.value = false
 
@@ -36,5 +48,4 @@ class MediaSearchViewModel: BaseListViewModel<Media, MediaService> {
             }
         }
     }
-    
 }

@@ -16,9 +16,6 @@
 		B64C2588220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
 		B64C2589220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
 		B64C258A220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
-		B64C258C22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
-		B64C258D22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
-		B64C258E22097B2E0034C01B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258B22097B2E0034C01B /* BindableViewController.swift */; };
 		B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
 		B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
 		B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C258F22097DB90034C01B /* BaseViewModel.swift */; };
@@ -168,7 +165,6 @@
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		B64C257F220976300034C01B /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		B64C2587220976D20034C01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B64C258B22097B2E0034C01B /* BindableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableViewController.swift; sourceTree = "<group>"; };
 		B64C258F22097DB90034C01B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B64C259C220988DB0034C01B /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
 		B64C25A522098BD40034C01B /* MediaSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchViewModel.swift; sourceTree = "<group>"; };
@@ -384,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				B64C25C1220996890034C01B /* Media */,
-				B64C258B22097B2E0034C01B /* BindableViewController.swift */,
 				B64C259C220988DB0034C01B /* StoryboardBased.swift */,
 				B64C25CA220999240034C01B /* BaseViewController.swift */,
 			);
@@ -683,7 +678,6 @@
 				B64C25EC2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
-				B64C258C22097B2E0034C01B /* BindableViewController.swift in Sources */,
 				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B64C259D220988DB0034C01B /* StoryboardBased.swift in Sources */,
@@ -737,7 +731,6 @@
 				B64C25ED2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
-				B64C258D22097B2E0034C01B /* BindableViewController.swift in Sources */,
 				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B64C259E220988DB0034C01B /* StoryboardBased.swift in Sources */,
@@ -783,7 +776,6 @@
 				B64C25EE2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
-				B64C258E22097B2E0034C01B /* BindableViewController.swift in Sources */,
 				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B64C259F220988DB0034C01B /* StoryboardBased.swift in Sources */,
