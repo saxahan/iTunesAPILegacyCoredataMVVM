@@ -9,10 +9,10 @@
 import Foundation
 
 class BaseListViewModel<T, S: ServiceDefinable>: BaseViewModel<T, S> {
-    var searchTrigger = Observable<String>()
-    let query = Observable<String>("")
-    let elements = Observable<[T]>([])
-    let totalElements = Observable<Int>(0)
+    internal var searchTrigger = Observable<String>("")
+    internal let query = Observable<String>("")
+    internal let elements = Observable<[T]>([])
+    internal let resultCount = Observable<Int>(0)
 
     override init() {
         super.init()

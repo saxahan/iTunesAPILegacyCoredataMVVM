@@ -20,6 +20,6 @@ class BaseViewController: UIViewController, StoryboardBased {
     // MARK: setup some things
     
     func setup() {
-
+        
     }
 }

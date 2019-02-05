@@ -69,6 +69,8 @@ class APIProvider<Service: ServiceType>: APIProviderType {
         request.httpMethod = service.method.rawValue
         request.httpBody = httpBody
 
+        debugPrint(request)
+
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode, error == nil else {
                 // FIXME: in order to indicate right type of error, at least we must know web service status codes, or error messages etc...
@@ -87,8 +89,9 @@ class APIProvider<Service: ServiceType>: APIProviderType {
                 return
             }
 
-            debugPrint(response.description)
-            completion(Result<Response, Error>.success(Response(statusCode: response.statusCode, data: data, request: request, response: response)))
+            let resp = (Response(statusCode: response.statusCode, data: data, request: request, response: response))
+            debugPrint(resp)
+            completion(Result<Response, Error>.success(resp))
         }
 
         task.resume()

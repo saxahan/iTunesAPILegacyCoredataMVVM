@@ -9,6 +9,5 @@
 import Foundation
 
 protocol Settable {
-    associatedtype Element
-    func setup(_ element: Element)
+    func setup(_ viewModel: CellViewModel)
 }

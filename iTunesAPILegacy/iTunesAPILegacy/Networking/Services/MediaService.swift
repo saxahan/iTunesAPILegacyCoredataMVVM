@@ -26,7 +26,7 @@ extension MediaService {
         case .searchItunes(let term, let entity, let limit):
             return .requestParameters(parameters: ["term": term,
                                                    "entity": entity.rawValue,
-                                                   "limit": limit
+                                                   "limit": "\(limit)"
                 ])
 //        default:
 //            return .requestPlain

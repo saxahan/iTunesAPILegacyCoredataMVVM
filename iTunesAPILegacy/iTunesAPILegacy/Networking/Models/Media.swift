@@ -63,8 +63,8 @@ class Media: NSManagedObject, Codable {
 
     @NSManaged var wrapperType: String?
     @NSManaged var kind: String?
-    @NSManaged var artistId: NSNumber
-    @NSManaged var trackId: NSNumber
+    @NSManaged var artistId: NSNumber?
+    @NSManaged var trackId: NSNumber?
     @NSManaged var artistName: String?
     @NSManaged var trackName: String?
     @NSManaged var trackCensoredName: String?
@@ -79,7 +79,7 @@ class Media: NSManagedObject, Codable {
     @NSManaged var releaseDate: Date?
     @NSManaged var collectionExplicitness: String?
     @NSManaged var trackExplicitness: String?
-    @NSManaged var trackTimeMillis: NSNumber
+    @NSManaged var trackTimeMillis: NSNumber?
     @NSManaged var country: String?
     @NSManaged var currency: String?
     @NSManaged var primaryGenreName: String?
@@ -108,8 +108,8 @@ class Media: NSManagedObject, Codable {
 
         self.wrapperType = try container.decodeIfPresent(String.self, forKey: .wrapperType)
         self.kind = try container.decodeIfPresent(String.self, forKey: .kind)
-        self.artistId = try container.decode(Int64.self, forKey: .artistId) as NSNumber
-        self.trackId = try container.decode(Int64.self, forKey: .trackId) as NSNumber
+        self.artistId = try container.decodeIfPresent(Int64.self, forKey: .artistId) as NSNumber?
+        self.trackId = try container.decodeIfPresent(Int64.self, forKey: .trackId) as NSNumber?
         self.artistName = try container.decodeIfPresent(String.self, forKey: .artistName)
         self.trackName = try container.decodeIfPresent(String.self, forKey: .trackName)
         self.trackCensoredName = try container.decodeIfPresent(String.self, forKey: .trackCensoredName)
@@ -124,7 +124,7 @@ class Media: NSManagedObject, Codable {
         self.releaseDate = try container.decodeIfPresent(String.self, forKey: .releaseDate)?.toDate()
         self.collectionExplicitness = try container.decodeIfPresent(String.self, forKey: .collectionExplicitness)
         self.trackExplicitness = try container.decodeIfPresent(String.self, forKey: .trackExplicitness)
-        self.trackTimeMillis = try container.decode(Int64.self, forKey: .trackTimeMillis) as NSNumber
+        self.trackTimeMillis = try container.decodeIfPresent(Int64.self, forKey: .trackTimeMillis) as NSNumber?
         self.country = try container.decodeIfPresent(String.self, forKey: .country)
         self.currency = try container.decodeIfPresent(String.self, forKey: .currency)
         self.primaryGenreName = try container.decodeIfPresent(String.self, forKey: .primaryGenreName)
@@ -138,8 +138,8 @@ class Media: NSManagedObject, Codable {
 
         try container.encodeIfPresent(wrapperType, forKey: .wrapperType)
         try container.encode(kind, forKey: .kind)
-        try container.encode(Int64(exactly: artistId), forKey: .artistId)
-        try container.encode(Int64(exactly: trackId), forKey: .trackId)
+        try container.encodeIfPresent(Int64(exactly: artistId ?? 0), forKey: .artistId)
+        try container.encodeIfPresent(Int64(exactly: trackId ?? 0), forKey: .trackId)
         try container.encodeIfPresent(artistName, forKey: .artistName)
         try container.encodeIfPresent(trackName, forKey: .trackName)
         try container.encodeIfPresent(trackCensoredName, forKey: .trackCensoredName)
@@ -154,7 +154,7 @@ class Media: NSManagedObject, Codable {
         try container.encodeIfPresent(releaseDate, forKey: .releaseDate)
         try container.encodeIfPresent(collectionExplicitness, forKey: .collectionExplicitness)
         try container.encodeIfPresent(trackExplicitness, forKey: .trackExplicitness)
-        try container.encode(Int64(exactly: trackTimeMillis), forKey: .trackTimeMillis)
+        try container.encodeIfPresent(Int64(exactly: trackTimeMillis ?? 0), forKey: .trackTimeMillis)
         try container.encodeIfPresent(country, forKey: .country)
         try container.encodeIfPresent(currency, forKey: .currency)
         try container.encodeIfPresent(primaryGenreName, forKey: .primaryGenreName)

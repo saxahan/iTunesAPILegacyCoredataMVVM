@@ -8,14 +8,10 @@
 
 import UIKit
 
-//protocol ViewModel {
-//    associatedtype Services
-//    init (withServices services: Services)
-//}
-
 protocol ViewModelBased: class {
     associatedtype ViewModel
     var viewModel: ViewModel! { get set }
+    func bindings() 
 }
 
 extension ViewModelBased where Self: StoryboardBased & UIViewController {
@@ -29,9 +25,9 @@ extension ViewModelBased where Self: StoryboardBased & UIViewController {
 class BaseViewModel<T, S: ServiceDefinable> {
     // view states
     let isLoading = Observable<Bool>(false)
-    let error = Observable<Error>()
-    let refreshTrigger = Observable<Void>()
-
+    var error: Observable<Error>?
+    let refreshTrigger = Observable<Void>(())
+    
     // data provider
     internal var provider: APIProvider<S>
 
