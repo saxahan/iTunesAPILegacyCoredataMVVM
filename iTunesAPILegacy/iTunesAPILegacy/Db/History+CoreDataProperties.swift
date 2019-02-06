@@ -10,16 +10,20 @@
 import Foundation
 import CoreData
 
-
 extension History {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<History> {
-        return NSFetchRequest<History>(entityName: "History")
-    }
-
     @NSManaged public var isRemoved: Bool
     @NSManaged public var isVisited: Bool
     @NSManaged public var visitedDate: NSDate?
     @NSManaged public var trackId: Int64
 
+    convenience init(trackId: Int, isRemoved: Bool, isVisited: Bool) {
+        self.init(context: CoreDataStack.managedObjectContext)
+        self.trackId = Int64(trackId)
+        self.isRemoved = isRemoved
+        self.isVisited = isVisited
+
+        if isVisited {
+            self.visitedDate = Date() as NSDate
+        }
+    }
 }

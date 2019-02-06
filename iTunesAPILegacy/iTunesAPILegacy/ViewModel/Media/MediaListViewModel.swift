@@ -13,9 +13,16 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
     let sectionViewModels = Observable<[SectionViewModel]>([])
     let mediaType = Observable<MediaType>(.all)
     let openDetail = Observable<MediaDetailViewModel?>(nil)
+    let histories = Observable<[History]>([])
 
-    override init() {
-        super.init()
+    override init(_ element: Media? = nil) {
+        super.init(element)
+
+        do {
+            histories.value = try CoreDataStack.managedObjectContext.fetchObjects(History.self)
+        } catch {
+            debugPrint(error)
+        }
 
         term.addObserver(fireNow: false) { [weak self] (text) in
             if !text.isEmpty {
@@ -40,30 +47,31 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
         self.mediaType.value = media
         isLoading.value = true
 
-        provider.request(.searchItunes(term: term, media: media, limit: limit)) { [weak self] (result) in
-            self?.cleared.value = false
-            self?.isLoading.value = false
+        provider.request(.searchItunes(term: term, media: media, limit: limit)) { [unowned self] (result) in
+            self.cleared.value = false
+            self.isLoading.value = false
 
             switch result {
             case .success(let response):
-                self?.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
+                self.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
 
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
                 let sections = SectionViewModel(cellViewModels: mediaList.map {
                     let obj = $0
-                    let tmp = MediaCellViewModel(trackId: obj.trackId, name: obj.trackName, previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100, price: obj.trackPrice)
+                    let visitedBefore = self.histories.value.contains { $0.trackId == Int64(obj.trackId ?? 0) && $0.isVisited }
+                    let tmp = MediaCellViewModel(trackId: obj.trackId, name: obj.trackName, previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100, price: obj.trackPrice, isVisited: visitedBefore)
                     tmp.cellTouched = {
                         let detail = MediaDetailViewModel(obj)
-                        self?.openDetail.value = detail
+                        self.openDetail.value = detail
                         // open media detail
                         
                     }
                     return tmp
                 })
-                self?.sectionViewModels.value = [sections]
+                self.sectionViewModels.value = [sections]
                 break
             case .failure(let error):
-                self?.error.value = error
+                self.error.value = error
                 break
             }
         }

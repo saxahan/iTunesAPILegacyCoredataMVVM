@@ -16,6 +16,11 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         super.setup()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.didAppeared?()
+    }
+
     func bindings() {
 
     }

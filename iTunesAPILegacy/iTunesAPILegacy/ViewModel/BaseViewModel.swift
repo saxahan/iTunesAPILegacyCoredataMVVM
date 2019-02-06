@@ -8,7 +8,14 @@
 
 import Foundation
 
-class BaseViewModel<T, S: HttpServiceDefinable> {
+protocol DetailLifeCycle {
+    var didAppeared: (() -> Void)? { get set }
+}
+
+class BaseViewModel<T, S: HttpServiceDefinable>: DetailLifeCycle {
+    
+    var didAppeared: (() -> Void)?
+
     // view states
     internal let isLoading = Observable<Bool>(false)
     internal let error = Observable<APIError?>(nil)
@@ -18,13 +25,9 @@ class BaseViewModel<T, S: HttpServiceDefinable> {
     // data provider
     internal let provider: APIProvider<S>
 
-    init() {
-        provider = APIProvider<S>()
-    }
-
-    convenience init(_ element: T) {
-        self.init()
+    init(_ element: T? = nil) {
         self.element.value = element
+        provider = APIProvider<S>()
     }
 }
 

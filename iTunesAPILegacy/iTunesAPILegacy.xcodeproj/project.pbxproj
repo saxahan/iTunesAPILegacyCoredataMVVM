@@ -82,6 +82,12 @@
 		B650D261220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
 		B650D262220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
 		B650D263220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
+		B650D27A220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */; };
+		B650D27B220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */; };
+		B650D27C220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */; };
+		B650D27E220B8954004EF756 /* NSManagedObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D27D220B8954004EF756 /* NSManagedObject+.swift */; };
+		B650D27F220B8954004EF756 /* NSManagedObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D27D220B8954004EF756 /* NSManagedObject+.swift */; };
+		B650D280220B8954004EF756 /* NSManagedObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D27D220B8954004EF756 /* NSManagedObject+.swift */; };
 		B66384A9220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
 		B66384AA220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
 		B66384AB220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
@@ -265,6 +271,8 @@
 		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
 		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
 		B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailViewController.xib; sourceTree = "<group>"; };
+		B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+.swift"; sourceTree = "<group>"; };
+		B650D27D220B8954004EF756 /* NSManagedObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+.swift"; sourceTree = "<group>"; };
 		B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
 		B66384A8220AB90D00FBAEFC /* MediaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListViewController.xib; sourceTree = "<group>"; };
 		B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -429,6 +437,15 @@
 				B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		B650D281220B899E004EF756 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B650D27D220B8954004EF756 /* NSManagedObject+.swift */,
+				B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B66384AF220ABA2300FBAEFC /* Settings */ = {
@@ -613,10 +630,11 @@
 		B6C458192208BFE200153920 /* Db */ = {
 			isa = PBXGroup;
 			children = (
+				B6C458202208CAA500153920 /* CoreDataStack.swift */,
 				B650D24C220B681F004EF756 /* History+CoreDataClass.swift */,
 				B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */,
+				B650D281220B899E004EF756 /* Extensions */,
 				B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */,
-				B6C458202208CAA500153920 /* CoreDataStack.swift */,
 			);
 			path = Db;
 			sourceTree = "<group>";
@@ -887,6 +905,7 @@
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
+				B650D27A220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -901,6 +920,7 @@
 				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
 				B66384B1220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B650D27E220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EC2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
@@ -959,6 +979,7 @@
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
+				B650D27B220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -973,6 +994,7 @@
 				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
 				B66384B2220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */,
+				B650D27F220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25ED2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
@@ -1023,6 +1045,7 @@
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
+				B650D27C220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -1037,6 +1060,7 @@
 				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
 				B66384B3220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B650D280220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EE2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,

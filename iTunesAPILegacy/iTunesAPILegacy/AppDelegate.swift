@@ -52,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppConfig.configure()
 
         // core data
-        
         debugPrint(CoreDataStack.applicationDocumentsDirectory)
         // reachability
 //        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()

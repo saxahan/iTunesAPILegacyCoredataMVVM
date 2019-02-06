@@ -61,21 +61,9 @@ final class CoreDataStack {
         let coordinator = persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
+        managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         return managedObjectContext
     }()
-
-    static func getEntity<T: NSManagedObject>() -> T {
-        if #available(iOS 10, *) {
-            let obj = T(context: CoreDataStack.managedObjectContext)
-            return obj
-        } else {
-            guard let entityDescription = NSEntityDescription.entity(forEntityName: NSStringFromClass(T.self), in: CoreDataStack.managedObjectContext) else {
-                fatalError("Core Data entity name doesn't match.")
-            }
-            let obj = T(entity: entityDescription, insertInto: CoreDataStack.managedObjectContext)
-            return obj
-        }
-    }
 
     // MARK: - Core Data Saving support
 

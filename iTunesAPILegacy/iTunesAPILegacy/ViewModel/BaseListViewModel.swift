@@ -15,9 +15,9 @@ class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     internal let cleared  = Observable<Bool>(true)
     internal var resultCount = 0
 
-    override init() {
-        super.init()
-    }
+//    override init(_ element: T?) {
+//        super.init(element)
+//    }
 
     func reload() {
 
