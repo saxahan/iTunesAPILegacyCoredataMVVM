@@ -10,6 +10,13 @@ import UIKit
 
 extension UIView {
 
+    static func initFromNib() -> Self {
+        func instanceFromNib<T: UIView>() -> T {
+            return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.first as! T
+        }
+        return instanceFromNib()
+    }
+    
     func roundCorners(_ corners: UIRectCorner = [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: CGFloat = 15) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()

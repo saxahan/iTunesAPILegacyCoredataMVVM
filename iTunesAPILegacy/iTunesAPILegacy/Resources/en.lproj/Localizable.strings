@@ -20,5 +20,8 @@
 "TAB_SEARCH" = "Search";
 "TAB_SETTINGS" = "Settings";
 
+"PLACEHOLDER_YOU_CAN_SEARCH" = "You can search for a movie, a podcast, an album or something else by thing keywords.";
+"PLACEHOLDER_SEARCHED_NO_RESULT" = "There is no result of searching.";
+
 
 

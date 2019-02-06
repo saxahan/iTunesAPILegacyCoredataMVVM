@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIImageView {
-    func setImage(_ urlString: String, closure: ((UIImage?) -> Void)? = nil) {
+    func setImage(_ urlString: String, placeholderImage: UIImage? = #imageLiteral(resourceName: "item-placeholder"), closure: ((UIImage?) -> Void)? = nil) {
+        image = placeholderImage
+        
         guard let url = URL(string: urlString) else {
             closure?(nil)
             return

@@ -19,3 +19,6 @@
 
 "TAB_SEARCH" = "Arama";
 "TAB_SETTINGS" = "Ayarlar";
+
+"PLACEHOLDER_YOU_CAN_SEARCH" = "Anahtar kelimeler yazarak albümleri, filmleri, çalma listelerini ya da herhangi bir şeyi arayabilirsiniz.";
+"PLACEHOLDER_SEARCHED_NO_RESULT" = "Hiçbir arama sonucu bulunamadı.";

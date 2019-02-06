@@ -18,6 +18,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
+        collectionView.showPlaceholder()
         collectionView.register(MediaCollectionViewCell.self)
         bindings()
     }
@@ -26,10 +27,11 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
 
         // FIXME: remove this line before production
-        viewModel.search("steve jobs", media: .all)
+        viewModel.search("godfather", media: .all)
 
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
+                self?.collectionView.hidePlaceholder()
                 self?.collectionView.showIndicator()
             }
             else {
@@ -45,7 +47,12 @@ class MediaListViewController: BaseViewController, ViewModelBased {
                 slf.collectionView.reloadData()
 
                 // search result count
-                // slf.viewModel.resultCount
+                if slf.viewModel.resultCount == 0 {
+                    slf.collectionView.showPlaceholder("PLACEHOLDER_SEARCHED_NO_RESULT".localized, image: #imageLiteral(resourceName: "filter"))
+                }
+                else {
+                    slf.collectionView.hidePlaceholder()
+                }
             }
         }
     }

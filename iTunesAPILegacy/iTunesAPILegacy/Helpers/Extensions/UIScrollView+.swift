@@ -77,3 +77,21 @@ extension UIScrollView {
         _refreshControl = control
     }
 }
+
+// Placeholder
+
+extension UIScrollView {
+    func showPlaceholder(_ message: String? = "PLACEHOLDER_YOU_CAN_SEARCH".localized, image: UIImage = #imageLiteral(resourceName: "search"), alwaysTemplate: Bool = true) {
+        let placeholder = ListResultPlaceholderView.initFromNib()
+        placeholder.lblTitle.text = message
+        placeholder.imgViewPlaceholder.image = alwaysTemplate ? image.withRenderingMode(.alwaysTemplate) : image
+
+        (self as? UICollectionView)?.backgroundView = placeholder
+        (self as? UITableView)?.backgroundView = placeholder
+    }
+
+    func hidePlaceholder() {
+        (self as? UICollectionView)?.backgroundView = nil
+        (self as? UITableView)?.backgroundView = nil
+    }
+}

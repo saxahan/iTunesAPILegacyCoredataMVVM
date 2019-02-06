@@ -85,6 +85,15 @@
 		B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
 		B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
 		B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
+		B66384CA220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */; };
+		B66384CB220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */; };
+		B66384CC220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */; };
+		B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
+		B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
+		B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
+		B66384D2220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
+		B66384D3220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
+		B66384D4220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
 		B6B61786220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61787220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61788220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
@@ -236,6 +245,9 @@
 		B66384B4220ABA7800FBAEFC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B66384B8220ABB8100FBAEFC /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
+		B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultPlaceholderView.swift; sourceTree = "<group>"; };
+		B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListResultPlaceholderView.xib; sourceTree = "<group>"; };
+		B66384D1220B025E00FBAEFC /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		B6B61789220A030200E7F372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -373,6 +385,7 @@
 		B64C25F42209CBC20034C01B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B66384C8220AFEE100FBAEFC /* Placeholders */,
 				B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -384,6 +397,15 @@
 				B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B66384C8220AFEE100FBAEFC /* Placeholders */ = {
+			isa = PBXGroup;
+			children = (
+				B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */,
+				B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */,
+			);
+			path = Placeholders;
 			sourceTree = "<group>";
 		};
 		B6B61798220A219D00E7F372 /* Utils */ = {
@@ -571,6 +593,7 @@
 				B64C25F92209D2E50034C01B /* UIScrollView+.swift */,
 				B6B617AE220A2B8800E7F372 /* UIApplication+.swift */,
 				B6B617C9220A337500E7F372 /* UIViewController+.swift */,
+				B66384D1220B025E00FBAEFC /* Bundle+.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -740,6 +763,7 @@
 				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 				B66384AC220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +789,7 @@
 				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 				B66384AD220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +808,7 @@
 				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 				B66384AE220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +824,7 @@
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C458592208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
+				B66384D2220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
@@ -840,6 +867,7 @@
 				B66384B5220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
+				B66384CA220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */,
@@ -863,6 +891,7 @@
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
+				B66384D3220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
@@ -905,6 +934,7 @@
 				B66384B6220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
+				B66384CB220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */,
@@ -920,6 +950,7 @@
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
 				B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
+				B66384D4220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
@@ -962,6 +993,7 @@
 				B66384B7220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
+				B66384CC220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */,
