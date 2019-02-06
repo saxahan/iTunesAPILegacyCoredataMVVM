@@ -10,7 +10,7 @@ import Foundation
 
 typealias HTTPParameters = [String: Any]
 
-enum HTTPMethod: String {
+enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -18,7 +18,7 @@ enum HTTPMethod: String {
     // etc...
 }
 
-enum HTTPTask {
+enum HttpTask {
     case requestPlain
     case requestData(Data)
     case requestParameters(parameters: HTTPParameters)
@@ -27,11 +27,11 @@ enum HTTPTask {
 
 internal protocol ServiceType {
     var baseURL: URL { get }
-    var method: HTTPMethod { get }
-    var task: HTTPTask { get }
+    var method: HttpMethod { get }
+    var task: HttpTask { get }
     var headers: [String: String]? { get }
 }
 
-protocol ServiceDefinable: ServiceType {
+protocol HttpServiceDefinable: ServiceType {
 
 }

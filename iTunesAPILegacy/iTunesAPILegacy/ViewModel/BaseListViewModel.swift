@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BaseListViewModel<T, S: ServiceDefinable>: BaseViewModel<T, S> {
+class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     internal var searchTrigger = Observable<String>("")
     internal let term = Observable<String>("")
     internal let elements = Observable<[T]>([])

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MediaService: ServiceDefinable {
+enum MediaService: HttpServiceDefinable {
     case searchItunes(term: String, entity: MediaType, limit: Int)
 }
 
@@ -17,11 +17,11 @@ extension MediaService {
         return AppConfig.baseURL.appendingPathComponent("search")
     }
 
-    var method: HTTPMethod {
+    var method: HttpMethod {
         return .get
     }
 
-    var task: HTTPTask {
+    var task: HttpTask {
         switch self {
         case .searchItunes(let term, let entity, let limit):
             return .requestParameters(parameters: ["term": term,

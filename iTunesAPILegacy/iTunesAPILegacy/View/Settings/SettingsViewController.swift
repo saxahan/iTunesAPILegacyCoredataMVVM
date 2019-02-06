@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsViewController: BaseViewController, ViewModelBased {
-    var viewModel: MediaSearchViewModel!
+    var viewModel: SettingsViewModel!
 
     override func setup() {
         super.setup()

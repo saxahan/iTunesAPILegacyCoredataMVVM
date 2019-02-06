@@ -17,5 +17,8 @@
 "EXCEPTION_WRONG_BASE_URL" = "Wrong base url is defined";
 "EXCEPTION_CANNOT_CREATE_REQUEST_URL" = "Request url cannot be created";
 
+"TAB_SEARCH" = "Search";
+"TAB_SETTINGS" = "Settings";
+
 
 

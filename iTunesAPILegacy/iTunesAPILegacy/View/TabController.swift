@@ -10,18 +10,22 @@ import UIKit
 
 class TabController: UITabBarController, UITabBarControllerDelegate {
 
-    class func createTabBased(_ viewControllers: [BaseViewController] ) -> TabController {
-        let tabBarController = TabController(viewControllers)
+    class func createTabBased(_ viewControllers: [BaseViewController] = []) -> TabController {
+        let mediaListVc = MediaListViewController.instantiate(with: MediaListViewModel(), title: "TAB_SEARCH".localized, tabImage: #imageLiteral(resourceName: "search"))
+        let settingsVc = SettingsViewController.instantiate(title: "TAB_SETTINGS".localized, tabImage: #imageLiteral(resourceName: "settings"))
 
         UITabBar.appearance().barTintColor = Constants.colorTabBarBackground
         UITabBar.appearance().tintColor = Constants.colorTabBarSelected
         UITabBar.appearance().isTranslucent = true
 
-        tabBarController.viewControllers = viewControllers.map {
+        let viewControllers = [mediaListVc, settingsVc]
+        let tabs = viewControllers.map { (v) -> NavigationController in
             let navigator = NavigationController(navigationBarClass: ColorfulNavigationBar.self, toolbarClass: nil)
-            navigator.setViewControllers([$0], animated: false)
+            navigator.setViewControllers([v], animated: false)
             return navigator
         }
+
+        let tabBarController = TabController(tabs)
 
         return tabBarController
     }

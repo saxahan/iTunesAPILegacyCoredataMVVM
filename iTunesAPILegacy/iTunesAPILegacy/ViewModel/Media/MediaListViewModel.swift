@@ -1,5 +1,5 @@
 //
-//  MediaSearchViewModel.swift
+//  MediaListViewModel.swift
 //  iTunesAPILegacy
 //
 //  Created by Yunus Alkan on 5.02.2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MediaSearchViewModel: BaseListViewModel<Media, MediaService> {
+class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
     let entity = Observable<MediaType>(.all)

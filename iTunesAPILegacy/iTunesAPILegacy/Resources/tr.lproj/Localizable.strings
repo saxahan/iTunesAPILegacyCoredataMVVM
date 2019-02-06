@@ -16,3 +16,6 @@
 "ERROR_MAP_OBJECT" = "Obje çeviri hatası";
 "EXCEPTION_WRONG_BASE_URL" = "Hatalı base url tanımlanmış";
 "EXCEPTION_CANNOT_CREATE_REQUEST_URL" = "İstek url' i oluşturulamadı";
+
+"TAB_SEARCH" = "Arama";
+"TAB_SETTINGS" = "Ayarlar";

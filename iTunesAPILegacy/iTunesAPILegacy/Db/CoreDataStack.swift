@@ -11,6 +11,11 @@ import CoreData
 
 final class CoreDataStack {
 
+    struct Entities {
+        static let media: String = "Media"
+        static let settings: String = "Settings"
+    }
+
     static let databaseName = Constants.coreDataDatabaseName
 
     static var applicationDocumentsDirectory: NSURL = {

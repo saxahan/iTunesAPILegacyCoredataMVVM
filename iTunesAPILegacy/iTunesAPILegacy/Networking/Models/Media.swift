@@ -40,23 +40,6 @@ enum MediaType: String {
     case movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all
 }
 
-enum MediaKind: String {
-    case book,
-    album,
-    pdf,
-    podcast,
-    artist,
-    song,
-    podcastEpisode = "podcast-episode",
-    softwarePackage = "software-package",
-    tvEpisode = "tv-episode",
-    coachedAudio = "coached-audio",
-    featureMovie = "feature-movie",
-    interactiveBooklet = "interactive-booklet",
-    musicVideo = "music-video",
-    unknown
-}
-
 class Media: NSManagedObject, Codable {
 
     // MARK: - Core Data Managed Object
@@ -97,13 +80,25 @@ class Media: NSManagedObject, Codable {
 
     // MARK: - Decodable
 
-    required convenience init(from decoder: Decoder) throws {
-        guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: "Media", in: CoreDataStack.managedObjectContext) else {
-                fatalError("Failed to decode Media")
-        }
+//    init?(artistId: Int, artistName: String) {
+//
+//    }
 
-        self.init(entity: entity, insertInto: CoreDataStack.managedObjectContext)
+    required convenience init(from decoder: Decoder) throws {
+//        guard let context = decoder.userInfo[CodingUserInfoKey.context!] as? NSManagedObjectContext else { fatalError() }
+//        guard let entity = NSEntityDescription.entity(forEntityName: CoreDataStack.Entities.media, in: context) else { fatalError() }
+//        self.init(entity: entity, insertInto: context)
+
+        let context = CoreDataStack.managedObjectContext
+        guard let entity = NSEntityDescription.entity(forEntityName: CoreDataStack.Entities.media, in: context) else { fatalError() }
+        self.init(entity: entity, insertInto: context)
+
+//        guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
+//            let entity = NSEntityDescription.entity(forEntityName: CoreDataEntities.media, in: CoreDataStack.managedObjectContext) else {
+//                fatalError("Failed to decode Media")
+//        }
+//
+//        self.init(entity: entity, insertInto: CoreDataStack.managedObjectContext)
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
 

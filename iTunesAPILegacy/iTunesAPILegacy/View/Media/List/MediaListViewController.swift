@@ -1,21 +1,21 @@
 //
-//  MediaSearchViewController.swift
+//  MediaListViewController.swift
 //  iTunesAPILegacy
 //
-//  Created by Yunus Alkan on 5.02.2019.
+//  Created by Yunus Alkan on 6.02.2019.
 //  Copyright © 2019 Yunus Alkan. All rights reserved.
 //
 
 import UIKit
 
-class MediaSearchViewController: BaseViewController, ViewModelBased {
+class MediaListViewController: BaseViewController, ViewModelBased {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     let padding: CGFloat = 10
     var numOfColumns: Int = DeviceManager.shared.isPhone() ? 1 : 2
 
-    var viewModel: MediaSearchViewModel!
+    var viewModel: MediaListViewModel!
 
     override func setup() {
         super.setup()
@@ -28,7 +28,7 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
         let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
 
         viewModel.isLoading.value = true
-        viewModel.search("matrix", entity: .movie)
+        viewModel.search("steve jobs", entity: .movie)
 
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
@@ -52,7 +52,7 @@ class MediaSearchViewController: BaseViewController, ViewModelBased {
     }
 }
 
-extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return viewModel.sectionViewModels.value.count > 0 ? viewModel.sectionViewModels.value.count : 1
     }
@@ -88,7 +88,7 @@ extension MediaSearchViewController: UICollectionViewDelegate, UICollectionViewD
 
 // MARK: UICollectionView dynamic columns layout
 
-extension MediaSearchViewController: UICollectionViewDelegateFlowLayout {
+extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             debugPrint("Landscape")
@@ -116,3 +116,4 @@ extension MediaSearchViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: itemHeight)
     }
 }
+

@@ -52,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // enviroment
         AppConfig.configure()
 
+        // core data
+        
+        debugPrint(CoreDataStack.applicationDocumentsDirectory)
         // reachability
 //        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()
     }
@@ -72,12 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func startTabBased() {
-//        let searchVc = MediaSearchViewController.instantiate(with: MediaSearchViewModel())
-        let searchVc = MediaSearchViewController.instantiate(with: MediaSearchViewModel(), title: "Search", tabImage: #imageLiteral(resourceName: "search"))
-        let settingsVc = SettingsViewController.instantiate(with: MediaSearchViewModel(), title: "Settings", tabImage: #imageLiteral(resourceName: "settings"))
-        let tabVc = TabController.createTabBased([searchVc, settingsVc])
-
-        setupRootViewController(tabVc)
+        setupRootViewController(TabController.createTabBased())
     }
 }
 
