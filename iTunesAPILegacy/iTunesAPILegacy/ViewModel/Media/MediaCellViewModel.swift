@@ -12,12 +12,12 @@ class MediaCellViewModel: CellViewModel, CellViewModelTouchable {
     
     var cellTouched: (() -> Void)?
 
-    var trackId: NSNumber?
+    var trackId: Int?
     var name: String?
     var previewUrl: String?
-    var price: NSNumber?
+    var price: Double?
 
-    init(trackId: NSNumber?, name: String?, previewUrl: String?, price: NSNumber?) {
+    init(trackId: Int?, name: String?, previewUrl: String?, price: Double?) {
         self.trackId = trackId
         self.name = name
         self.previewUrl = previewUrl

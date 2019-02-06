@@ -57,6 +57,14 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             }
         }
 
+        // open detail screen
+        viewModel.openDetail.addObserver(fireNow: false) { [weak self] (detail) in
+            if let dt = detail {
+                let vc = MediaDetailViewController.instantiate(with: dt, title: nil)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+
         // loader
         let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
         viewModel.isLoading.addObserver { [weak self] (isLoading) in

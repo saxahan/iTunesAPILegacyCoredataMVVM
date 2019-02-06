@@ -12,6 +12,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
     let mediaType = Observable<MediaType>(.all)
+    let openDetail = Observable<MediaDetailViewModel?>(nil)
 
     override init() {
         super.init()
@@ -49,9 +50,13 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
                 let sections = SectionViewModel(cellViewModels: mediaList.map {
-                    let tmp = MediaCellViewModel(trackId: $0.trackId, name: $0.trackName, previewUrl: $0.artworkUrl600 ?? $0.artworkUrl100, price: $0.trackPrice)
+                    let obj = $0
+                    let tmp = MediaCellViewModel(trackId: obj.trackId, name: obj.trackName, previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100, price: obj.trackPrice)
                     tmp.cellTouched = {
-                        debugPrint("tapped \(tmp.name ?? "cell")")
+                        let detail = MediaDetailViewModel(obj)
+                        self?.openDetail.value = detail
+                        // open media detail
+                        
                     }
                     return tmp
                 })

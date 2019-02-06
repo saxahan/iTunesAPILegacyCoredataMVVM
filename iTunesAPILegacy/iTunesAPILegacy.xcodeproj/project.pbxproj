@@ -67,6 +67,21 @@
 		B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
+		B650D24E220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
+		B650D24F220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
+		B650D250220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
+		B650D251220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
+		B650D252220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
+		B650D253220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
+		B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
+		B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
+		B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
+		B650D25E220B76EB004EF756 /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */; };
+		B650D25F220B76EB004EF756 /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */; };
+		B650D260220B76EB004EF756 /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */; };
+		B650D261220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
+		B650D262220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
+		B650D263220B76EB004EF756 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */; };
 		B66384A9220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
 		B66384AA220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
 		B66384AB220AB90D00FBAEFC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */; };
@@ -245,6 +260,11 @@
 		B64C25F52209CBDE0034C01B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		B64C25F92209D2E50034C01B /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B650D24C220B681F004EF756 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
+		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
+		B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailViewController.xib; sourceTree = "<group>"; };
 		B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
 		B66384A8220AB90D00FBAEFC /* MediaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListViewController.xib; sourceTree = "<group>"; };
 		B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -359,6 +379,7 @@
 			children = (
 				B64C25A522098BD40034C01B /* MediaListViewModel.swift */,
 				B64C25EB2209B6BE0034C01B /* MediaCellViewModel.swift */,
+				B650D258220B7378004EF756 /* MediaDetailViewModel.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -367,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				B6B617BC220A31C100E7F372 /* List */,
+				B650D264220B76F2004EF756 /* Detail */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -398,6 +420,15 @@
 				B66384E9220B165A00FBAEFC /* SearchBar */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B650D264220B76F2004EF756 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */,
+				B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B66384AF220ABA2300FBAEFC /* Settings */ = {
@@ -582,6 +613,8 @@
 		B6C458192208BFE200153920 /* Db */ = {
 			isa = PBXGroup;
 			children = (
+				B650D24C220B681F004EF756 /* History+CoreDataClass.swift */,
+				B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */,
 				B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */,
 				B6C458202208CAA500153920 /* CoreDataStack.swift */,
 			);
@@ -782,6 +815,7 @@
 				B66384E6220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 				B66384AC220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B650D261220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +843,7 @@
 				B66384E7220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 				B66384AD220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B650D262220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,6 +864,7 @@
 				B66384E8220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 				B66384AE220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
+				B650D263220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +892,7 @@
 				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
 				B64C25E02209B1810034C01B /* UIImageView+.swift in Sources */,
+				B650D24E220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -873,6 +910,7 @@
 				B6B617CA220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F02209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
+				B650D251220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
 				B64C2580220976300034C01B /* Modelable.swift in Sources */,
@@ -882,6 +920,8 @@
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
 				B66384E2220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
+				B650D25E220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
+				B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384B9220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */,
@@ -924,6 +964,7 @@
 				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
 				B64C25E12209B1810034C01B /* UIImageView+.swift in Sources */,
+				B650D24F220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -941,6 +982,7 @@
 				B6B617CB220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F12209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
+				B650D252220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
 				B64C2581220976300034C01B /* Modelable.swift in Sources */,
@@ -950,6 +992,8 @@
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
 				B66384E3220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
+				B650D25F220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
+				B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BA220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */,
@@ -984,6 +1028,7 @@
 				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C458702208D83F00153920 /* Response.swift in Sources */,
 				B64C25E22209B1810034C01B /* UIImageView+.swift in Sources */,
+				B650D250220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -1001,6 +1046,7 @@
 				B6B617CC220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F22209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
+				B650D253220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
 				B64C2582220976300034C01B /* Modelable.swift in Sources */,
@@ -1010,6 +1056,8 @@
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
 				B66384E4220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
+				B650D260220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
+				B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BB220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */,

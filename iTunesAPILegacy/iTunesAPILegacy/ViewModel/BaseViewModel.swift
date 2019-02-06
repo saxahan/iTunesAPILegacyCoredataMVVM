@@ -13,13 +13,18 @@ class BaseViewModel<T, S: HttpServiceDefinable> {
     internal let isLoading = Observable<Bool>(false)
     internal let error = Observable<APIError?>(nil)
     internal let refreshTrigger = Observable<Void>(())
-    internal var element: Observable<T>?
+    internal let element = Observable<T?>(nil)
     
     // data provider
     internal let provider: APIProvider<S>
 
     init() {
         provider = APIProvider<S>()
+    }
+
+    convenience init(_ element: T) {
+        self.init()
+        self.element.value = element
     }
 }
 
