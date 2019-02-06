@@ -519,11 +519,11 @@
 		B6C458072208BF0700153920 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B66384AF220ABA2300FBAEFC /* Settings */,
 				B64C25CE2209A4570034C01B /* BaseListViewModel.swift */,
 				B64C258F22097DB90034C01B /* BaseViewModel.swift */,
 				B64C25F32209BAF30034C01B /* Common */,
 				B64C25A422098BC30034C01B /* Media */,
+				B66384AF220ABA2300FBAEFC /* Settings */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

@@ -11,9 +11,9 @@ import Foundation
 class BaseViewModel<T, S: HttpServiceDefinable> {
     // view states
     internal let isLoading = Observable<Bool>(false)
+    internal let error = Observable<APIError?>(nil)
     internal let refreshTrigger = Observable<Void>(())
     internal var element: Observable<T>?
-    internal var error: Observable<Error>?
     
     // data provider
     internal let provider: APIProvider<S>

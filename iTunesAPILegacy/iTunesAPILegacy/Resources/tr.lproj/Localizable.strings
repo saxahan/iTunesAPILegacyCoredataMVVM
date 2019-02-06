@@ -5,7 +5,8 @@
   Created by Yunus Alkan on 5.02.2019.
   Copyright © 2019 Yunus Alkan. All rights reserved.
 */
-"ERROR_UNKNOWN" = "Bilinmeyen hata";
+"ERROR_TIMEOUT" = "İstek zaman aşımına uğradı";
+"ERROR_UNKNOWN_X" = "Bilinmeyen hata: %@";
 "ERROR_SERVER_WITH_STATUS_CODE" = "%d server hatası";
 "ERROR_INVALID_URL" = "Hatalı url";
 "ERROR_INVALID_SEARCH_TERM" = "Hatalı arama kelimesi";

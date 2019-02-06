@@ -9,7 +9,8 @@
 import Foundation
 
 enum APIError: Swift.Error {
-    case unknown
+    case unknown(Swift.Error)
+    case timeout
     case invalidSearchTerm
     case invalidURL
     case invalidServerResponse
@@ -19,13 +20,17 @@ enum APIError: Swift.Error {
     case jsonMapping
     case objectMapping(Swift.Error)
     case errorMessageFromBackend(String)
+    case wrongBaseUrlDefined
+    case cannotCreateRequestUrl
 }
 
 extension APIError {
     var localizedDescription: String {
         switch self {
-        case .unknown:
-            return "ERROR_UNKNOWN".localized
+        case .timeout:
+            return "ERROR_TIMEOUT".localized
+        case .unknown(let err):
+            return String(format: "ERROR_UNKNOWN_X".localized, err.localizedDescription)
         case .invalidSearchTerm:
             return "ERROR_INVALID_SEARCH_TERM".localized
         case .invalidURL:
@@ -44,6 +49,10 @@ extension APIError {
             return "ERROR_MAP_OBJECT".localized
         case .errorMessageFromBackend(let errorMessage):
             return errorMessage
+        case .wrongBaseUrlDefined:
+            return "EXCEPTION_WRONG_BASE_URL".localized
+        case .cannotCreateRequestUrl:
+            return "EXCEPTION_CANNOT_CREATE_REQUEST_URL".localized
         }
     }
 }

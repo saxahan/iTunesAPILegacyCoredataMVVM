@@ -19,16 +19,18 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
-        dismissKeyboardOnTapOutside()
+        // dismissKeyboardOnTapOutside()
         initNavbar()
         bindings()
     }
 
     func bindings() {
+        // searchbar
         searchBar.onSearch = { [unowned self] text in
-            if text.count > Constants.minimumSearchCharacter {
-                if self.viewModel.term.value != text.trim() {
-                    self.viewModel.term.value = text.trim()
+            let txt = text.trim()
+            if txt.count > Constants.minimumSearchCharacter {
+                if self.viewModel.term.value != txt {
+                    self.viewModel.term.value = txt
                 }
             }
         }
@@ -36,11 +38,27 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             self?.viewModel.clearList()
         }
 
+        // collection view
         collectionView.showPlaceholder()
         collectionView.register(MediaCollectionViewCell.self)
 
-        let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
+        viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
+            if let slf = self {
+                slf.collectionView.reloadData()
 
+                // search result count
+                if slf.viewModel.resultCount == 0 {
+                    let cleared = slf.viewModel.cleared.value
+                    slf.collectionView.showPlaceholder("\(cleared ? "PLACEHOLDER_YOU_CAN_SEARCH" : "PLACEHOLDER_SEARCHED_NO_RESULT")".localized, image: cleared ? #imageLiteral(resourceName: "search") : #imageLiteral(resourceName: "visible") )
+                }
+                else {
+                    slf.collectionView.hidePlaceholder()
+                }
+            }
+        }
+
+        // loader
+        let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
                 self?.collectionView.hidePlaceholder()
@@ -49,22 +67,12 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             else {
                 self?.collectionView.hideIndicator()
                 refresher.endRefreshing()
-                self?.collectionView.reloadData()
             }
         }
 
-        viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
-            if let slf = self {
-                slf.collectionView.reloadData()
-
-                // search result count
-                if slf.viewModel.resultCount == 0 {
-                    slf.collectionView.showPlaceholder("PLACEHOLDER_SEARCHED_NO_RESULT".localized, image: #imageLiteral(resourceName: "visible"))
-                }
-                else {
-                    slf.collectionView.hidePlaceholder()
-                }
-            }
+        // error
+        viewModel.error.addObserver(fireNow: false) { [weak self] (err) in
+            self?.collectionView.showPlaceholder(err?.localizedDescription ?? "", image: #imageLiteral(resourceName: "error"))
         }
     }
 
@@ -90,25 +98,17 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
 extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.sectionViewModels.value.count > 0 ? viewModel.sectionViewModels.value.count : 0
+        return viewModel.sectionViewModels.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if viewModel.sectionViewModels.value.count > section {
-            let sectionViewModel = viewModel.sectionViewModels.value[section]
-            return sectionViewModel.cellViewModels.count
-        }
-
-        return 0
+        let sectionViewModel = viewModel.sectionViewModels.value[section]
+        return sectionViewModel.cellViewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard viewModel.sectionViewModels.value.count > indexPath.section else { return MediaCollectionViewCell() }
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.identifier, for: indexPath) as! MediaCollectionViewCell
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
-
-        guard sectionViewModel.cellViewModels.count > indexPath.row else { return MediaCollectionViewCell() }
         let cellViewModel = sectionViewModel.cellViewModels[indexPath.row]
 
         cell.setup(cellViewModel)
@@ -119,8 +119,6 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard viewModel.sectionViewModels.value.count > indexPath.section else { return }
-
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
         if let cellViewModel = sectionViewModel.cellViewModels[indexPath.row] as? CellViewModelTouchable {
             cellViewModel.cellTouched?()

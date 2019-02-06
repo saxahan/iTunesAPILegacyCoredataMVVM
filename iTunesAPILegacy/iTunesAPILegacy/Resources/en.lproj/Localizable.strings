@@ -5,7 +5,8 @@
   Created by Yunus Alkan on 5.02.2019.
   Copyright © 2019 Yunus Alkan. All rights reserved.
 */
-"ERROR_UNKNOWN" = "Unknown error";
+"ERROR_TIMEOUT" = "Request timeout";
+"ERROR_UNKNOWN_X" = "Unknown error: %@";
 "ERROR_SERVER_WITH_STATUS_CODE" = "Server error code with %d";
 "ERROR_INVALID_URL" = "Invalid url";
 "ERROR_INVALID_SEARCH_TERM" = "Invalid search term";

@@ -10,25 +10,7 @@ import Foundation
 
 // MARK: typealias blocks
 
-typealias Completion = (_ result: Result<Response, Error>) -> Void
-
-// MARK: Exception
-
-enum APIProviderException: Swift.Error {
-    case wrongBaseUrlDefined
-    case cannotCreateRequestUrl
-}
-
-extension APIProviderException {
-    var localizedDescription: String {
-        switch self {
-        case .wrongBaseUrlDefined:
-            return "EXCEPTION_WRONG_BASE_URL".localized
-        case .cannotCreateRequestUrl:
-            return "EXCEPTION_CANNOT_CREATE_REQUEST_URL".localized
-        }
-    }
-}
+typealias Completion = (_ result: Result<Response, APIError>) -> Void
 
 // MARK: Provider
 
@@ -43,7 +25,7 @@ class APIProvider<Service: ServiceType>: APIProviderType {
 
     func request(_ service: Service, completion: @escaping Completion) {
         guard var components = URLComponents(url: service.baseURL, resolvingAgainstBaseURL: true) else {
-            completion(Result<Response, Error>.failure(APIProviderException.wrongBaseUrlDefined))
+            completion(Result<Response, APIError>.failure(APIError.wrongBaseUrlDefined))
             return
         }
 
@@ -60,7 +42,7 @@ class APIProvider<Service: ServiceType>: APIProviderType {
         }
 
         guard let requestUrl = components.url else {
-            completion(Result<Response, Error>.failure(APIProviderException.cannotCreateRequestUrl))
+            completion(Result<Response, APIError>.failure(APIError.cannotCreateRequestUrl))
             return
         }
 
@@ -72,10 +54,19 @@ class APIProvider<Service: ServiceType>: APIProviderType {
         debugPrint(request)
 
         URLSession.shared.dataTask(with: request) { [unowned self] data, response, error in
+            if let hasError = error {
+                completion(Result<Response, APIError>.failure(.unknown(hasError)))
+                return
+            }
+
+            if let respon = response as? HTTPURLResponse, respon.statusCode == -1009 {
+                // timeout error
+                completion(Result<Response, APIError>.failure(.timeout))
+                return
+            }
+            
             guard let dat = data else {
-                let err = APIError.missingData
-                completion(Result<Response, Error>.failure(err))
-                debugPrint()
+                completion(Result<Response, APIError>.failure(.missingData))
                 return
             }
 
@@ -83,27 +74,26 @@ class APIProvider<Service: ServiceType>: APIProviderType {
                 self.isSuccessCode(respon.statusCode), error == nil else {
 
                     if let err = error {
-                        debugPrint(err.localizedDescription)
-                        completion(Result<Response, Error>.failure(err))
+                        completion(Result<Response, APIError>.failure(.unknown(err)))
                         return
                     }
 
                     do {
                         let errResponse = try JSONSerialization.jsonObject(with: dat, options: .allowFragments) as? [String: AnyObject]
                         let errMsg = errResponse?["errorMessage"] as? String ?? ""
-                        completion(Result<Response, Error>.failure(APIError.errorMessageFromBackend(errMsg)))
+                        completion(Result<Response, APIError>.failure(APIError.errorMessageFromBackend(errMsg)))
                         debugPrint(errMsg)
                         return
                     } catch let errr {
                         debugPrint(errr)
-                        completion(Result<Response, Error>.failure(errr))
+                        completion(Result<Response, APIError>.failure(.unknown(errr)))
                         return
                     }
             }
 
             let resp = (Response(statusCode: respon.statusCode, data: dat, request: request, response: respon))
             debugPrint(resp)
-            completion(Result<Response, Error>.success(resp))
+            completion(Result<Response, APIError>.success(resp))
 
         }.resume()
     }

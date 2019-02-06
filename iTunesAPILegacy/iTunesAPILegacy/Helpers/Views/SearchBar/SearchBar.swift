@@ -23,7 +23,30 @@ class SearchBar: UISearchBar {
 
     private func setup() {
         self.placeholder = "PLACEHOLDER_SEARCH".localized
+        self.showsCancelButton = true
+        self.tintColor = Constants.colorNavbarForeground
         self.delegate = self
+
+        if let buttonItem = self.subviews.first?.subviews.last as? UIButton {
+            buttonItem.setTitleColor(Constants.colorNavbarForeground, for: .normal)
+        }
+    }
+
+    private func clear() {
+        self.text = ""
+        self.onCancel?()
+    }
+
+    private func throttleSearch(_ searchBar: UISearchBar) {
+        if searchBar.text?.isEmpty == true {
+            // cleared text
+            clear()
+            return
+        }
+
+        // to limit network activity, wait for throttle time interval
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(performSearch), object: nil)
+        self.perform(#selector(performSearch), with: nil, afterDelay: throttleInterval)
     }
 
     @objc private func performSearch() {
@@ -33,16 +56,15 @@ class SearchBar: UISearchBar {
 
 extension SearchBar: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.onCancel?()
+        clear()
+        searchBar.resignFirstResponder()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // no necessary :)
+        throttleSearch(searchBar)
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // to limit network activity, reload half a second after last key press.
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(performSearch), object: nil)
-        self.perform(#selector(performSearch), with: nil, afterDelay: throttleInterval)
+        throttleSearch(searchBar)
     }
 }

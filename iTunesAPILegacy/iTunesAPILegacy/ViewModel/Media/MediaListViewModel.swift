@@ -11,32 +11,36 @@ import Foundation
 class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
-    let media = Observable<MediaType>(.all)
+    let mediaType = Observable<MediaType>(.all)
 
     override init() {
         super.init()
 
         term.addObserver(fireNow: false) { [weak self] (text) in
-            self?.reload()
+            if !text.isEmpty {
+                self?.reload()
+            }
         }
     }
 
     override func reload() {
-        search(term.value, media: media.value)
+        search(term.value, media: mediaType.value)
     }
 
     override func clearList() {
         super.clearList()
+        term.value = ""
         sectionViewModels.value = []
     }
 
     // MARK: Service calls
     
     func search(_ term: String, media: MediaType = .all, limit: Int = 100) {
-        self.media.value = media
+        self.mediaType.value = media
         isLoading.value = true
 
         provider.request(.searchItunes(term: term, media: media, limit: limit)) { [weak self] (result) in
+            self?.cleared.value = false
             self?.isLoading.value = false
 
             switch result {
@@ -54,7 +58,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                 self?.sectionViewModels.value = [sections]
                 break
             case .failure(let error):
-                self?.error?.value = error
+                self?.error.value = error
                 break
             }
         }
