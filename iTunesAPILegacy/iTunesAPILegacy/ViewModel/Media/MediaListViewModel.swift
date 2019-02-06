@@ -15,14 +15,24 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     override init() {
         super.init()
+
+        term.addObserver(fireNow: false) { [weak self] (text) in
+            self?.reload()
+        }
     }
 
     override func reload() {
         search(term.value, media: media.value)
     }
+
+    override func clearList() {
+        super.clearList()
+        sectionViewModels.value = []
+    }
+
+    // MARK: Service calls
     
-    func search(_ term: String, media: MediaType, limit: Int = 100) {
-        self.term.value = term
+    func search(_ term: String, media: MediaType = .all, limit: Int = 100) {
         self.media.value = media
         isLoading.value = true
 

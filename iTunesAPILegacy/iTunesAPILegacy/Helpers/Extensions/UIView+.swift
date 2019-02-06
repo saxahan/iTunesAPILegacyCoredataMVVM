@@ -9,14 +9,13 @@
 import UIKit
 
 extension UIView {
-
     static func initFromNib() -> Self {
         func instanceFromNib<T: UIView>() -> T {
             return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.first as! T
         }
         return instanceFromNib()
     }
-    
+
     func roundCorners(_ corners: UIRectCorner = [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: CGFloat = 15) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -24,6 +23,28 @@ extension UIView {
         self.layer.mask = mask
     }
 
+
+    class func createButton(frame btnFrame: CGRect = .zero, imageName: String, alwaysTemplate: Bool = false, title: String? = nil, target: Any?, action: Selector) -> UIButton {
+        let btn = UIButton(frame: btnFrame)
+        btn.setImage(UIImage(named: imageName)?.withRenderingMode(alwaysTemplate ? .alwaysTemplate : .alwaysOriginal), for: .normal)
+        btn.addTarget(target, action: action, for: .touchUpInside)
+
+        if let title = title {
+            btn.titleLabel?.adjustsFontSizeToFitWidth = true
+            btn.titleLabel?.font = Constants.fontPrimaryButton
+            btn.setTitleColor(.white, for: .normal)
+            btn.setTitle(title, for: .normal)
+            btn.semanticContentAttribute = .forceRightToLeft
+            btn.imageEdgeInsets = UIEdgeInsets(top: btn.imageEdgeInsets.top, left: 10, bottom: btn.imageEdgeInsets.bottom, right: -10)
+        }
+
+        return btn
+    }
+}
+
+// MARK: Inspectable
+
+extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

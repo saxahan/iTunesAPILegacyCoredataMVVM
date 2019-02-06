@@ -15,4 +15,13 @@ extension UIViewController {
         }
         return instanceFromNib()
     }
+
+    func dismissKeyboardOnTapOutside() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

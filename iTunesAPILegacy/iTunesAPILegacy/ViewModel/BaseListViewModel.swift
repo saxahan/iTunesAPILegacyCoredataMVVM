@@ -21,4 +21,9 @@ class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     func reload() {
 
     }
+
+    func clearList() {
+        resultCount = 0
+        elements.value = []
+    }
 }

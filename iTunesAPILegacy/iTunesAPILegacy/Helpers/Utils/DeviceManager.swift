@@ -21,4 +21,12 @@ class DeviceManager {
     func isPhone() -> Bool {
         return currentDevice.userInterfaceIdiom == .phone
     }
+
+    func isLandscape() -> Bool {
+        return currentDevice.orientation.isLandscape
+    }
+
+    func isPortrait() -> Bool {
+        return currentDevice.orientation.isPortrait
+    }
 }

@@ -91,9 +91,15 @@
 		B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
 		B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
 		B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */; };
-		B66384D2220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
-		B66384D3220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
-		B66384D4220B025E00FBAEFC /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384D1220B025E00FBAEFC /* Bundle+.swift */; };
+		B66384E2220B157200FBAEFC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384E1220B157200FBAEFC /* SearchBar.swift */; };
+		B66384E3220B157200FBAEFC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384E1220B157200FBAEFC /* SearchBar.swift */; };
+		B66384E4220B157200FBAEFC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384E1220B157200FBAEFC /* SearchBar.swift */; };
+		B66384E6220B15AC00FBAEFC /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384E5220B15AC00FBAEFC /* SearchBar.xib */; };
+		B66384E7220B15AC00FBAEFC /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384E5220B15AC00FBAEFC /* SearchBar.xib */; };
+		B66384E8220B15AC00FBAEFC /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66384E5220B15AC00FBAEFC /* SearchBar.xib */; };
+		B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
+		B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
+		B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
 		B6B61786220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61787220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61788220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
@@ -247,7 +253,9 @@
 		B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultPlaceholderView.swift; sourceTree = "<group>"; };
 		B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListResultPlaceholderView.xib; sourceTree = "<group>"; };
-		B66384D1220B025E00FBAEFC /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		B66384E1220B157200FBAEFC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B66384E5220B15AC00FBAEFC /* SearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
+		B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
 		B6B61789220A030200E7F372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -385,8 +393,9 @@
 		B64C25F42209CBC20034C01B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B66384C8220AFEE100FBAEFC /* Placeholders */,
 				B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */,
+				B66384C8220AFEE100FBAEFC /* Placeholders */,
+				B66384E9220B165A00FBAEFC /* SearchBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,6 +415,15 @@
 				B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */,
 			);
 			path = Placeholders;
+			sourceTree = "<group>";
+		};
+		B66384E9220B165A00FBAEFC /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				B66384E1220B157200FBAEFC /* SearchBar.swift */,
+				B66384E5220B15AC00FBAEFC /* SearchBar.xib */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		B6B61798220A219D00E7F372 /* Utils */ = {
@@ -593,7 +611,7 @@
 				B64C25F92209D2E50034C01B /* UIScrollView+.swift */,
 				B6B617AE220A2B8800E7F372 /* UIApplication+.swift */,
 				B6B617C9220A337500E7F372 /* UIViewController+.swift */,
-				B66384D1220B025E00FBAEFC /* Bundle+.swift */,
+				B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -761,6 +779,7 @@
 				B6B61786220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458282208CFF100153920 /* Config-Staging.plist in Resources */,
 				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
+				B66384E6220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 				B66384AC220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
@@ -787,6 +806,7 @@
 				B6B61787220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458392208D07500153920 /* Config-Staging.plist in Resources */,
 				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
+				B66384E7220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 				B66384AD220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
@@ -806,6 +826,7 @@
 				B6B61788220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */,
 				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
+				B66384E8220B15AC00FBAEFC /* SearchBar.xib in Resources */,
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 				B66384AE220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
@@ -824,9 +845,9 @@
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C458592208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
-				B66384D2220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
+				B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
@@ -859,6 +880,7 @@
 				B64C257C220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
+				B66384E2220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384B9220ABB8100FBAEFC /* SettingsService.swift in Sources */,
@@ -891,9 +913,9 @@
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
-				B66384D3220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
+				B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
@@ -926,6 +948,7 @@
 				B64C257D220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
+				B66384E3220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BA220ABB8100FBAEFC /* SettingsService.swift in Sources */,
@@ -950,9 +973,9 @@
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
 				B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
-				B66384D4220B025E00FBAEFC /* Bundle+.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
+				B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
 				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
@@ -985,6 +1008,7 @@
 				B64C257E220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
+				B66384E4220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BB220ABB8100FBAEFC /* SettingsService.swift in Sources */,

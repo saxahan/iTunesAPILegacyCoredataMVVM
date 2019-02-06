@@ -8,38 +8,44 @@
 
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 extension UIImageView {
     func setImage(_ urlString: String, placeholderImage: UIImage? = #imageLiteral(resourceName: "item-placeholder"), closure: ((UIImage?) -> Void)? = nil) {
-        image = placeholderImage
-        
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        else {
+            image = placeholderImage
+        }
+
         guard let url = URL(string: urlString) else {
             closure?(nil)
             return
         }
 
-        URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
-                debugPrint("error: \(String(describing: error))")
                 closure?(nil)
                 return
             }
 
             guard response != nil else {
-                debugPrint("no response")
                 closure?(nil)
                 return
             }
 
             guard data != nil else {
-                debugPrint("no data")
                 closure?(nil)
                 return
             }
 
             DispatchQueue.main.async { [weak self] in
-                let dImage = UIImage(data: data!)
-                self?.image = dImage
-                closure?(dImage)
+                let cache = UIImage(data: data!)
+                imageCache.setObject(cache!, forKey: urlString as AnyObject)
+                self?.image = cache
+                closure?(cache)
             }
         }.resume()
     }

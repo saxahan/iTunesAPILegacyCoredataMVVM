@@ -9,5 +9,5 @@
 import Foundation
 
 struct SectionViewModel {
-    let cellViewModels: [CellViewModel]
+    var cellViewModels: [CellViewModel]
 }

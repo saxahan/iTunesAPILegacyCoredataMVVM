@@ -26,4 +26,8 @@ struct Constants {
     // Fonts
     static let fontNavbar: UIFont = UIFont.boldSystemFont(ofSize: 18)
     static let fontTabBar: UIFont = UIFont.systemFont(ofSize: 13)
+    static let fontPrimaryButton: UIFont = UIFont.boldSystemFont(ofSize: 20)
+
+    // Numbers
+    static let minimumSearchCharacter: Int = 0
 }

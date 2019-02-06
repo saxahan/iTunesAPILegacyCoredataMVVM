@@ -11,23 +11,35 @@ import UIKit
 class MediaListViewController: BaseViewController, ViewModelBased {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: SearchBar!
 
-    var numOfColumns: Int = DeviceManager.shared.isPhone() ? 1 : 2
+    var numOfColumns: Int = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
     var viewModel: MediaListViewModel!
 
     override func setup() {
         super.setup()
 
-        collectionView.showPlaceholder()
-        collectionView.register(MediaCollectionViewCell.self)
+        dismissKeyboardOnTapOutside()
+        initNavbar()
         bindings()
     }
 
     func bindings() {
-        let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
+        searchBar.onSearch = { [unowned self] text in
+            if text.count > Constants.minimumSearchCharacter {
+                if self.viewModel.term.value != text.trim() {
+                    self.viewModel.term.value = text.trim()
+                }
+            }
+        }
+        searchBar.onCancel = { [weak self] in
+            self?.viewModel.clearList()
+        }
 
-        // FIXME: remove this line before production
-        viewModel.search("godfather", media: .all)
+        collectionView.showPlaceholder()
+        collectionView.register(MediaCollectionViewCell.self)
+
+        let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
 
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
@@ -37,9 +49,8 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             else {
                 self?.collectionView.hideIndicator()
                 refresher.endRefreshing()
+                self?.collectionView.reloadData()
             }
-
-            self?.collectionView.reloadData()
         }
 
         viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
@@ -48,13 +59,28 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
                 // search result count
                 if slf.viewModel.resultCount == 0 {
-                    slf.collectionView.showPlaceholder("PLACEHOLDER_SEARCHED_NO_RESULT".localized, image: #imageLiteral(resourceName: "filter"))
+                    slf.collectionView.showPlaceholder("PLACEHOLDER_SEARCHED_NO_RESULT".localized, image: #imageLiteral(resourceName: "visible"))
                 }
                 else {
                     slf.collectionView.hidePlaceholder()
                 }
             }
         }
+    }
+
+    func initNavbar() {
+        let filterBtn = UIBarButtonItem.createButton(imageName: "filter", target: self, action: #selector(filterTapped))
+        let layoutBtn = UIBarButtonItem.createButton(imageName: "keypad", target: self, action: #selector(layoutTapped))
+
+        navigationItem.rightBarButtonItems = [filterBtn, layoutBtn]
+    }
+
+    @objc func filterTapped() {
+        debugPrint(#function)
+    }
+
+    @objc func layoutTapped() {
+        debugPrint(#function)
     }
 
     @objc func refreshed() {
@@ -64,7 +90,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
 extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.sectionViewModels.value.count > 0 ? viewModel.sectionViewModels.value.count : 1
+        return viewModel.sectionViewModels.value.count > 0 ? viewModel.sectionViewModels.value.count : 0
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,8 +103,12 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard viewModel.sectionViewModels.value.count > indexPath.section else { return MediaCollectionViewCell() }
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.identifier, for: indexPath) as! MediaCollectionViewCell
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
+
+        guard sectionViewModel.cellViewModels.count > indexPath.row else { return MediaCollectionViewCell() }
         let cellViewModel = sectionViewModel.cellViewModels[indexPath.row]
 
         cell.setup(cellViewModel)
@@ -89,6 +119,8 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard viewModel.sectionViewModels.value.count > indexPath.section else { return }
+
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
         if let cellViewModel = sectionViewModel.cellViewModels[indexPath.row] as? CellViewModelTouchable {
             cellViewModel.cellTouched?()
@@ -100,15 +132,7 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 
 extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            debugPrint("Landscape")
-            numOfColumns = 2
-        }
-        else {
-            debugPrint("Portrait")
-            numOfColumns = DeviceManager.shared.isPhone() ? 1 : 2
-        }
-
+        numOfColumns = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
         collectionView?.collectionViewLayout.invalidateLayout()
         super.viewWillTransition(to: size, with: coordinator)
     }
