@@ -34,7 +34,7 @@ class iTunesAPILegacyTests: XCTestCase {
     // MARK: CoreData
 
     func testCoreDataMediaInsert() {
-        
+
     }
 
     // MARK: Media API

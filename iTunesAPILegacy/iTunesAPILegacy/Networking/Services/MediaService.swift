@@ -9,7 +9,7 @@
 import Foundation
 
 enum MediaService: HttpServiceDefinable {
-    case searchItunes(term: String, entity: MediaType, limit: Int)
+    case searchItunes(term: String, media: MediaType, limit: Int)
 }
 
 extension MediaService {
@@ -23,9 +23,9 @@ extension MediaService {
 
     var task: HttpTask {
         switch self {
-        case .searchItunes(let term, let entity, let limit):
+        case .searchItunes(let term, let media, let limit):
             return .requestParameters(parameters: ["term": term,
-                                                   "entity": entity.rawValue,
+                                                   "media": media.rawValue,
                                                    "limit": "\(limit)"
                 ])
 //        default:

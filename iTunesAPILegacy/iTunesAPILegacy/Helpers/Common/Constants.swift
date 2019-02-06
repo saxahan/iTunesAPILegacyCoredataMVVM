@@ -24,6 +24,6 @@ struct Constants {
     static let colorTabBarSelected: UIColor = #colorLiteral(red: 0.07450980392, green: 0.07450980392, blue: 0.07450980392, alpha: 1)
 
     // Fonts
-    static let fontNavbar: UIFont = UIFont.boldSystemFont(ofSize: 20)
+    static let fontNavbar: UIFont = UIFont.boldSystemFont(ofSize: 18)
     static let fontTabBar: UIFont = UIFont.systemFont(ofSize: 13)
 }

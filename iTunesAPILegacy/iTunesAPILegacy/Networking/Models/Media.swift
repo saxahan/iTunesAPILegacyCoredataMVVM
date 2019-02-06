@@ -157,5 +157,4 @@ class Media: NSManagedObject, Codable {
         try container.encodeIfPresent(currency, forKey: .currency)
         try container.encodeIfPresent(primaryGenreName, forKey: .primaryGenreName)
     }
-
 }

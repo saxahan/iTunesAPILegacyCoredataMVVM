@@ -12,7 +12,7 @@ class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     internal var searchTrigger = Observable<String>("")
     internal let term = Observable<String>("")
     internal let elements = Observable<[T]>([])
-    internal let resultCount = Observable<Int>(0)
+    internal var resultCount = 0
 
     override init() {
         super.init()

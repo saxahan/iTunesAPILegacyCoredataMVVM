@@ -11,26 +11,27 @@ import Foundation
 class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     let sectionViewModels = Observable<[SectionViewModel]>([])
-    let entity = Observable<MediaType>(.all)
+    let media = Observable<MediaType>(.all)
 
     override init() {
         super.init()
     }
 
     override func reload() {
-        search(term.value, entity: entity.value)
+        search(term.value, media: media.value)
     }
     
-    func search(_ term: String, entity: MediaType, limit: Int = 100) {
+    func search(_ term: String, media: MediaType, limit: Int = 100) {
         self.term.value = term
-        self.entity.value = entity
+        self.media.value = media
+        isLoading.value = true
 
-        provider.request(.searchItunes(term: term, entity: entity, limit: limit)) { [weak self] (result) in
+        provider.request(.searchItunes(term: term, media: media, limit: limit)) { [weak self] (result) in
             self?.isLoading.value = false
 
             switch result {
             case .success(let response):
-                self?.resultCount.value = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
+                self?.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
 
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
                 let sections = SectionViewModel(cellViewModels: mediaList.map {

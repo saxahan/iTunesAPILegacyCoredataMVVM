@@ -12,9 +12,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    let padding: CGFloat = 10
     var numOfColumns: Int = DeviceManager.shared.isPhone() ? 1 : 2
-
     var viewModel: MediaListViewModel!
 
     override func setup() {
@@ -27,8 +25,8 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     func bindings() {
         let refresher = collectionView.addRefreshControl(target: self, action: #selector(refreshed))
 
-        viewModel.isLoading.value = true
-        viewModel.search("steve jobs", entity: .movie)
+        // FIXME: remove this line before production
+        viewModel.search("steve jobs", media: .all)
 
         viewModel.isLoading.addObserver { [weak self] (isLoading) in
             if isLoading {
@@ -43,7 +41,12 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         }
 
         viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
-            self?.collectionView.reloadData()
+            if let slf = self {
+                slf.collectionView.reloadData()
+
+                // search result count
+                // slf.viewModel.resultCount
+            }
         }
     }
 
