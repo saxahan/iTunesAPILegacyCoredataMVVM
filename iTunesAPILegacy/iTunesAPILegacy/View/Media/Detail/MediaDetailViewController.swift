@@ -18,11 +18,23 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.didAppeared?()
+        viewModel.visit?()
     }
 
     func bindings() {
 
     }
 
+    override func initNavbar() {
+        super.initNavbar()
+
+        let deleteBtn = UIBarButtonItem.createButton(imageName: "trash", target: self, action: #selector(deleteTapped))
+        navigationItem.rightBarButtonItem = deleteBtn
+    }
+
+    @objc func deleteTapped() {
+        // FIXME: add confirmation dialog
+        self.navigationController?.popViewController(animated: true)
+        viewModel.delete?()
+    }
 }

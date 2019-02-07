@@ -9,21 +9,13 @@
 import Foundation
 
 class MediaListViewModel: BaseListViewModel<Media, MediaService> {
-
-    let sectionViewModels = Observable<[SectionViewModel]>([])
     let mediaType = Observable<MediaType>(.all)
-    let openDetail = Observable<MediaDetailViewModel?>(nil)
+    let selectedDetail = Observable<MediaDetailViewModel?>(nil)
     let histories = Observable<[History]>([])
 
     override init(_ element: Media? = nil) {
         super.init(element)
-
-        do {
-            histories.value = try CoreDataStack.managedObjectContext.fetchObjects(History.self)
-        } catch {
-            debugPrint(error)
-        }
-
+        
         term.addObserver(fireNow: false) { [weak self] (text) in
             if !text.isEmpty {
                 self?.reload()
@@ -43,6 +35,14 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
     // MARK: Service calls
     
+    func fetchHistories() {
+        do {
+            histories.value = try CoreDataStack.managedObjectContext.fetchObjects(History.self)
+        } catch {
+            debugPrint(error)
+        }
+    }
+    
     func search(_ term: String, media: MediaType = .all, limit: Int = 100) {
         self.mediaType.value = media
         isLoading.value = true
@@ -54,21 +54,40 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
             switch result {
             case .success(let response):
                 self.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
-
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
-                let sections = SectionViewModel(cellViewModels: mediaList.map {
-                    let obj = $0
-                    let visitedBefore = self.histories.value.contains { $0.trackId == Int64(obj.trackId ?? 0) && $0.isVisited }
-                    let tmp = MediaCellViewModel(trackId: obj.trackId, name: obj.trackName, previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100, price: obj.trackPrice, isVisited: visitedBefore)
-                    tmp.cellTouched = {
-                        let detail = MediaDetailViewModel(obj)
-                        self.openDetail.value = detail
-                        // open media detail
-                        
+                self.fetchHistories()
+
+                var cells = [MediaCellViewModel]()
+                for (index, obj) in mediaList.enumerated() {
+                    if let trackId = obj.trackId {
+                        let deleted = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.isRemoved }
+
+                        if !deleted {
+                            let visited = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.isVisited }
+                            let cell = MediaCellViewModel(trackId: trackId,
+                                                          name: obj.trackName,
+                                                          previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100,
+                                                          price: obj.trackPrice,
+                                                          isVisited: visited,
+                                                          isDeleted: deleted,
+                                                          row: index)
+
+                            cell.cellTouched = {
+                                // open media detail
+                                self.selectedSection = cell.section
+                                self.selectedRow = cell.row
+                                self.selectedDetail.value = MediaDetailViewModel(obj)
+                            }
+
+                            cells.append(cell)
+                        }
                     }
-                    return tmp
-                })
-                self.sectionViewModels.value = [sections]
+                    else {
+                        debugPrint("no trackId")
+                    }
+                }
+
+                self.sectionViewModels.value = [SectionViewModel(title: nil, cells: cells)]
                 break
             case .failure(let error):
                 self.error.value = error

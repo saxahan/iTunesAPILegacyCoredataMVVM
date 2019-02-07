@@ -9,16 +9,31 @@
 import Foundation
 
 class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
-
+    
     override init(_ element: Media? = nil) {
         super.init(element)
 
-        didAppeared = {
+        visit = { [weak self] in
             if let el = element, let trackId = el.trackId {
                 let history = History(trackId: trackId, isRemoved: false, isVisited: true)
+                
+                do {
+                    try history.save()
+                    self?.state.value = .isVisited(true)
+                }
+                catch {
+                    debugPrint(error)
+                }
+            }
+        }
+
+        delete = { [weak self] in
+            if let el = element, let trackId = el.trackId {
+                let history = History(trackId: trackId, isRemoved: true, isVisited: false)
 
                 do {
                     try history.save()
+                    self?.state.value = .isDeleted(true)
                 }
                 catch {
                     debugPrint(error)
@@ -26,5 +41,4 @@ class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
             }
         }
     }
-
 }

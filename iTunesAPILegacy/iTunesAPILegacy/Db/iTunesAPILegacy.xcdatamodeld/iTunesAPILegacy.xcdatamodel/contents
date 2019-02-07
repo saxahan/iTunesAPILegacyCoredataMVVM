@@ -37,7 +37,7 @@
         <attribute name="wrapperType" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Media" positionX="-54.8984375" positionY="-6.04296875" width="128" height="390"/>
         <element name="History" positionX="-45" positionY="153" width="128" height="105"/>
+        <element name="Media" positionX="-54.8984375" positionY="-6.04296875" width="128" height="390"/>
     </elements>
 </model>

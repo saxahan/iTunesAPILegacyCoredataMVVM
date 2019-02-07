@@ -29,8 +29,8 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
         guard let viewModel = viewModel as? MediaCellViewModel else { return }
         self.viewModel = viewModel
 
-        backgroundColor = viewModel.isVisited ? .red : .clear
-        
+        backgroundColor = viewModel.isVisited ? Constants.colorVisitedBackground : .clear
+
         if let prevUrl = self.viewModel?.previewUrl {
             imgViewPreview.setImage(prevUrl)
         }

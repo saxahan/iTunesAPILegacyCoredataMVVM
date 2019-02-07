@@ -10,9 +10,6 @@
 		B64C257C220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257D220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257E220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
-		B64C2580220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
-		B64C2581220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
-		B64C2582220976300034C01B /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257F220976300034C01B /* Modelable.swift */; };
 		B64C2588220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
 		B64C2589220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
 		B64C258A220976D20034C01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C2587220976D20034C01B /* Constants.swift */; };
@@ -160,13 +157,15 @@
 		B6B617DA220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
 		B6B617DB220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
 		B6B617DC220A36D100E7F372 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B617D6220A36D100E7F372 /* SplashViewController.xib */; };
+		B6C067BC220C2DB500E885B1 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C067BB220C2DB500E885B1 /* States.swift */; };
+		B6C067BD220C2DB500E885B1 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C067BB220C2DB500E885B1 /* States.swift */; };
+		B6C067BE220C2DB500E885B1 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C067BB220C2DB500E885B1 /* States.swift */; };
 		B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C457E92208BD4100153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
 		B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
 		B6C457F72208BD4100153920 /* iTunesAPILegacyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457F62208BD4100153920 /* iTunesAPILegacyTests.swift */; };
 		B6C458032208BE4F00153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
 		B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
-		B6C458092208BF4100153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
 		B6C4581C2208C1DA00153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
 		B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */; };
 		B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
@@ -182,7 +181,6 @@
 		B6C458322208D07500153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
 		B6C458342208D07500153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
 		B6C458362208D07500153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
-		B6C458372208D07500153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
 		B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
 		B6C458392208D07500153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
 		B6C4583A2208D07500153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
@@ -195,7 +193,6 @@
 		B6C458482208D0DD00153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
 		B6C4584A2208D0DD00153920 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C458022208BE4F00153920 /* CoreData.framework */; };
 		B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
-		B6C4584D2208D0DD00153920 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6C458082208BF4100153920 /* .gitkeep */; };
 		B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C457EA2208BD4100153920 /* LaunchScreen.storyboard */; };
 		B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
 		B6C458502208D0DD00153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
@@ -247,7 +244,6 @@
 
 /* Begin PBXFileReference section */
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		B64C257F220976300034C01B /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		B64C2587220976D20034C01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B64C258F22097DB90034C01B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B64C25A522098BD40034C01B /* MediaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +294,7 @@
 		B6B617CE220A364F00E7F372 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		B6B617D5220A36D100E7F372 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B6B617D6220A36D100E7F372 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		B6C067BB220C2DB500E885B1 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B6C457DB2208BD4000153920 /* iTunesAPILegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAPILegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C457DE2208BD4000153920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C457E82208BD4100153920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -308,7 +305,6 @@
 		B6C457F82208BD4100153920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C458022208BE4F00153920 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B6C458052208BE7100153920 /* iTunesAPILegacy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAPILegacy.xcdatamodel; sourceTree = "<group>"; };
-		B6C458082208BF4100153920 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		B6C4581B2208C1DA00153920 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+.swift"; sourceTree = "<group>"; };
 		B6C458202208CAA500153920 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -374,10 +370,7 @@
 		B64C257A220975D30034C01B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B64C257F220976300034C01B /* Modelable.swift */,
-				B64C257B220975DE0034C01B /* Identifiable.swift */,
 				B64C2587220976D20034C01B /* Constants.swift */,
-				B64C25A9220993080034C01B /* Observable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -416,6 +409,7 @@
 				B64C25E32209B5930034C01B /* CellViewModel.swift */,
 				B64C25E72209B6170034C01B /* Settable.swift */,
 				B64C25EF2209BAC80034C01B /* SectionViewModel.swift */,
+				B6C067BB220C2DB500E885B1 /* States.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -477,6 +471,8 @@
 		B6B61798220A219D00E7F372 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B64C257B220975DE0034C01B /* Identifiable.swift */,
+				B64C25A9220993080034C01B /* Observable.swift */,
 				B6B61799220A21AF00E7F372 /* DeviceManager.swift */,
 			);
 			path = Utils;
@@ -534,7 +530,6 @@
 		B6C457DD2208BD4000153920 /* iTunesAPILegacy */ = {
 			isa = PBXGroup;
 			children = (
-				B6C458082208BF4100153920 /* .gitkeep */,
 				B6C458192208BFE200153920 /* Db */,
 				B6C4580E2208BF6F00153920 /* Helpers */,
 				B6C4580D2208BF6800153920 /* Networking */,
@@ -822,7 +817,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
-				B6C458092208BF4100153920 /* .gitkeep in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D82209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -850,7 +844,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
-				B6C458372208D07500153920 /* .gitkeep in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D92209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -871,7 +864,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
-				B6C4584D2208D0DD00153920 /* .gitkeep in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25DA2209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -901,6 +893,7 @@
 				B6C458592208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
+				B6C067BC220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
@@ -933,7 +926,6 @@
 				B650D251220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
-				B64C2580220976300034C01B /* Modelable.swift in Sources */,
 				B64C25E82209B6170034C01B /* Settable.swift in Sources */,
 				B64C257C220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
@@ -975,6 +967,7 @@
 				B6C4585A2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
+				B6C067BD220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
@@ -1007,7 +1000,6 @@
 				B650D252220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
-				B64C2581220976300034C01B /* Modelable.swift in Sources */,
 				B64C25E92209B6170034C01B /* Settable.swift in Sources */,
 				B64C257D220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
@@ -1041,6 +1033,7 @@
 				B6C4585B2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
+				B6C067BE220C2DB500E885B1 /* States.swift in Sources */,
 				B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
@@ -1073,7 +1066,6 @@
 				B650D253220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
-				B64C2582220976300034C01B /* Modelable.swift in Sources */,
 				B64C25EA2209B6170034C01B /* Settable.swift in Sources */,
 				B64C257E220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,

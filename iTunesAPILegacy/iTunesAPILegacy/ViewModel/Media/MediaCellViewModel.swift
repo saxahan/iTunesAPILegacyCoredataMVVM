@@ -9,20 +9,17 @@
 import Foundation
 
 class MediaCellViewModel: CellViewModel, CellViewModelTouchable {
-    
     var cellTouched: (() -> Void)?
-
     var trackId: Int?
     var name: String?
     var previewUrl: String?
     var price: Double?
-    var isVisited: Bool
 
-    init(trackId: Int?, name: String?, previewUrl: String?, price: Double?, isVisited: Bool = false) {
+    init(trackId: Int?, name: String?, previewUrl: String?, price: Double?, isVisited: Bool = false, isDeleted: Bool = false, section: Int = 0, row: Int) {
+        super.init(isVisited: isVisited, isDeleted: isDeleted, section: section, row: row)
         self.trackId = trackId
         self.name = name
         self.previewUrl = previewUrl
         self.price = price
-        self.isVisited = isVisited
     }
 }

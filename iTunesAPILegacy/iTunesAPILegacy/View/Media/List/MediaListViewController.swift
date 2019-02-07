@@ -20,8 +20,15 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         super.setup()
 
         // dismissKeyboardOnTapOutside()
-        initNavbar()
         bindings()
+    }
+
+    override func initNavbar() {
+        super.initNavbar()
+        let filterBtn = UIBarButtonItem.createButton(imageName: "filter", target: self, action: #selector(filterTapped))
+        let layoutBtn = UIBarButtonItem.createButton(imageName: "keypad", target: self, action: #selector(layoutTapped))
+
+        navigationItem.rightBarButtonItems = [filterBtn, layoutBtn]
     }
 
     func bindings() {
@@ -57,11 +64,43 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             }
         }
 
-        // open detail screen
-        viewModel.openDetail.addObserver(fireNow: false) { [weak self] (detail) in
+        // selected cell change listener according to state
+        viewModel.selectedDetail.addObserver(fireNow: false) { [unowned self] (detail) in
+            detail?.state.addObserver(fireNow: false) { (state) in
+                let indexPath = IndexPath(row: self.viewModel.selectedRow, section: self.viewModel.selectedSection)
+                let indexArr = [indexPath]
+//                var dataSource = self.viewModel.sectionViewModels.value
+
+                switch state {
+                case .initial:
+                    break
+
+                case .isVisited(let isVisited):
+                    if isVisited {
+                        self.viewModel.sectionViewModels.value[self.viewModel.selectedSection].cells[self.viewModel.selectedRow].isVisited = isVisited
+
+                        self.collectionView.performBatchUpdates({
+                            self.collectionView.reloadItems(at: indexArr)
+                        })
+                    }
+                    break
+
+                case .isDeleted(let isDeleted):
+                    if isDeleted {
+                        self.viewModel.sectionViewModels.value[self.viewModel.selectedSection].cells.remove(at: self.viewModel.selectedRow)
+
+                        self.collectionView.performBatchUpdates({
+                            self.collectionView.deleteItems(at: indexArr)
+                        })
+                    }
+                    break
+                }
+            }
+
             if let dt = detail {
                 let vc = MediaDetailViewController.instantiate(with: dt, title: nil)
-                self?.navigationController?.pushViewController(vc, animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
+                return
             }
         }
 
@@ -84,13 +123,6 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         }
     }
 
-    func initNavbar() {
-        let filterBtn = UIBarButtonItem.createButton(imageName: "filter", target: self, action: #selector(filterTapped))
-        let layoutBtn = UIBarButtonItem.createButton(imageName: "keypad", target: self, action: #selector(layoutTapped))
-
-        navigationItem.rightBarButtonItems = [filterBtn, layoutBtn]
-    }
-
     @objc func filterTapped() {
         debugPrint(#function)
     }
@@ -111,13 +143,13 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let sectionViewModel = viewModel.sectionViewModels.value[section]
-        return sectionViewModel.cellViewModels.count
+        return sectionViewModel.cells.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.identifier, for: indexPath) as! MediaCollectionViewCell
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
-        let cellViewModel = sectionViewModel.cellViewModels[indexPath.row]
+        let cellViewModel = sectionViewModel.cells[indexPath.row]
 
         cell.setup(cellViewModel)
         cell.setNeedsDisplay()
@@ -128,7 +160,7 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
-        if let cellViewModel = sectionViewModel.cellViewModels[indexPath.row] as? CellViewModelTouchable {
+        if let cellViewModel = sectionViewModel.cells[indexPath.row] as? CellViewModelTouchable {
             cellViewModel.cellTouched?()
         }
     }

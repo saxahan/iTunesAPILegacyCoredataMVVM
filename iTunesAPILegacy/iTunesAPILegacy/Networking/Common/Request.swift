@@ -10,6 +10,9 @@ import Foundation
 
 struct Request {
     static var baseHeaders: [String: String] {
-        return ["Content-Type": "application/json"]
+        return [
+            "Content-Type": "application/json",
+            "Accept-Language": DeviceManager.shared.language
+        ]
     }
 }

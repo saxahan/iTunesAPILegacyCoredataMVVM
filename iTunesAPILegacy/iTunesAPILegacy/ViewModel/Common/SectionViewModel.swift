@@ -9,5 +9,6 @@
 import Foundation
 
 struct SectionViewModel {
-    var cellViewModels: [CellViewModel]
+    var title: String?
+    var cells: [CellViewModel]
 }

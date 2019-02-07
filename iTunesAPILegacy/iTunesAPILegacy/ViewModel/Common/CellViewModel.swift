@@ -8,10 +8,20 @@
 
 import Foundation
 
-protocol CellViewModel {
+class CellViewModel {
+    var row: Int
+    var section: Int
+    var isVisited: Bool
+    var isDeleted: Bool
 
+    init(isVisited: Bool, isDeleted: Bool, section: Int, row: Int) {
+        self.section = section
+        self.row = row
+        self.isVisited = isVisited
+        self.isDeleted = isDeleted
+    }
 }
 
 protocol CellViewModelTouchable {
-    var cellTouched: (() -> Void)? { get set}
+    var cellTouched: (() -> Void)? { get set }
 }

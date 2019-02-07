@@ -20,6 +20,8 @@ class BaseViewController: UIViewController, UInterfaceBased {
     // MARK: setup some things
     
     func setup() {
-        
+        initNavbar()
     }
+
+    func initNavbar() { }
 }

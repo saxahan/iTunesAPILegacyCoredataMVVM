@@ -14,6 +14,10 @@ class DeviceManager {
 
     private let currentDevice: UIDevice = UIDevice.current
 
+    var language: String {
+        return Bundle.main.preferredLocalizations[0]
+    }
+
     func isPad() -> Bool {
         return currentDevice.userInterfaceIdiom == .pad
     }
