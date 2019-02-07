@@ -23,5 +23,7 @@ class BaseViewController: UIViewController, UInterfaceBased {
         initNavbar()
     }
 
-    func initNavbar() { }
+    func initNavbar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 }

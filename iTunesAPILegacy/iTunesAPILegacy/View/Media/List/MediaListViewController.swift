@@ -49,9 +49,11 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         collectionView.showPlaceholder()
         collectionView.register(MediaCollectionViewCell.self)
 
-        viewModel.sectionViewModels.addObserver(fireNow: false) { [weak self] (sections) in
+        viewModel.dataSource.addObserver(fireNow: false) { [weak self] (sections, batch) in
             if let slf = self {
-                slf.collectionView.reloadData()
+                if !batch {
+                    slf.collectionView.reloadData()
+                }
 
                 // search result count
                 if slf.viewModel.resultCount == 0 {
@@ -69,32 +71,33 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             detail?.state.addObserver(fireNow: false) { (state) in
                 let indexPath = IndexPath(row: self.viewModel.selectedRow, section: self.viewModel.selectedSection)
                 let indexArr = [indexPath]
-//                var dataSource = self.viewModel.sectionViewModels.value
 
-                switch state {
-                case .initial:
-                    break
+                self.collectionView.performBatchUpdates({
+                    switch state {
+                    case .initial:
+                        break
 
-                case .isVisited(let isVisited):
-                    if isVisited {
-                        self.viewModel.sectionViewModels.value[self.viewModel.selectedSection].cells[self.viewModel.selectedRow].isVisited = isVisited
-
-                        self.collectionView.performBatchUpdates({
+                    case .isVisited(let isVisited):
+                        if isVisited {
                             self.collectionView.reloadItems(at: indexArr)
-                        })
-                    }
-                    break
 
-                case .isDeleted(let isDeleted):
-                    if isDeleted {
-                        self.viewModel.sectionViewModels.value[self.viewModel.selectedSection].cells.remove(at: self.viewModel.selectedRow)
+                            let sections = self.viewModel.dataSource.value.0
+                            sections[self.viewModel.selectedSection].cells[self.viewModel.selectedRow].isVisited = isVisited
+                            self.viewModel.dataSource.value = (sections, true)
+                        }
+                        break
 
-                        self.collectionView.performBatchUpdates({
+                    case .isDeleted(let isDeleted):
+                        if isDeleted {
                             self.collectionView.deleteItems(at: indexArr)
-                        })
+
+                            var sections = self.viewModel.dataSource.value.0
+                            sections[self.viewModel.selectedSection].cells.remove(at: self.viewModel.selectedRow)
+                            self.viewModel.dataSource.value = (sections, true)
+                        }
+                        break
                     }
-                    break
-                }
+                })
             }
 
             if let dt = detail {
@@ -138,17 +141,17 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
 extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.sectionViewModels.value.count
+        return viewModel.dataSource.value.0.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let sectionViewModel = viewModel.sectionViewModels.value[section]
+        let sectionViewModel = viewModel.dataSource.value.0[section]
         return sectionViewModel.cells.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.identifier, for: indexPath) as! MediaCollectionViewCell
-        let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
+        let sectionViewModel = viewModel.dataSource.value.0[indexPath.section]
         let cellViewModel = sectionViewModel.cells[indexPath.row]
 
         cell.setup(cellViewModel)
@@ -159,7 +162,10 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sectionViewModel = viewModel.sectionViewModels.value[indexPath.section]
+        viewModel.selectedSection = indexPath.section
+        viewModel.selectedRow = indexPath.row
+
+        let sectionViewModel = viewModel.dataSource.value.0[indexPath.section]
         if let cellViewModel = sectionViewModel.cells[indexPath.row] as? CellViewModelTouchable {
             cellViewModel.cellTouched?()
         }
@@ -171,12 +177,18 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         numOfColumns = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
-        collectionView?.collectionViewLayout.invalidateLayout()
+        UIScreen.main.snapshotView(afterScreenUpdates: true)
+
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView?.collectionViewLayout.invalidateLayout()
+        }
+
         super.viewWillTransition(to: size, with: coordinator)
+
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var margins: CGFloat = padding * padding * CGFloat(numOfColumns - 1)
+        var margins: CGFloat = padding * 2 + padding * CGFloat(numOfColumns - 1)
 
         if #available(iOS 11.0, *) {
             margins += collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right

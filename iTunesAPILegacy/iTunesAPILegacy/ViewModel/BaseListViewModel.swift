@@ -16,7 +16,7 @@ class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     internal let cleared  = Observable<Bool>(true)
 
     // list observers
-    internal let sectionViewModels = Observable<[SectionViewModel]>([])
+    internal let dataSource = Observable<([SectionViewModel], Bool)>(([], false))
 
     // variables
     internal var resultCount = 0

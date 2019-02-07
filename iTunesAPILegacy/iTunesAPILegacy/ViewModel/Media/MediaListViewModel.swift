@@ -30,7 +30,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
     override func clearList() {
         super.clearList()
         term.value = ""
-        sectionViewModels.value = []
+        dataSource.value = ([], false)
     }
 
     // MARK: Service calls
@@ -54,7 +54,9 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
             switch result {
             case .success(let response):
                 self.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
-                let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? [])
+
+                // some record has no track id, so filter to be not nil
+                let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? []).filter {$0.trackId != nil}
                 self.fetchHistories()
 
                 var cells = [MediaCellViewModel]()
@@ -69,13 +71,10 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                                                           previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100,
                                                           price: obj.trackPrice,
                                                           isVisited: visited,
-                                                          isDeleted: deleted,
-                                                          row: index)
+                                                          isDeleted: deleted)
 
                             cell.cellTouched = {
                                 // open media detail
-                                self.selectedSection = cell.section
-                                self.selectedRow = cell.row
                                 self.selectedDetail.value = MediaDetailViewModel(obj)
                             }
 
@@ -87,7 +86,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                     }
                 }
 
-                self.sectionViewModels.value = [SectionViewModel(title: nil, cells: cells)]
+                self.dataSource.value = ([SectionViewModel(title: nil, cells: cells)], false)
                 break
             case .failure(let error):
                 self.error.value = error

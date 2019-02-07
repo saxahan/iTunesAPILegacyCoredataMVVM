@@ -15,8 +15,8 @@ class MediaCellViewModel: CellViewModel, CellViewModelTouchable {
     var previewUrl: String?
     var price: Double?
 
-    init(trackId: Int?, name: String?, previewUrl: String?, price: Double?, isVisited: Bool = false, isDeleted: Bool = false, section: Int = 0, row: Int) {
-        super.init(isVisited: isVisited, isDeleted: isDeleted, section: section, row: row)
+    init(trackId: Int?, name: String?, previewUrl: String?, price: Double?, isVisited: Bool = false, isDeleted: Bool = false) {
+        super.init(isVisited: isVisited, isDeleted: isDeleted)
         self.trackId = trackId
         self.name = name
         self.previewUrl = previewUrl

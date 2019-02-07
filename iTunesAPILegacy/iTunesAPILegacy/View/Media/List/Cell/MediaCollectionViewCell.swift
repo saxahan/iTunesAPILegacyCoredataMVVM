@@ -16,6 +16,12 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var bottomVisualEffectView: UIVisualEffectView!
 
+    override var isSelected: Bool {
+        didSet {
+            backgroundColor = isSelected ? Constants.colorVisitedBackground : .clear
+        }
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -28,7 +34,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
     func setup(_ viewModel: CellViewModel) {
         guard let viewModel = viewModel as? MediaCellViewModel else { return }
         self.viewModel = viewModel
-
+        
         backgroundColor = viewModel.isVisited ? Constants.colorVisitedBackground : .clear
 
         if let prevUrl = self.viewModel?.previewUrl {

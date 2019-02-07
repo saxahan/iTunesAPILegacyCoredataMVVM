@@ -64,12 +64,9 @@
 		B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
-		B650D24E220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
-		B650D24F220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
-		B650D250220B681F004EF756 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History+CoreDataClass.swift */; };
-		B650D251220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
-		B650D252220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
-		B650D253220B681F004EF756 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */; };
+		B650D24E220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
+		B650D24F220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
+		B650D250220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
 		B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
 		B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D258220B7378004EF756 /* MediaDetailViewModel.swift */; };
@@ -262,8 +259,7 @@
 		B64C25F52209CBDE0034C01B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		B64C25F92209D2E50034C01B /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		B650D24C220B681F004EF756 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B650D24C220B681F004EF756 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
 		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
 		B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailViewController.xib; sourceTree = "<group>"; };
@@ -626,8 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C458202208CAA500153920 /* CoreDataStack.swift */,
-				B650D24C220B681F004EF756 /* History+CoreDataClass.swift */,
-				B650D24D220B681F004EF756 /* History+CoreDataProperties.swift */,
+				B650D24C220B681F004EF756 /* History.swift */,
 				B650D281220B899E004EF756 /* Extensions */,
 				B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */,
 			);
@@ -904,7 +899,7 @@
 				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
 				B64C25E02209B1810034C01B /* UIImageView+.swift in Sources */,
-				B650D24E220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
+				B650D24E220B681F004EF756 /* History.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -923,7 +918,6 @@
 				B6B617CA220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F02209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
-				B650D251220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
 				B64C25E82209B6170034C01B /* Settable.swift in Sources */,
@@ -978,7 +972,7 @@
 				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
 				B64C25E12209B1810034C01B /* UIImageView+.swift in Sources */,
-				B650D24F220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
+				B650D24F220B681F004EF756 /* History.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -997,7 +991,6 @@
 				B6B617CB220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F12209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
-				B650D252220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
 				B64C25E92209B6170034C01B /* Settable.swift in Sources */,
@@ -1044,7 +1037,7 @@
 				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C458702208D83F00153920 /* Response.swift in Sources */,
 				B64C25E22209B1810034C01B /* UIImageView+.swift in Sources */,
-				B650D250220B681F004EF756 /* History+CoreDataClass.swift in Sources */,
+				B650D250220B681F004EF756 /* History.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
 				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -1063,7 +1056,6 @@
 				B6B617CC220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F22209BAC80034C01B /* SectionViewModel.swift in Sources */,
 				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
-				B650D253220B681F004EF756 /* History+CoreDataProperties.swift in Sources */,
 				B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
 				B64C25EA2209B6170034C01B /* Settable.swift in Sources */,

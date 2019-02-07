@@ -47,4 +47,8 @@ class Observable<T> {
             }
         }
     }
+
+    func changeValueWithoutNotify(_ newValue: T) {
+        self._value = newValue
+    }
 }

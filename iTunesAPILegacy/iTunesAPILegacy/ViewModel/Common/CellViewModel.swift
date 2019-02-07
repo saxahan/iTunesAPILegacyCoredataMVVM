@@ -9,14 +9,10 @@
 import Foundation
 
 class CellViewModel {
-    var row: Int
-    var section: Int
     var isVisited: Bool
     var isDeleted: Bool
 
-    init(isVisited: Bool, isDeleted: Bool, section: Int, row: Int) {
-        self.section = section
-        self.row = row
+    init(isVisited: Bool, isDeleted: Bool) {
         self.isVisited = isVisited
         self.isDeleted = isDeleted
     }

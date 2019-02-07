@@ -1,5 +1,5 @@
 //
-//  History+CoreDataProperties.swift
+//  History+CoreDataClass.swift
 //  iTunesAPILegacy
 //
 //  Created by Yunus Alkan on 6.02.2019.
@@ -10,10 +10,12 @@
 import Foundation
 import CoreData
 
-extension History {
+@objc(History)
+public class History: NSManagedObject {
     @NSManaged public var isRemoved: Bool
     @NSManaged public var isVisited: Bool
     @NSManaged public var visitedDate: NSDate?
+    @NSManaged public var removedDate: NSDate?
     @NSManaged public var trackId: Int64
 
     convenience init(trackId: Int, isRemoved: Bool, isVisited: Bool) {
@@ -24,6 +26,10 @@ extension History {
 
         if isVisited {
             self.visitedDate = Date() as NSDate
+        }
+
+        if isRemoved {
+            self.removedDate = Date() as NSDate
         }
     }
 }
