@@ -176,7 +176,7 @@ extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var margins: CGFloat = padding * 2 + padding * CGFloat(numOfColumns - 1)
+        var margins: CGFloat = padding * padding * CGFloat(numOfColumns - 1)
 
         if #available(iOS 11.0, *) {
             margins += collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right
