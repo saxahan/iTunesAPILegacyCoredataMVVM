@@ -18,7 +18,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
 
     override var isSelected: Bool {
         didSet {
-            backgroundColor = isSelected ? Constants.colorVisitedBackground : .clear
+            backgroundColor = isSelected ? Constants.Color.visitedBackground : .clear
         }
     }
 
@@ -35,7 +35,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
         guard let viewModel = viewModel as? MediaCellViewModel else { return }
         self.viewModel = viewModel
         
-        backgroundColor = viewModel.isVisited ? Constants.colorVisitedBackground : .clear
+        backgroundColor = viewModel.isVisited ? Constants.Color.visitedBackground : .clear
 
         if let prevUrl = self.viewModel?.previewUrl {
             imgViewPreview.setImage(prevUrl)

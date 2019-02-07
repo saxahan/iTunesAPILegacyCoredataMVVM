@@ -25,14 +25,14 @@ class NavigationController: UINavigationController {
     var navbarParams: [String: AnyObject]! {
         didSet {
 
-            var bgColor: UIColor = Constants.colorNavbarBackground
+            var bgColor: UIColor = Constants.Color.navbarBackground
             if let backgroundColor = navbarParams["backgroundColor"] as? UIColor {
                 bgColor = backgroundColor
             }
 
             navigationBar.barTintColor = bgColor
 
-            var fgColor: UIColor = Constants.colorNavbarForeground
+            var fgColor: UIColor = Constants.Color.navbarForeground
             if let foregroundColor = navbarParams["foregroundColor"] as? UIColor {
                 fgColor = foregroundColor
             }
@@ -44,7 +44,7 @@ class NavigationController: UINavigationController {
                 navigationBar.topItem?.titleView = logo
             }
 
-            var titleFont = Constants.fontNavbar
+            var titleFont = Constants.Font.navbar
             if let font = navbarParams["titleFont"] as? UIFont {
                 titleFont = font
             }

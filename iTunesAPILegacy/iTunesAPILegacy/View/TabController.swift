@@ -14,8 +14,8 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         let mediaListVc = MediaListViewController.instantiate(with: MediaListViewModel(), title: "TAB_SEARCH".localized, tabImage: #imageLiteral(resourceName: "search"))
         let settingsVc = SettingsViewController.instantiate(title: "TAB_SETTINGS".localized, tabImage: #imageLiteral(resourceName: "settings"))
 
-        UITabBar.appearance().barTintColor = Constants.colorTabBarBackground
-        UITabBar.appearance().tintColor = Constants.colorTabBarSelected
+        UITabBar.appearance().barTintColor = Constants.Color.tabBarBackground
+        UITabBar.appearance().tintColor = Constants.Color.tabBarSelected
         UITabBar.appearance().isTranslucent = true
 
         let viewControllers = [mediaListVc, settingsVc]
@@ -54,11 +54,11 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
 
     func setupViews() {
         delegate = self
-        view.backgroundColor = Constants.colorBackground
+        view.backgroundColor = Constants.Color.background
 
-        let selectedColor = Constants.colorTabBarSelected
-        let unselectedColor = Constants.colorTabBarForeground
-        let titleFont = Constants.fontTabBar
+        let selectedColor = Constants.Color.tabBarSelected
+        let unselectedColor = Constants.Color.tabBarForeground
+        let titleFont = Constants.Font.tabBar
 
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: selectedColor], for: .selected)

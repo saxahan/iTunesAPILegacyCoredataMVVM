@@ -24,11 +24,11 @@ class SearchBar: UISearchBar {
     private func setup() {
         self.placeholder = "PLACEHOLDER_SEARCH".localized
         self.showsCancelButton = true
-        self.tintColor = Constants.colorNavbarForeground
+        self.tintColor = Constants.Color.navbarForeground
         self.delegate = self
 
         if let buttonItem = self.subviews.first?.subviews.last as? UIButton {
-            buttonItem.setTitleColor(Constants.colorNavbarForeground, for: .normal)
+            buttonItem.setTitleColor(Constants.Color.navbarForeground, for: .normal)
         }
     }
 

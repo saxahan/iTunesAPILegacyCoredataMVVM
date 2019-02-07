@@ -10,10 +10,9 @@ import Foundation
 
 class BaseListViewModel<T, S: HttpServiceDefinable>: BaseViewModel<T, S> {
     // base observers
-    internal var searchTrigger = Observable<String>("")
     internal let term = Observable<String>("")
     internal let elements = Observable<[T]>([])
-    internal let cleared  = Observable<Bool>(true)
+    internal let cleared = Observable<Bool>(true)
 
     // list observers
     internal let dataSource = Observable<([SectionViewModel], Bool)>(([], false))

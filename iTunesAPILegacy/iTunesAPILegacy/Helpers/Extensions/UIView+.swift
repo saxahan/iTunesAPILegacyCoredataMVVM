@@ -31,7 +31,7 @@ extension UIView {
 
         if let title = title {
             btn.titleLabel?.adjustsFontSizeToFitWidth = true
-            btn.titleLabel?.font = Constants.fontPrimaryButton
+            btn.titleLabel?.font = Constants.Font.primaryButton
             btn.setTitleColor(.white, for: .normal)
             btn.setTitle(title, for: .normal)
             btn.semanticContentAttribute = .forceRightToLeft

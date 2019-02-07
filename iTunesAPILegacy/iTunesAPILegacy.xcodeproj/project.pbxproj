@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6407BF0220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
+		B6407BF1220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
+		B6407BF2220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
+		B6407BF3220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
+		B6407BF4220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
+		B6407BF5220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
+		B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
+		B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
+		B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
+		B6407BFC220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
+		B6407BFD220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
+		B6407BFE220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
+		B6407C00220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
+		B6407C01220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
+		B6407C02220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
+		B6407C04220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
+		B6407C05220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
+		B6407C06220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
 		B64C257C220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257D220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257E220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
@@ -240,6 +258,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6407BEE220CE01B008C998F /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		B6407BEF220CE01B008C998F /* PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
+		B6407BF7220CE549008C998F /* HoldableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldableButton.swift; sourceTree = "<group>"; };
+		B6407BFB220CE56F008C998F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		B6407BFF220CE930008C998F /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		B6407C03220CE99C008C998F /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		B64C2587220976D20034C01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B64C258F22097DB90034C01B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -363,6 +387,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6407BED220CDF06008C998F /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				B6407BEE220CE01B008C998F /* PopupViewController.swift */,
+				B6407BEF220CE01B008C998F /* PopupViewController.xib */,
+				B6407BFF220CE930008C998F /* Modal.swift */,
+				B6407C03220CE99C008C998F /* PopupView.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		B6407BF6220CE530008C998F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B6407BF7220CE549008C998F /* HoldableButton.swift */,
+				B6407BFB220CE56F008C998F /* PrimaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		B64C257A220975D30034C01B /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +457,8 @@
 		B64C25F42209CBC20034C01B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6407BF6220CE530008C998F /* Buttons */,
+				B6407BED220CDF06008C998F /* Popup */,
 				B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */,
 				B66384C8220AFEE100FBAEFC /* Placeholders */,
 				B66384E9220B165A00FBAEFC /* SearchBar */,
@@ -814,6 +860,7 @@
 				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D82209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6407BF3220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DA220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61786220A030200E7F372 /* Localizable.strings in Resources */,
@@ -841,6 +888,7 @@
 				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D92209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6407BF4220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DB220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61787220A030200E7F372 /* Localizable.strings in Resources */,
@@ -861,6 +909,7 @@
 				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25DA2209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
+				B6407BF5220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DC220A36D100E7F372 /* SplashViewController.xib in Resources */,
 				B6B61788220A030200E7F372 /* Localizable.strings in Resources */,
@@ -881,6 +930,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6407C04220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384A9220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AA220993080034C01B /* Observable.swift in Sources */,
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
@@ -895,6 +945,8 @@
 				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27A220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
+				B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */,
+				B6407BFC220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586E2208D83F00153920 /* Response.swift in Sources */,
@@ -908,6 +960,7 @@
 				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
 				B66384B1220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6407C00220CE930008C998F /* Modal.swift in Sources */,
 				B650D27E220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EC2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
@@ -926,6 +979,7 @@
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
 				B66384E2220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
+				B6407BF0220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D25E220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
@@ -954,6 +1008,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6407C05220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384AA220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AB220993080034C01B /* Observable.swift in Sources */,
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
@@ -968,6 +1023,8 @@
 				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27B220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
+				B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */,
+				B6407BFD220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C4586F2208D83F00153920 /* Response.swift in Sources */,
@@ -981,6 +1038,7 @@
 				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
 				B66384B2220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6407C01220CE930008C998F /* Modal.swift in Sources */,
 				B650D27F220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25ED2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
@@ -999,6 +1057,7 @@
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
 				B66384E3220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
+				B6407BF1220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D25F220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
@@ -1019,6 +1078,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6407C06220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384AB220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AC220993080034C01B /* Observable.swift in Sources */,
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
@@ -1033,6 +1093,8 @@
 				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27C220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
+				B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */,
+				B6407BFE220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
 				B6C458702208D83F00153920 /* Response.swift in Sources */,
@@ -1046,6 +1108,7 @@
 				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
 				B66384B3220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */,
+				B6407C02220CE930008C998F /* Modal.swift in Sources */,
 				B650D280220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EE2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
@@ -1064,6 +1127,7 @@
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
 				B66384E4220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
+				B6407BF2220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D260220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
