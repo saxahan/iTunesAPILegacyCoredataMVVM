@@ -11,7 +11,8 @@ import UIKit
 class Popup: BaseViewController {
 
     @IBInspectable var backViewColor: UIColor = UIColor(white: 0.1, alpha: 0.5)
-    var completionBlock: PopupCompletion?
+    
+    var stateBlock: PopupCompletionState?
     var showAnimation: UIViewControllerAnimatedTransitioning? = PopupShowAnimation()
     var dismissAnimation: UIViewControllerAnimatedTransitioning? = PopupDismissAnimation()
 

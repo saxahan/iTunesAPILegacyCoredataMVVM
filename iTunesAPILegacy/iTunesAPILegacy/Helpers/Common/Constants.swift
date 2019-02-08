@@ -22,6 +22,7 @@ struct Constants {
     struct Color {
         static let background: UIColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         static let visitedBackground: UIColor = #colorLiteral(red: 0.9960784314, green: 0.9019607843, blue: 0.06666666667, alpha: 0.6475847271)
+        static let selectedBackground: UIColor = #colorLiteral(red: 0.9960784314, green: 0.9019607843, blue: 0.06666666667, alpha: 0.6475847271)
         static let navbarBackground: UIColor = #colorLiteral(red: 0.9960784314, green: 0.9019607843, blue: 0.06666666667, alpha: 1)
         static let navbarForeground: UIColor = #colorLiteral(red: 0.07450980392, green: 0.07450980392, blue: 0.07450980392, alpha: 1)
         static let tabBarBackground: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

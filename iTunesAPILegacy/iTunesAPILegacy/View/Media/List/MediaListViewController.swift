@@ -127,7 +127,22 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     }
 
     @objc func filterTapped() {
-        debugPrint(#function)
+        guard let filters = viewModel.filter.value.filters else { return }
+
+        var selecteds: (Int, Int)?
+        if let selected = viewModel.filter.value.selecteds.first, let found = filters.firstIndex(where: { (m) -> Bool in
+            m == selected
+        }){
+            selecteds = (0, found)
+        }
+
+        let rows = filters.map { return FilterRowViewModel(imageName: "checked", title: $0.rawValue.uppercased()) }
+        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
+                           allowsMultiSelection: false,
+                           completion: { [weak self] data in
+                            _ = self?.viewModel.filter.value.updateSelected(at: data?.selected?.row)
+
+        }).show()
     }
 
     @objc func layoutTapped() {
@@ -177,7 +192,6 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         numOfColumns = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
-//        UIScreen.main.snapshotView(afterScreenUpdates: true)
 
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.collectionViewLayout.invalidateLayout()

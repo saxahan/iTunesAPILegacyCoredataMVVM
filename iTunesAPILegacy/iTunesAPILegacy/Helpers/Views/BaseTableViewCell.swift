@@ -8,20 +8,24 @@
 
 import UIKit
 
-class BaseTableViewCell<T>: UITableViewCell {
+class BaseTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundView = nil
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+        selectionStyle = .gray
+
+        let selectedBg = UIView(frame: self.frame)
+        selectedBg.cornerRadius = 5
+        selectedBg.backgroundColor = Constants.Color.selectedBackground
+        selectedBackgroundView = selectedBg
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-
-    func setup(_ row: T?) {
-
     }
 }

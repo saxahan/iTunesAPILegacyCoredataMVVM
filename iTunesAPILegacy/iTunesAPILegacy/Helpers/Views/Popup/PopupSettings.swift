@@ -24,5 +24,6 @@ enum PopupButtonType: String {
     case dismiss
 }
 
-typealias PopupCompletion = (_ state: PopupButtonType) -> Void
+typealias PopupCompletionState = (_ state: PopupButtonType) -> Void
+typealias PopupCompletion<T> = (_ data: T?) -> Void
 

@@ -9,22 +9,28 @@
 import Foundation
 
 class MediaListViewModel: BaseListViewModel<Media, MediaService> {
-    let mediaType = Observable<MediaType>(.all)
+    let filter = Observable<MediaFilterViewModel>(MediaFilterViewModel())
     let selectedDetail = Observable<MediaDetailViewModel?>(nil)
     let histories = Observable<[History]>([])
 
     override init(_ element: Media? = nil) {
         super.init(element)
-        
+
         term.addObserver(fireNow: false) { [weak self] (text) in
             if !text.isEmpty {
                 self?.reload()
             }
         }
+
+        filter.addObserver(fireNow: false) { [weak self] (filter) in
+            self?.cleared.value = true
+            self?.reload()
+        }
     }
 
     override func reload() {
-        search(term.value, media: mediaType.value)
+        guard let mediaType = filter.value.selecteds.first else { return }
+        search(term.value, media: mediaType)
     }
 
     override func clearList() {
@@ -44,7 +50,6 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
     }
     
     func search(_ term: String, media: MediaType = .all, limit: Int = 100) {
-        self.mediaType.value = media
         isLoading.value = true
 
         provider.request(.searchItunes(term: term, media: media, limit: limit)) { [unowned self] (result) in

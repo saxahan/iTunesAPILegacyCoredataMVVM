@@ -9,11 +9,12 @@
 import UIKit
 
 extension UIView {
-    static func initFromNib() -> Self {
-        func instanceFromNib<T: UIView>() -> T {
-            return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.first as! T
-        }
-        return instanceFromNib()
+    private static func instanceFromNib<T: UIView>(name: String? = nil) -> T {
+        return Bundle.main.loadNibNamed(name ?? String(describing: self), owner: nil, options: nil)?.first as! T
+    }
+
+    static func initFromNib(name: String? = nil) -> Self {
+        return instanceFromNib(name: name)
     }
 
     func roundCorners(_ corners: UIRectCorner = [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: CGFloat = 15) {

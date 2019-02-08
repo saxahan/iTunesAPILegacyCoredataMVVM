@@ -22,6 +22,12 @@
 		B628A7F2220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
 		B628A7F3220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
 		B628A7F4220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
+		B62D5154220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */; };
+		B62D5155220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */; };
+		B62D5156220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */; };
+		B62D515C220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
+		B62D515D220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
+		B62D515E220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
 		B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
@@ -103,9 +109,6 @@
 		B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
 		B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
 		B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
-		B64E7B1D220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
-		B64E7B1E220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
-		B64E7B1F220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
 		B650D24E220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D24F220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D250220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
@@ -287,6 +290,8 @@
 		B628A7E8220DA2D7005FB103 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPopup.swift; sourceTree = "<group>"; };
 		B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationPopup.xib; sourceTree = "<group>"; };
+		B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilterViewModel.swift; sourceTree = "<group>"; };
+		B62D515B220E10A700FE66D7 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		B6407BF7220CE549008C998F /* HoldableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldableButton.swift; sourceTree = "<group>"; };
 		B6407BFB220CE56F008C998F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -314,7 +319,6 @@
 		B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceTableViewCell.xib; sourceTree = "<group>"; };
 		B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		B64E7B1C220DD0B10075F67D /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
 		B650D24C220B681F004EF756 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
 		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 				B64C25A522098BD40034C01B /* MediaListViewModel.swift */,
 				B64C25EB2209B6BE0034C01B /* MediaCellViewModel.swift */,
 				B650D258220B7378004EF756 /* MediaDetailViewModel.swift */,
+				B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -493,7 +498,7 @@
 				B64C25E72209B6170034C01B /* Settable.swift */,
 				B64C25EF2209BAC80034C01B /* SectionViewModel.swift */,
 				B6C067BB220C2DB500E885B1 /* States.swift */,
-				B64E7B1C220DD0B10075F67D /* RowViewModel.swift */,
+				B62D515B220E10A700FE66D7 /* FilterViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1010,6 +1015,7 @@
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
 				B6C067BC220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
+				B62D515C220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
@@ -1027,6 +1033,7 @@
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E5220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
+				B62D5154220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */,
 				B6C4587A2208EB7900153920 /* API.swift in Sources */,
 				B6C4587E2208FE6100153920 /* String+.swift in Sources */,
 				B64E7B0E220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
@@ -1038,7 +1045,6 @@
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
 				B628A7E1220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
-				B64E7B1D220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617CF220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
@@ -1094,6 +1100,7 @@
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
 				B6C067BD220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
+				B62D515D220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
@@ -1111,6 +1118,7 @@
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E6220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
+				B62D5155220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */,
 				B6C4587B2208EB7900153920 /* API.swift in Sources */,
 				B6C4587F2208FE6100153920 /* String+.swift in Sources */,
 				B64E7B0F220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
@@ -1122,7 +1130,6 @@
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
 				B628A7E2220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
-				B64E7B1E220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D0220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
@@ -1170,6 +1177,7 @@
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
 				B6C067BE220C2DB500E885B1 /* States.swift in Sources */,
 				B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
+				B62D515E220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
@@ -1187,6 +1195,7 @@
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E7220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
+				B62D5156220E070B00FE66D7 /* MediaFilterViewModel.swift in Sources */,
 				B6C4587C2208EB7900153920 /* API.swift in Sources */,
 				B6C458802208FE6100153920 /* String+.swift in Sources */,
 				B64E7B10220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
@@ -1198,7 +1207,6 @@
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
 				B628A7E3220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
-				B64E7B1F220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D1220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,

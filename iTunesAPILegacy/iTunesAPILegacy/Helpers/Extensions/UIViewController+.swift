@@ -9,11 +9,13 @@
 import UIKit
 
 extension UIViewController {
-    static func initFromNib() -> Self {
-        func instanceFromNib<T: UIViewController>() -> T {
-            return T(nibName: String(describing: self), bundle: nil)
-        }
-        return instanceFromNib()
+
+    private static func instanceFromNib<T: UIViewController>(name: String? = nil) -> T {
+        return T(nibName: name ?? String(describing: self), bundle: nil)
+    }
+
+    static func initFromNib(name: String? = nil) -> Self {
+        return instanceFromNib(name: name)
     }
 
     func dismissKeyboardOnTapOutside() {

@@ -30,12 +30,12 @@ class ConfirmationPopup: Popup {
     var textTitle: String?
     var textMessage: String?
 
-    class func create(title: String?, message: String? = nil, topImage: UIImage? = nil, completion: PopupCompletion? = nil) -> ConfirmationPopup {
+    class func create(title: String?, message: String? = nil, topImage: UIImage? = nil, completion: PopupCompletionState? = nil) -> ConfirmationPopup {
         let popup = ConfirmationPopup.initFromNib()
         popup.topImage = topImage
         popup.textTitle = title
         popup.textMessage = message
-        popup.completionBlock = completion
+        popup.stateBlock = completion
         return popup
     }
 
@@ -55,14 +55,14 @@ class ConfirmationPopup: Popup {
 
     @IBAction func yesTapped(_ sender: Any) {
         dismiss { [weak self] in
-            self?.completionBlock?(.yes)
+            self?.stateBlock?(.yes)
         }
     }
 
     @IBAction func noTapped(_ sender: Any) {
         debugPrint(#function)
         dismiss { [weak self] in
-            self?.completionBlock?(.no)
+            self?.stateBlock?(.no)
         }
     }
 

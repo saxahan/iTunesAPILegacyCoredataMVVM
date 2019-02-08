@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ChoiceTableViewCell: BaseTableViewCell<RowViewModel> {
+class ChoiceTableViewCell: BaseTableViewCell {
 
     @IBOutlet weak var iconImgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,11 +24,14 @@ class ChoiceTableViewCell: BaseTableViewCell<RowViewModel> {
         iconImgView.alpha = selected ? 1 : 0.1
     }
 
-    override func setup(_ row: RowViewModel?) {
-        guard let row = row else { return }
+    func setup<T: FilterRowViewModel>(_ data: T?) {
+        guard let data = data else { return }
+        titleLbl.text = data.title
 
-        titleLbl.text = row.title
-        iconImgView.image = UIImage(named: row.imageName)
+        if let imgName = data.imageName {
+            iconImgView.image = UIImage(named: imgName)
+        }
+
         iconImgView.alpha = isSelected ? 1 : 0.1
     }
 }
