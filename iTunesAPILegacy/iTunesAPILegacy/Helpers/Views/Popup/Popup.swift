@@ -9,12 +9,11 @@
 import UIKit
 
 class Popup: BaseViewController {
-
-    @IBInspectable var backViewColor: UIColor = UIColor(white: 0.1, alpha: 0.5)
     
     var stateBlock: PopupCompletionState?
     var showAnimation: UIViewControllerAnimatedTransitioning? = PopupShowAnimation()
     var dismissAnimation: UIViewControllerAnimatedTransitioning? = PopupDismissAnimation()
+    var shouldDismissTouchOutside: Bool = false
 
     private var showing: Bool = false
     var isShowing: Bool {
@@ -41,6 +40,12 @@ class Popup: BaseViewController {
     override func setup() {
         super.setup()
         view.backgroundColor = UIColor.clear
+
+        // not implemented
+//        if (self is ChoicePopup) == false {
+//            let tapOutside = UITapGestureRecognizer(target: self, action: #selector(tappedOutside))
+//            presented.view.addGestureRecognizer(tapOutside)
+//        }
     }
 
     func show(above viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController, completion: (()-> Void)? = nil) {
@@ -59,6 +64,12 @@ class Popup: BaseViewController {
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
+
+    @objc func tappedOutside() {
+        if shouldDismissTouchOutside {
+            dismiss()
+        }
+    }
 }
 
 extension Popup: UIViewControllerTransitioningDelegate {
@@ -67,7 +78,8 @@ extension Popup: UIViewControllerTransitioningDelegate {
                                 source: UIViewController) -> UIPresentationController? {
 
         let controller = PopupPresentationController(presentedViewController: presented, presenting: presenting)
-        controller.backViewColor = backViewColor
+        controller.backViewColor = PopupAnimationProps.Color.backViewColor
+
         return controller
     }
 

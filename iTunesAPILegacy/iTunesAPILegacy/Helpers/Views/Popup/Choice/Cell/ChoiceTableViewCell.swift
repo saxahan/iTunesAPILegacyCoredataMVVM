@@ -13,14 +13,8 @@ class ChoiceTableViewCell: BaseTableViewCell {
     @IBOutlet weak var iconImgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         iconImgView.alpha = selected ? 1 : 0.1
     }
 

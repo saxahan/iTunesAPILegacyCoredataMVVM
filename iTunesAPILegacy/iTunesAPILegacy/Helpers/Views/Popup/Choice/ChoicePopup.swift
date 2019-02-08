@@ -14,14 +14,17 @@ class ChoicePopup<T: SectionViewModel<FilterRowViewModel>>: Popup, UITableViewDe
     @IBOutlet weak var selectButton: HoldableButton!
 
     var completionBlock: PopupCompletion<T>?
-    var allowsMultiSelection: Bool = false
+    // var allowsMultiSelection: Bool = false // not implemented
+    var shouldDismissOnSelection: Bool = false
     var filters: [T]!
 
     override func setup() {
         super.setup()
 
+        selectButton.setTitle("OK".localized, for: .normal)
+        
         tableView.register(ChoiceTableViewCell.self)
-        tableView.allowsMultipleSelection = allowsMultiSelection
+//        tableView.allowsMultipleSelection = allowsMultiSelection
 
         DispatchQueue.main.async { [unowned self] in
             if let row = self.filters[0].selected?.row {
@@ -50,6 +53,10 @@ class ChoicePopup<T: SectionViewModel<FilterRowViewModel>>: Popup, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.filters[0].selected?.section = indexPath.section
         self.filters[0].selected?.row = indexPath.row
+
+        if shouldDismissOnSelection {
+            okTapped(self)
+        }
     }
 
     // MARK: Actions
@@ -61,9 +68,9 @@ class ChoicePopup<T: SectionViewModel<FilterRowViewModel>>: Popup, UITableViewDe
 }
 
 extension ChoicePopup {
-    class func create(_ filters: [T], allowsMultiSelection: Bool = false, completion: PopupCompletion<T>? = nil) -> ChoicePopup {
+    class func create(_ filters: [T], shouldDismissOnSelection: Bool = false, completion: PopupCompletion<T>? = nil) -> ChoicePopup {
         let popup = ChoicePopup.initFromNib(name: "ChoicePopup")
-        popup.allowsMultiSelection = allowsMultiSelection
+        popup.shouldDismissOnSelection = shouldDismissOnSelection
         popup.filters = filters
         popup.completionBlock = completion
         return popup

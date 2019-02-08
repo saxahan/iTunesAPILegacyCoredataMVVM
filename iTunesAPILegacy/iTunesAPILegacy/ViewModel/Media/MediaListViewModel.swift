@@ -23,8 +23,9 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
         }
 
         filter.addObserver(fireNow: false) { [weak self] (filter) in
-            self?.cleared.value = true
-            self?.reload()
+            if let text = self?.term.value.trim(), !text.isEmpty {
+                self?.reload()
+            }
         }
     }
 
@@ -58,9 +59,10 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
 
             switch result {
             case .success(let response):
-                self.resultCount = (try? response.map(Int.self, atKeyPath: "resultCount")) ?? 0
 
-                // some record has no track id, so filter to be not nil
+                // because some media type results, like audiobook has no trackId
+                // so we consider it's empty because of primary key violation
+                // for demonstration purposes filter to be not nil
                 let mediaList = ((try? response.map([Media].self, atKeyPath: "results")) ?? []).filter {$0.trackId != nil}
                 self.fetchHistories()
 
@@ -91,6 +93,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                     }
                 }
 
+                self.resultCount = cells.count
                 self.dataSource.value = ([SectionViewModel(title: nil, cells: cells)], false)
                 break
             case .failure(let error):

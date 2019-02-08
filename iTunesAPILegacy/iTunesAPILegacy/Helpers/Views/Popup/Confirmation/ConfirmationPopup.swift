@@ -36,6 +36,7 @@ class ConfirmationPopup: Popup {
         popup.textTitle = title
         popup.textMessage = message
         popup.stateBlock = completion
+        popup.shouldDismissTouchOutside = false
         return popup
     }
 
@@ -45,7 +46,8 @@ class ConfirmationPopup: Popup {
     }
 
     private func initItems() {
-        // top stack
+        yesButton.setTitle("YES".localized, for: .normal)
+        noButton.setTitle("NO".localized, for: .normal)
         topImageView?.image = topImage
         titleLabel?.text = textTitle
         messageLabel?.text = textMessage

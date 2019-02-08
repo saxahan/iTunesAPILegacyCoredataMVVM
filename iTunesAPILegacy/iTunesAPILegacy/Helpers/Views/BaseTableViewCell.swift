@@ -17,7 +17,7 @@ class BaseTableViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         selectionStyle = .gray
 
-        let selectedBg = UIView(frame: self.frame)
+        let selectedBg = UIView(frame: contentView.frame)
         selectedBg.cornerRadius = 5
         selectedBg.backgroundColor = Constants.Color.selectedBackground
         selectedBackgroundView = selectedBg

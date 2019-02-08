@@ -41,6 +41,16 @@ extension UIView {
 
         return btn
     }
+
+    func dismissKeyboardOnTapOutside(cancelsTouchesInView: Bool = true) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = cancelsTouchesInView
+        self.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func dismissKeyboard() {
+        self.endEditing(true)
+    }
 }
 
 // MARK: Inspectable

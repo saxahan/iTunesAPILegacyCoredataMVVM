@@ -19,7 +19,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
-        // dismissKeyboardOnTapOutside()
+        view.dismissKeyboardOnTapOutside(cancelsTouchesInView: false)
         bindings()
     }
 
@@ -138,9 +138,9 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
         let rows = filters.map { return FilterRowViewModel(imageName: "checked", title: $0.rawValue.uppercased()) }
         ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
-                           allowsMultiSelection: false,
-                           completion: { [weak self] data in
-                            _ = self?.viewModel.filter.value.updateSelected(at: data?.selected?.row)
+                                                                 shouldDismissOnSelection: true,
+                                                                 completion: { [weak self] data in
+                                                                    _ = self?.viewModel.filter.value.updateSelected(at: data?.selected?.row)
 
         }).show()
     }

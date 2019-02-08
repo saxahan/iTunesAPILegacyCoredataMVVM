@@ -6,7 +6,10 @@
 //  Copyright © 2019 Yunus Alkan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+typealias PopupCompletionState = (_ state: PopupStates) -> Void
+typealias PopupCompletion<T> = (_ data: T?) -> Void
 
 enum PopupType: String {
     case info
@@ -15,7 +18,7 @@ enum PopupType: String {
     case success
 }
 
-enum PopupButtonType: String {
+enum PopupStates: String {
     case ok
     case cancel
     case yes
@@ -24,6 +27,22 @@ enum PopupButtonType: String {
     case dismiss
 }
 
-typealias PopupCompletionState = (_ state: PopupButtonType) -> Void
-typealias PopupCompletion<T> = (_ data: T?) -> Void
+struct PopupAnimationProps {
+
+    struct Color {
+       static let backViewColor: UIColor = UIColor(white: 0.1, alpha: 0.5)
+    }
+
+    struct Show {
+        static let duration: TimeInterval = 0.5
+        static let delay: TimeInterval = 0.0
+        static let springWithDamping: CGFloat = 0.5
+        static let springVelocity: CGFloat = 10.0
+    }
+
+    struct Dismiss {
+        static let duration: TimeInterval = 0.2
+        static let delay: TimeInterval = 0.0
+    }
+}
 

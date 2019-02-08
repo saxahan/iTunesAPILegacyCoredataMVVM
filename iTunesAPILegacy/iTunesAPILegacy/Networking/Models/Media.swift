@@ -24,4 +24,5 @@ struct Media: Codable {
     var collectionExplicitness, trackExplicitness: String?
     var trackTimeMillis: Int?
     var country, currency, primaryGenreName: String?
+    var description: String?
 }

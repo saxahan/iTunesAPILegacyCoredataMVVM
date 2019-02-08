@@ -9,13 +9,9 @@
 import UIKit
 
 class PopupShowAnimation: NSObject, UIViewControllerAnimatedTransitioning {
-    var duration: TimeInterval = 0.8
-    var delay: TimeInterval = 0.0
-    var springWithDamping: CGFloat = 0.8
-    var springVelocity: CGFloat = 2.0
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
+        return PopupAnimationProps.Show.duration
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -30,10 +26,10 @@ class PopupShowAnimation: NSObject, UIViewControllerAnimatedTransitioning {
         containerView.addSubview(toView)
 
         toView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-        UIView.animate(withDuration: duration,
-                       delay: delay,
-                       usingSpringWithDamping: springWithDamping,
-                       initialSpringVelocity: springVelocity,
+        UIView.animate(withDuration: PopupAnimationProps.Show.duration,
+                       delay: PopupAnimationProps.Show.delay,
+                       usingSpringWithDamping: PopupAnimationProps.Show.springWithDamping,
+                       initialSpringVelocity: PopupAnimationProps.Show.springVelocity,
                        options: .curveEaseInOut, animations: {
                         toView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }) { (finished) in
@@ -43,11 +39,8 @@ class PopupShowAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 }
 
 class PopupDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
-    var duration: TimeInterval = 0.2
-    var delay: TimeInterval = 0.0
-
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
+        return PopupAnimationProps.Dismiss.duration
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -56,8 +49,8 @@ class PopupDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
                 return
         }
 
-        UIView.animate(withDuration: duration,
-                       delay: delay,
+        UIView.animate(withDuration: PopupAnimationProps.Dismiss.duration,
+                       delay: PopupAnimationProps.Dismiss.delay,
                        options: .curveEaseInOut,
                        animations: {
                         fromView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
