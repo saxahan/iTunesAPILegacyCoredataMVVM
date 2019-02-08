@@ -5,6 +5,16 @@
   Created by Yunus Alkan on 5.02.2019.
   Copyright © 2019 Yunus Alkan. All rights reserved.
 */
+"INFO" = "Information";
+"WARNING" = "Warning";
+"ERROR" = "Error";
+"SUCCESS" = "Success";
+
+"OK" = "OK";
+"CANCEL" = "Cancel";
+"YES" = "Yes";
+"NO" = "No";
+
 "ERROR_TIMEOUT" = "Request timeout";
 "ERROR_UNKNOWN_X" = "Unknown error: %@";
 "ERROR_SERVER_WITH_STATUS_CODE" = "Server error code with %d";
@@ -24,6 +34,8 @@
 "PLACEHOLDER_SEARCH" = "Album, movie or anything else";
 "PLACEHOLDER_YOU_CAN_SEARCH" = "You can search for a movie, a podcast, an album or something else by typing keywords.";
 "PLACEHOLDER_SEARCHED_NO_RESULT" = "There is no result of searching.";
+
+"POPUP_ARE_YOU_SURE_WANT_TO_DELETE" = "Are you sure want to delete?";
 
 
 

@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6407BF0220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
-		B6407BF1220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
-		B6407BF2220CE01B008C998F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BEE220CE01B008C998F /* PopupViewController.swift */; };
-		B6407BF3220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
-		B6407BF4220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
-		B6407BF5220CE01B008C998F /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6407BEF220CE01B008C998F /* PopupViewController.xib */; };
+		B628A7E1220DA0CF005FB103 /* PopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E0220DA0CF005FB103 /* PopupAnimation.swift */; };
+		B628A7E2220DA0CF005FB103 /* PopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E0220DA0CF005FB103 /* PopupAnimation.swift */; };
+		B628A7E3220DA0CF005FB103 /* PopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E0220DA0CF005FB103 /* PopupAnimation.swift */; };
+		B628A7E5220DA14F005FB103 /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E4220DA14F005FB103 /* PopupPresentationController.swift */; };
+		B628A7E6220DA14F005FB103 /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E4220DA14F005FB103 /* PopupPresentationController.swift */; };
+		B628A7E7220DA14F005FB103 /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E4220DA14F005FB103 /* PopupPresentationController.swift */; };
+		B628A7E9220DA2D7005FB103 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E8220DA2D7005FB103 /* Popup.swift */; };
+		B628A7EA220DA2D7005FB103 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E8220DA2D7005FB103 /* Popup.swift */; };
+		B628A7EB220DA2D7005FB103 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E8220DA2D7005FB103 /* Popup.swift */; };
+		B628A7EF220DA419005FB103 /* ConfirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */; };
+		B628A7F0220DA419005FB103 /* ConfirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */; };
+		B628A7F1220DA419005FB103 /* ConfirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */; };
+		B628A7F2220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
+		B628A7F3220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
+		B628A7F4220DA419005FB103 /* ConfirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */; };
 		B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BFC220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
 		B6407BFD220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
 		B6407BFE220CE56F008C998F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFB220CE56F008C998F /* PrimaryButton.swift */; };
-		B6407C00220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
-		B6407C01220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
-		B6407C02220CE930008C998F /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BFF220CE930008C998F /* Modal.swift */; };
-		B6407C04220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
-		B6407C05220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
-		B6407C06220CE99C008C998F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407C03220CE99C008C998F /* PopupView.swift */; };
 		B64C257C220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257D220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
 		B64C257E220975DE0034C01B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C257B220975DE0034C01B /* Identifiable.swift */; };
@@ -82,6 +85,24 @@
 		B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
 		B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */; };
+		B64E7AFB220DC2470075F67D /* PopupSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFA220DC2470075F67D /* PopupSettings.swift */; };
+		B64E7AFC220DC2470075F67D /* PopupSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFA220DC2470075F67D /* PopupSettings.swift */; };
+		B64E7AFD220DC2470075F67D /* PopupSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFA220DC2470075F67D /* PopupSettings.swift */; };
+		B64E7B01220DC2EA0075F67D /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFF220DC2EA0075F67D /* ChoicePopup.swift */; };
+		B64E7B02220DC2EA0075F67D /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFF220DC2EA0075F67D /* ChoicePopup.swift */; };
+		B64E7B03220DC2EA0075F67D /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7AFF220DC2EA0075F67D /* ChoicePopup.swift */; };
+		B64E7B04220DC2EA0075F67D /* ChoicePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B00220DC2EA0075F67D /* ChoicePopup.xib */; };
+		B64E7B05220DC2EA0075F67D /* ChoicePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B00220DC2EA0075F67D /* ChoicePopup.xib */; };
+		B64E7B06220DC2EA0075F67D /* ChoicePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B00220DC2EA0075F67D /* ChoicePopup.xib */; };
+		B64E7B0E220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */; };
+		B64E7B0F220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */; };
+		B64E7B10220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */; };
+		B64E7B11220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */; };
+		B64E7B12220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */; };
+		B64E7B13220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */; };
+		B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
+		B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
+		B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
 		B650D24E220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D24F220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D250220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
@@ -258,12 +279,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B6407BEE220CE01B008C998F /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		B6407BEF220CE01B008C998F /* PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
+		B628A7E0220DA0CF005FB103 /* PopupAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAnimation.swift; sourceTree = "<group>"; };
+		B628A7E4220DA14F005FB103 /* PopupPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPresentationController.swift; sourceTree = "<group>"; };
+		B628A7E8220DA2D7005FB103 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPopup.swift; sourceTree = "<group>"; };
+		B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationPopup.xib; sourceTree = "<group>"; };
 		B6407BF7220CE549008C998F /* HoldableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldableButton.swift; sourceTree = "<group>"; };
 		B6407BFB220CE56F008C998F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
-		B6407BFF220CE930008C998F /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
-		B6407C03220CE99C008C998F /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		B64C2587220976D20034C01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B64C258F22097DB90034C01B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -283,6 +305,12 @@
 		B64C25F52209CBDE0034C01B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		B64C25F92209D2E50034C01B /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B64E7AFA220DC2470075F67D /* PopupSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSettings.swift; sourceTree = "<group>"; };
+		B64E7AFF220DC2EA0075F67D /* ChoicePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePopup.swift; sourceTree = "<group>"; };
+		B64E7B00220DC2EA0075F67D /* ChoicePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicePopup.xib; sourceTree = "<group>"; };
+		B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceTableViewCell.xib; sourceTree = "<group>"; };
+		B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B650D24C220B681F004EF756 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
 		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
@@ -387,13 +415,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B628A7EC220DA3DE005FB103 /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				B628A7ED220DA419005FB103 /* ConfirmationPopup.swift */,
+				B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */,
+			);
+			path = Confirmation;
+			sourceTree = "<group>";
+		};
 		B6407BED220CDF06008C998F /* Popup */ = {
 			isa = PBXGroup;
 			children = (
-				B6407BEE220CE01B008C998F /* PopupViewController.swift */,
-				B6407BEF220CE01B008C998F /* PopupViewController.xib */,
-				B6407BFF220CE930008C998F /* Modal.swift */,
-				B6407C03220CE99C008C998F /* PopupView.swift */,
+				B64E7AFE220DC2C50075F67D /* Choice */,
+				B628A7EC220DA3DE005FB103 /* Confirmation */,
+				B628A7E8220DA2D7005FB103 /* Popup.swift */,
+				B628A7E0220DA0CF005FB103 /* PopupAnimation.swift */,
+				B628A7E4220DA14F005FB103 /* PopupPresentationController.swift */,
+				B64E7AFA220DC2470075F67D /* PopupSettings.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -457,13 +496,33 @@
 		B64C25F42209CBC20034C01B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B6407BF6220CE530008C998F /* Buttons */,
-				B6407BED220CDF06008C998F /* Popup */,
 				B64C25FD2209D5200034C01B /* BaseCollectionViewCell.swift */,
+				B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */,
+				B6407BF6220CE530008C998F /* Buttons */,
 				B66384C8220AFEE100FBAEFC /* Placeholders */,
+				B6407BED220CDF06008C998F /* Popup */,
 				B66384E9220B165A00FBAEFC /* SearchBar */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B64E7AFE220DC2C50075F67D /* Choice */ = {
+			isa = PBXGroup;
+			children = (
+				B64E7B0B220DC7910075F67D /* Cell */,
+				B64E7AFF220DC2EA0075F67D /* ChoicePopup.swift */,
+				B64E7B00220DC2EA0075F67D /* ChoicePopup.xib */,
+			);
+			path = Choice;
+			sourceTree = "<group>";
+		};
+		B64E7B0B220DC7910075F67D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */,
+				B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B650D264220B76F2004EF756 /* Detail */ = {
@@ -858,11 +917,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
+				B628A7F2220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D82209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
-				B6407BF3220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DA220A36D100E7F372 /* SplashViewController.xib in Resources */,
+				B64E7B11220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */,
 				B6B61786220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458282208CFF100153920 /* Config-Staging.plist in Resources */,
 				B6C4582A2208D00100153920 /* Config-Release.plist in Resources */,
@@ -871,6 +931,7 @@
 				B66384AC220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D261220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
+				B64E7B04220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,11 +947,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
+				B628A7F3220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D92209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
-				B6407BF4220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DB220A36D100E7F372 /* SplashViewController.xib in Resources */,
+				B64E7B12220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */,
 				B6B61787220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C458392208D07500153920 /* Config-Staging.plist in Resources */,
 				B6C4583A2208D07500153920 /* Config-Release.plist in Resources */,
@@ -899,6 +961,7 @@
 				B66384AD220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D262220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
+				B64E7B05220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,11 +970,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
+				B628A7F4220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25DA2209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
-				B6407BF5220CE01B008C998F /* PopupViewController.xib in Resources */,
 				B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */,
 				B6B617DC220A36D100E7F372 /* SplashViewController.xib in Resources */,
+				B64E7B13220DC7B10075F67D /* ChoiceTableViewCell.xib in Resources */,
 				B6B61788220A030200E7F372 /* Localizable.strings in Resources */,
 				B6C4584F2208D0DD00153920 /* Config-Staging.plist in Resources */,
 				B6C458502208D0DD00153920 /* Config-Release.plist in Resources */,
@@ -920,6 +984,7 @@
 				B66384AE220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D263220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
 				B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
+				B64E7B06220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,18 +995,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6407C04220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384A9220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AA220993080034C01B /* Observable.swift in Sources */,
 				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C458592208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
+				B628A7EF220DA419005FB103 /* ConfirmationPopup.swift in Sources */,
 				B6C457DF2208BD4000153920 /* AppDelegate.swift in Sources */,
 				B6C067BC220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
+				B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27A220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
@@ -954,22 +1020,25 @@
 				B650D24E220B681F004EF756 /* History.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
+				B628A7E5220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587A2208EB7900153920 /* API.swift in Sources */,
 				B6C4587E2208FE6100153920 /* String+.swift in Sources */,
+				B64E7B0E220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
 				B6C458242208CF8200153920 /* AppConfig.swift in Sources */,
 				B66384B1220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */,
-				B6407C00220CE930008C998F /* Modal.swift in Sources */,
 				B650D27E220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EC2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
+				B628A7E1220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
 				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617CF220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B6B617CA220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F02209BAC80034C01B /* SectionViewModel.swift in Sources */,
+				B628A7E9220DA2D7005FB103 /* Popup.swift in Sources */,
 				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
@@ -979,11 +1048,11 @@
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
 				B66384E2220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C4581C2208C1DA00153920 /* Media.swift in Sources */,
-				B6407BF0220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D25E220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384B9220ABB8100FBAEFC /* SettingsService.swift in Sources */,
+				B64E7B01220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D7220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B66384B5220ABA7800FBAEFC /* Settings.swift in Sources */,
@@ -992,6 +1061,7 @@
 				B66384CA220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B64E7AFB220DC2470075F67D /* PopupSettings.swift in Sources */,
 				B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1008,18 +1078,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6407C05220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384AA220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AB220993080034C01B /* Observable.swift in Sources */,
 				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
+				B628A7F0220DA419005FB103 /* ConfirmationPopup.swift in Sources */,
 				B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */,
 				B6C067BD220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
+				B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27B220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
@@ -1032,22 +1103,25 @@
 				B650D24F220B681F004EF756 /* History.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
+				B628A7E6220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587B2208EB7900153920 /* API.swift in Sources */,
 				B6C4587F2208FE6100153920 /* String+.swift in Sources */,
+				B64E7B0F220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
 				B6C458302208D07500153920 /* AppConfig.swift in Sources */,
 				B66384B2220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458312208D07500153920 /* CodingUserInfoKey+.swift in Sources */,
-				B6407C01220CE930008C998F /* Modal.swift in Sources */,
 				B650D27F220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25ED2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
+				B628A7E2220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
 				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D0220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B6B617CB220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F12209BAC80034C01B /* SectionViewModel.swift in Sources */,
+				B628A7EA220DA2D7005FB103 /* Popup.swift in Sources */,
 				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
@@ -1057,11 +1131,11 @@
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
 				B66384E3220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458322208D07500153920 /* Media.swift in Sources */,
-				B6407BF1220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D25F220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BA220ABB8100FBAEFC /* SettingsService.swift in Sources */,
+				B64E7B02220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D8220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B66384B6220ABA7800FBAEFC /* Settings.swift in Sources */,
@@ -1070,6 +1144,7 @@
 				B66384CB220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B64E7AFC220DC2470075F67D /* PopupSettings.swift in Sources */,
 				B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1078,18 +1153,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6407C06220CE99C008C998F /* PopupView.swift in Sources */,
 				B66384AB220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AC220993080034C01B /* Observable.swift in Sources */,
 				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
 				B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
+				B628A7F1220DA419005FB103 /* ConfirmationPopup.swift in Sources */,
 				B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */,
 				B6C067BE220C2DB500E885B1 /* States.swift in Sources */,
 				B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
+				B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27C220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
@@ -1102,22 +1178,25 @@
 				B650D250220B681F004EF756 /* History.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
+				B628A7E7220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
 				B6C4587C2208EB7900153920 /* API.swift in Sources */,
 				B6C458802208FE6100153920 /* String+.swift in Sources */,
+				B64E7B10220DC7B10075F67D /* ChoiceTableViewCell.swift in Sources */,
 				B6C458462208D0DD00153920 /* AppConfig.swift in Sources */,
 				B66384B3220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */,
 				B6C458472208D0DD00153920 /* CodingUserInfoKey+.swift in Sources */,
-				B6407C02220CE930008C998F /* Modal.swift in Sources */,
 				B650D280220B8954004EF756 /* NSManagedObject+.swift in Sources */,
 				B64C25EE2209B6BE0034C01B /* MediaCellViewModel.swift in Sources */,
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
+				B628A7E3220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
 				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D1220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
 				B6B617CC220A337500E7F372 /* UIViewController+.swift in Sources */,
 				B64C25F22209BAC80034C01B /* SectionViewModel.swift in Sources */,
+				B628A7EB220DA2D7005FB103 /* Popup.swift in Sources */,
 				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
@@ -1127,11 +1206,11 @@
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
 				B66384E4220B157200FBAEFC /* SearchBar.swift in Sources */,
 				B6C458482208D0DD00153920 /* Media.swift in Sources */,
-				B6407BF2220CE01B008C998F /* PopupViewController.swift in Sources */,
 				B650D260220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
 				B66384BB220ABB8100FBAEFC /* SettingsService.swift in Sources */,
+				B64E7B03220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D9220A36D100E7F372 /* SplashViewController.swift in Sources */,
 				B66384B7220ABA7800FBAEFC /* Settings.swift in Sources */,
@@ -1140,6 +1219,7 @@
 				B66384CC220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */,
+				B64E7AFD220DC2470075F67D /* PopupSettings.swift in Sources */,
 				B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

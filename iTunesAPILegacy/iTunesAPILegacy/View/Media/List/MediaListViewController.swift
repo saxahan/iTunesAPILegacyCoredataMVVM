@@ -128,10 +128,6 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
     @objc func filterTapped() {
         debugPrint(#function)
-
-        let pop = PopupViewController.initFromNib()
-        pop.modalPresentationStyle = .overCurrentContext
-        self.present(pop, animated: true, completion: nil)
     }
 
     @objc func layoutTapped() {

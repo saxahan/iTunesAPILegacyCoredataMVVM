@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 enum MediaType: String, CaseIterable {
     case movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all

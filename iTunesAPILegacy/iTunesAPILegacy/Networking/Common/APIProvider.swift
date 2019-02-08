@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: typealias blocks
 
-typealias Completion = (_ result: Result<Response, APIError>) -> Void
+internal typealias Completion = (_ result: Result<Response, APIError>) -> Void
 
 // MARK: Provider
 

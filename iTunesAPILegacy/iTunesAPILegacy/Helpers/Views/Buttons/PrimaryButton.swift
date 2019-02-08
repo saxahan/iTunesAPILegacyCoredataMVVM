@@ -8,10 +8,9 @@
 
 import UIKit
 
-@IBDesignable
 class PrimaryButton: HoldableButton {
     
-    required init(title: String, image: UIImage? = nil) {
+    init(title: String, image: UIImage? = nil) {
         super.init(frame: .zero)
 
         backgroundColor = Constants.Color.primary
@@ -30,8 +29,10 @@ class PrimaryButton: HoldableButton {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
     }
+
 
     override func draw(_ rect: CGRect) {
         layer.cornerRadius = frame.height / 2
