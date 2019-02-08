@@ -181,7 +181,7 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         numOfColumns = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
-        UIScreen.main.snapshotView(afterScreenUpdates: true)
+//        UIScreen.main.snapshotView(afterScreenUpdates: true)
 
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.collectionViewLayout.invalidateLayout()

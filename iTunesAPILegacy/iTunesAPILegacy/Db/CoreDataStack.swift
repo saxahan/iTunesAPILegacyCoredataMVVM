@@ -41,6 +41,7 @@ final class CoreDataStack {
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)
         } catch {
             // Report any error we got.
+            
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject
             dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject
@@ -61,6 +62,7 @@ final class CoreDataStack {
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        managedObjectContext.retainsRegisteredObjects = true
         return managedObjectContext
     }()
 

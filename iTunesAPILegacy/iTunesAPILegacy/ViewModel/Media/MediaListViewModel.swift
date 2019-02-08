@@ -60,12 +60,12 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                 self.fetchHistories()
 
                 var cells = [MediaCellViewModel]()
-                for (index, obj) in mediaList.enumerated() {
+                for obj in mediaList {
                     if let trackId = obj.trackId {
-                        let deleted = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.isRemoved }
+                        let deleted = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.removed }
 
                         if !deleted {
-                            let visited = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.isVisited }
+                            let visited = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.visited }
                             let cell = MediaCellViewModel(trackId: trackId,
                                                           name: obj.trackName,
                                                           previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100,

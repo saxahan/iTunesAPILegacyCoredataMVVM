@@ -20,6 +20,10 @@ class BaseViewController: UIViewController, UInterfaceBased {
     // MARK: setup some things
     
     func setup() {
+        self.edgesForExtendedLayout = []
+        self.extendedLayoutIncludesOpaqueBars = false
+        self.automaticallyAdjustsScrollViewInsets = false
+
         initNavbar()
     }
 

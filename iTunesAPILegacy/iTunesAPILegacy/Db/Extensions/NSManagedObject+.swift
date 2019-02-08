@@ -32,7 +32,11 @@ extension NSManagedObject {
     }
 
     func save() throws {
-        try self.managedObjectContext?.save()
+        do {
+            try self.managedObjectContext?.save()
+        } catch {
+            debugPrint(error)
+        }
     }
 
 }
