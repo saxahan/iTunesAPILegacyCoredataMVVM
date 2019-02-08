@@ -13,10 +13,18 @@ class ChoicePopup: Popup {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectButton: HoldableButton!
 
-    override func setup() {
-        super.setup()
+    class func create(_ daataSource: [CellViewModel], completion: PopupCompletion? = nil) -> ChoicePopup {
+        let popup = ChoicePopup.initFromNib()
+        popup.completionBlock = completion
+        return popup
     }
 
+    override func setup() {
+        super.setup()
+
+        tableView.register(ChoiceTableViewCell.self)
+
+    }
 }
 
 extension ChoicePopup: UITableViewDelegate, UITableViewDataSource {

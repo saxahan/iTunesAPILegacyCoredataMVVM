@@ -23,8 +23,6 @@ class ConfirmationPopup: Popup {
     @IBOutlet weak var yesButton: HoldableButton!
     @IBOutlet weak var noButton: HoldableButton!
 
-    var completionBlock: PopupCompletion?
-
     // images
     var topImage: UIImage?
 

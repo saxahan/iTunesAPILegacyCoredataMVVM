@@ -21,7 +21,7 @@ class BaseTableViewCell<T>: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setup(_ data: T?) {
+    func setup(_ row: T?) {
 
     }
 }

@@ -103,6 +103,9 @@
 		B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
 		B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
 		B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */; };
+		B64E7B1D220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
+		B64E7B1E220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
+		B64E7B1F220DD0B10075F67D /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E7B1C220DD0B10075F67D /* RowViewModel.swift */; };
 		B650D24E220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D24F220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
 		B650D250220B681F004EF756 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650D24C220B681F004EF756 /* History.swift */; };
@@ -311,6 +314,7 @@
 		B64E7B0C220DC7B10075F67D /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B64E7B0D220DC7B10075F67D /* ChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceTableViewCell.xib; sourceTree = "<group>"; };
 		B64E7B14220DC7DC0075F67D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		B64E7B1C220DD0B10075F67D /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
 		B650D24C220B681F004EF756 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B650D258220B7378004EF756 /* MediaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModel.swift; sourceTree = "<group>"; };
 		B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
@@ -489,6 +493,7 @@
 				B64C25E72209B6170034C01B /* Settable.swift */,
 				B64C25EF2209BAC80034C01B /* SectionViewModel.swift */,
 				B6C067BB220C2DB500E885B1 /* States.swift */,
+				B64E7B1C220DD0B10075F67D /* RowViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1033,6 +1038,7 @@
 				B64C2588220976D20034C01B /* Constants.swift in Sources */,
 				B6C458662208D6F300153920 /* Request.swift in Sources */,
 				B628A7E1220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
+				B64E7B1D220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259022097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617CF220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586A2208D7BD00153920 /* APIProvider.swift in Sources */,
@@ -1116,6 +1122,7 @@
 				B64C2589220976D20034C01B /* Constants.swift in Sources */,
 				B6C458672208D6F300153920 /* Request.swift in Sources */,
 				B628A7E2220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
+				B64E7B1E220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259122097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D0220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586B2208D7BD00153920 /* APIProvider.swift in Sources */,
@@ -1191,6 +1198,7 @@
 				B64C258A220976D20034C01B /* Constants.swift in Sources */,
 				B6C458682208D6F300153920 /* Request.swift in Sources */,
 				B628A7E3220DA0CF005FB103 /* PopupAnimation.swift in Sources */,
+				B64E7B1F220DD0B10075F67D /* RowViewModel.swift in Sources */,
 				B64C259222097DB90034C01B /* BaseViewModel.swift in Sources */,
 				B6B617D1220A364F00E7F372 /* SettingsViewController.swift in Sources */,
 				B6C4586C2208D7BD00153920 /* APIProvider.swift in Sources */,
