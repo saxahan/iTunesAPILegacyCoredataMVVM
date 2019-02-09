@@ -11,7 +11,7 @@ import Foundation
 enum Result<Value, Error> {
     case success(Value)
     case failure(Error)
-
+    
     var isSuccess: Bool {
         switch self {
         case .success:

@@ -139,12 +139,6 @@
 		B66384B1220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */; };
 		B66384B2220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */; };
 		B66384B3220ABA3D00FBAEFC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */; };
-		B66384B5220ABA7800FBAEFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B4220ABA7800FBAEFC /* Settings.swift */; };
-		B66384B6220ABA7800FBAEFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B4220ABA7800FBAEFC /* Settings.swift */; };
-		B66384B7220ABA7800FBAEFC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B4220ABA7800FBAEFC /* Settings.swift */; };
-		B66384B9220ABB8100FBAEFC /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B8220ABB8100FBAEFC /* SettingsService.swift */; };
-		B66384BA220ABB8100FBAEFC /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B8220ABB8100FBAEFC /* SettingsService.swift */; };
-		B66384BB220ABB8100FBAEFC /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384B8220ABB8100FBAEFC /* SettingsService.swift */; };
 		B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
 		B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
 		B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */; };
@@ -163,15 +157,30 @@
 		B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
 		B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
 		B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */; };
+		B69E67FE220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E67FC220F3B6700FE3583 /* SettingsTableViewCell.swift */; };
+		B69E67FF220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E67FC220F3B6700FE3583 /* SettingsTableViewCell.swift */; };
+		B69E6800220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E67FC220F3B6700FE3583 /* SettingsTableViewCell.swift */; };
+		B69E6801220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E67FD220F3B6700FE3583 /* SettingsTableViewCell.xib */; };
+		B69E6802220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E67FD220F3B6700FE3583 /* SettingsTableViewCell.xib */; };
+		B69E6803220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E67FD220F3B6700FE3583 /* SettingsTableViewCell.xib */; };
+		B69E6805220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6804220F3C6500FE3583 /* SettingsRowViewModel.swift */; };
+		B69E6806220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6804220F3C6500FE3583 /* SettingsRowViewModel.swift */; };
+		B69E6807220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6804220F3C6500FE3583 /* SettingsRowViewModel.swift */; };
+		B69E680D220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */; };
+		B69E680E220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */; };
+		B69E680F220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */; };
+		B69E6811220F702100FE3583 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6810220F702100FE3583 /* Persistence.swift */; };
+		B69E6812220F702100FE3583 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6810220F702100FE3583 /* Persistence.swift */; };
+		B69E6813220F702100FE3583 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6810220F702100FE3583 /* Persistence.swift */; };
+		B69E681A220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
+		B69E681B220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
+		B69E681C220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
 		B6B61786220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61787220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61788220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B6178D220A0E4800E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
 		B6B6178E220A0E5000E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
 		B6B6178F220A0E5600E7F372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */; };
-		B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
-		B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
-		B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61790220A0E6700E7F372 /* Reachability.swift */; };
 		B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
 		B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
 		B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B61799220A21AF00E7F372 /* DeviceManager.swift */; };
@@ -213,12 +222,10 @@
 		B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
 		B6C4581C2208C1DA00153920 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581B2208C1DA00153920 /* Media.swift */; };
 		B6C4581F2208C6BE00153920 /* CodingUserInfoKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */; };
-		B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
 		B6C458242208CF8200153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
 		B6C458262208CFB900153920 /* Config-Develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458252208CFB900153920 /* Config-Develop.plist */; };
 		B6C458282208CFF100153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
 		B6C4582A2208D00100153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
-		B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
 		B6C4582E2208D07500153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
 		B6C458302208D07500153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
@@ -230,7 +237,6 @@
 		B6C458392208D07500153920 /* Config-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458272208CFF100153920 /* Config-Staging.plist */; };
 		B6C4583A2208D07500153920 /* Config-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C458292208D00100153920 /* Config-Release.plist */; };
 		B6C4583B2208D07500153920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C457E82208BD4100153920 /* Assets.xcassets */; };
-		B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458202208CAA500153920 /* CoreDataStack.swift */; };
 		B6C458442208D0DD00153920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C457DE2208BD4000153920 /* AppDelegate.swift */; };
 		B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */; };
 		B6C458462208D0DD00153920 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C458232208CF8200153920 /* AppConfig.swift */; };
@@ -332,18 +338,21 @@
 		B66384A7220AB90D00FBAEFC /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
 		B66384A8220AB90D00FBAEFC /* MediaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListViewController.xib; sourceTree = "<group>"; };
 		B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		B66384B4220ABA7800FBAEFC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		B66384B8220ABB8100FBAEFC /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		B66384BC220ABD0E00FBAEFC /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		B66384C9220AFF1300FBAEFC /* ListResultPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultPlaceholderView.swift; sourceTree = "<group>"; };
 		B66384CD220AFF1C00FBAEFC /* ListResultPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListResultPlaceholderView.xib; sourceTree = "<group>"; };
 		B66384E1220B157200FBAEFC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B66384E5220B15AC00FBAEFC /* SearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
 		B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+.swift"; sourceTree = "<group>"; };
+		B69E67FC220F3B6700FE3583 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		B69E67FD220F3B6700FE3583 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		B69E6804220F3C6500FE3583 /* SettingsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowViewModel.swift; sourceTree = "<group>"; };
+		B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentStoreCoordinator+.swift"; sourceTree = "<group>"; };
+		B69E6810220F702100FE3583 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B69E6819220F7A2A00FE3583 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		B6B61789220A030200E7F372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B6B61790220A0E6700E7F372 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B6B61799220A21AF00E7F372 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		B6B6179D220A275700E7F372 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B6B617A1220A295B00E7F372 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
@@ -367,7 +376,6 @@
 		B6C458052208BE7100153920 /* iTunesAPILegacy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAPILegacy.xcdatamodel; sourceTree = "<group>"; };
 		B6C4581B2208C1DA00153920 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		B6C4581E2208C6BE00153920 /* CodingUserInfoKey+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+.swift"; sourceTree = "<group>"; };
-		B6C458202208CAA500153920 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B6C458232208CF8200153920 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		B6C458252208CFB900153920 /* Config-Develop.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Develop.plist"; sourceTree = "<group>"; };
 		B6C458272208CFF100153920 /* Config-Staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Staging.plist"; sourceTree = "<group>"; };
@@ -553,6 +561,7 @@
 			children = (
 				B650D27D220B8954004EF756 /* NSManagedObject+.swift */,
 				B650D279220B8803004EF756 /* NSManagedObjectContext+.swift */,
+				B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				B66384B0220ABA3D00FBAEFC /* SettingsViewModel.swift */,
+				B69E6804220F3C6500FE3583 /* SettingsRowViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -583,12 +593,30 @@
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
+		B69E67FB220F3B5600FE3583 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B69E67FC220F3B6700FE3583 /* SettingsTableViewCell.swift */,
+				B69E67FD220F3B6700FE3583 /* SettingsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B69E6814220F703800FE3583 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B650D24C220B681F004EF756 /* History.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		B6B61798220A219D00E7F372 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				B64C257B220975DE0034C01B /* Identifiable.swift */,
 				B64C25A9220993080034C01B /* Observable.swift */,
 				B6B61799220A21AF00E7F372 /* DeviceManager.swift */,
+				B69E6819220F7A2A00FE3583 /* AlertManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -605,6 +633,7 @@
 		B6B617B2220A2E4100E7F372 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B69E67FB220F3B5600FE3583 /* Cell */,
 				B6B617CD220A364F00E7F372 /* SettingsViewController.swift */,
 				B6B617CE220A364F00E7F372 /* SettingsViewController.xib */,
 			);
@@ -740,8 +769,8 @@
 		B6C458192208BFE200153920 /* Db */ = {
 			isa = PBXGroup;
 			children = (
-				B6C458202208CAA500153920 /* CoreDataStack.swift */,
-				B650D24C220B681F004EF756 /* History.swift */,
+				B69E6810220F702100FE3583 /* Persistence.swift */,
+				B69E6814220F703800FE3583 /* Entities */,
 				B650D281220B899E004EF756 /* Extensions */,
 				B6C458042208BE7100153920 /* iTunesAPILegacy.xcdatamodeld */,
 			);
@@ -752,7 +781,6 @@
 			isa = PBXGroup;
 			children = (
 				B6C4581B2208C1DA00153920 /* Media.swift */,
-				B66384B4220ABA7800FBAEFC /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -796,7 +824,6 @@
 				B6C458712208D84D00153920 /* APIError.swift */,
 				B6C458692208D7BD00153920 /* APIProvider.swift */,
 				B6C458582208D1FE00153920 /* HttpServiceDefinable.swift */,
-				B6B61790220A0E6700E7F372 /* Reachability.swift */,
 				B6C458652208D6F300153920 /* Request.swift */,
 				B6C4586D2208D83F00153920 /* Response.swift */,
 				B6C4585C2208D38100153920 /* Result.swift */,
@@ -808,7 +835,6 @@
 			isa = PBXGroup;
 			children = (
 				B6C458612208D3EB00153920 /* MediaService.swift */,
-				B66384B8220ABB8100FBAEFC /* SettingsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -945,6 +971,7 @@
 				B6C457E92208BD4100153920 /* Assets.xcassets in Resources */,
 				B66384AC220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D261220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
+				B69E6801220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */,
 				B66384CE220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 				B64E7B04220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
@@ -975,6 +1002,7 @@
 				B6C4583B2208D07500153920 /* Assets.xcassets in Resources */,
 				B66384AD220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D262220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
+				B69E6802220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */,
 				B66384CF220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 				B64E7B05220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
@@ -998,6 +1026,7 @@
 				B6C458512208D0DD00153920 /* Assets.xcassets in Resources */,
 				B66384AE220AB90D00FBAEFC /* MediaListViewController.xib in Resources */,
 				B650D263220B76EB004EF756 /* MediaDetailViewController.xib in Resources */,
+				B69E6803220F3B6700FE3583 /* SettingsTableViewCell.xib in Resources */,
 				B66384D0220AFF1C00FBAEFC /* ListResultPlaceholderView.xib in Resources */,
 				B64E7B06220DC2EA0075F67D /* ChoicePopup.xib in Resources */,
 			);
@@ -1012,7 +1041,6 @@
 			files = (
 				B66384A9220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AA220993080034C01B /* Observable.swift in Sources */,
-				B6C458212208CAA500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179E220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C458592208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CB220999240034C01B /* BaseViewController.swift in Sources */,
@@ -1021,13 +1049,16 @@
 				B6C067BC220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EB220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B62D515C220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
+				B69E681A220F7A2A00FE3583 /* AlertManager.swift in Sources */,
 				B64C25A622098BD40034C01B /* MediaListViewModel.swift in Sources */,
+				B69E6811220F702100FE3583 /* Persistence.swift in Sources */,
 				B6B617A2220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B15220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617AF220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27A220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BD220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */,
+				B69E67FE220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */,
 				B6407BFC220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458622208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C6220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -1061,6 +1092,8 @@
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
 				B62D516C220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25E82209B6170034C01B /* Settable.swift in Sources */,
+				B69E680D220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */,
+				B69E6805220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */,
 				B64C257C220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585D2208D38100153920 /* Result.swift in Sources */,
@@ -1069,18 +1102,15 @@
 				B650D25E220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D259220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BA220994190034C01B /* UICollectionView+.swift in Sources */,
-				B66384B9220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B64E7B01220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179A220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D7220A36D100E7F372 /* SplashViewController.swift in Sources */,
-				B66384B5220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458722208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D52209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B66384CA220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BE220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FA2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B64E7AFB220DC2470075F67D /* PopupSettings.swift in Sources */,
-				B6B61791220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,7 +1128,6 @@
 			files = (
 				B66384AA220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AB220993080034C01B /* Observable.swift in Sources */,
-				B6C4582D2208D07500153920 /* CoreDataStack.swift in Sources */,
 				B6B6179F220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585A2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CC220999240034C01B /* BaseViewController.swift in Sources */,
@@ -1107,13 +1136,16 @@
 				B6C067BD220C2DB500E885B1 /* States.swift in Sources */,
 				B66384EC220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B62D515D220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
+				B69E681B220F7A2A00FE3583 /* AlertManager.swift in Sources */,
 				B64C25A722098BD40034C01B /* MediaListViewModel.swift in Sources */,
+				B69E6812220F702100FE3583 /* Persistence.swift in Sources */,
 				B6B617A3220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B16220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617B0220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27B220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BE220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */,
+				B69E67FF220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */,
 				B6407BFD220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458632208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C7220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -1147,6 +1179,8 @@
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
 				B62D516D220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25E92209B6170034C01B /* Settable.swift in Sources */,
+				B69E680E220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */,
+				B69E6806220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */,
 				B64C257D220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585E2208D38100153920 /* Result.swift in Sources */,
@@ -1155,18 +1189,15 @@
 				B650D25F220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25A220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BB220994190034C01B /* UICollectionView+.swift in Sources */,
-				B66384BA220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B64E7B02220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179B220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D8220A36D100E7F372 /* SplashViewController.swift in Sources */,
-				B66384B6220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458732208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D62209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B66384CB220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25BF220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FB2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B64E7AFC220DC2470075F67D /* PopupSettings.swift in Sources */,
-				B6B61792220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,7 +1207,6 @@
 			files = (
 				B66384AB220AB90D00FBAEFC /* MediaListViewController.swift in Sources */,
 				B64C25AC220993080034C01B /* Observable.swift in Sources */,
-				B6C458432208D0DD00153920 /* CoreDataStack.swift in Sources */,
 				B6B617A0220A275700E7F372 /* NavigationController.swift in Sources */,
 				B6C4585B2208D1FE00153920 /* HttpServiceDefinable.swift in Sources */,
 				B64C25CD220999240034C01B /* BaseViewController.swift in Sources */,
@@ -1185,13 +1215,16 @@
 				B6C067BE220C2DB500E885B1 /* States.swift in Sources */,
 				B66384ED220B20FB00FBAEFC /* UIBarButtonItem+.swift in Sources */,
 				B62D515E220E10A700FE66D7 /* FilterViewModel.swift in Sources */,
+				B69E681C220F7A2A00FE3583 /* AlertManager.swift in Sources */,
 				B64C25A822098BD40034C01B /* MediaListViewModel.swift in Sources */,
+				B69E6813220F702100FE3583 /* Persistence.swift in Sources */,
 				B6B617A4220A295B00E7F372 /* TabController.swift in Sources */,
 				B64E7B17220DC7DC0075F67D /* BaseTableViewCell.swift in Sources */,
 				B6B617B1220A2B8800E7F372 /* UIApplication+.swift in Sources */,
 				B650D27C220B8803004EF756 /* NSManagedObjectContext+.swift in Sources */,
 				B66384BF220ABD0E00FBAEFC /* ViewModelBased.swift in Sources */,
 				B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */,
+				B69E6800220F3B6700FE3583 /* SettingsTableViewCell.swift in Sources */,
 				B6407BFE220CE56F008C998F /* PrimaryButton.swift in Sources */,
 				B6C458642208D3EB00153920 /* MediaService.swift in Sources */,
 				B6B617C8220A332700E7F372 /* UInterfaceBased.swift in Sources */,
@@ -1225,6 +1258,8 @@
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
 				B62D516E220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25EA2209B6170034C01B /* Settable.swift in Sources */,
+				B69E680F220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift in Sources */,
+				B69E6807220F3C6500FE3583 /* SettingsRowViewModel.swift in Sources */,
 				B64C257E220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,
 				B6C4585F2208D38100153920 /* Result.swift in Sources */,
@@ -1233,18 +1268,15 @@
 				B650D260220B76EB004EF756 /* MediaDetailViewController.swift in Sources */,
 				B650D25B220B7378004EF756 /* MediaDetailViewModel.swift in Sources */,
 				B64C25BC220994190034C01B /* UICollectionView+.swift in Sources */,
-				B66384BB220ABB8100FBAEFC /* SettingsService.swift in Sources */,
 				B64E7B03220DC2EA0075F67D /* ChoicePopup.swift in Sources */,
 				B6B6179C220A21AF00E7F372 /* DeviceManager.swift in Sources */,
 				B6B617D9220A36D100E7F372 /* SplashViewController.swift in Sources */,
-				B66384B7220ABA7800FBAEFC /* Settings.swift in Sources */,
 				B6C458742208D84D00153920 /* APIError.swift in Sources */,
 				B64C25D72209AF480034C01B /* MediaCollectionViewCell.swift in Sources */,
 				B66384CC220AFF1300FBAEFC /* ListResultPlaceholderView.swift in Sources */,
 				B64C25C0220994240034C01B /* UITableView+.swift in Sources */,
 				B64C25FC2209D2E50034C01B /* UIScrollView+.swift in Sources */,
 				B64E7AFD220DC2470075F67D /* PopupSettings.swift in Sources */,
-				B6B61793220A0E6700E7F372 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

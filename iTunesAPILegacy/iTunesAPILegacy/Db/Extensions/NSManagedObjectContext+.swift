@@ -10,6 +10,22 @@ import CoreData
 
 extension NSManagedObjectContext {
 
+    func fetchRequest<T: NSManagedObject>(_ entityClass: T.Type, sortBy: [NSSortDescriptor]? = nil, predicate: NSPredicate? = nil) -> NSFetchRequest<T> {
+        let request: NSFetchRequest<NSFetchRequestResult>
+        if #available(iOS 10.0, *) {
+            request = entityClass.fetchRequest()
+        } else {
+            let entityName = String(describing: entityClass)
+            request = NSFetchRequest(entityName: entityName)
+        }
+
+        request.returnsObjectsAsFaults = false
+        request.predicate = predicate
+        request.sortDescriptors = sortBy
+
+        return request as! NSFetchRequest<T>
+    }
+
     func fetchObjects<T: NSManagedObject>(_ entityClass: T.Type, sortBy: [NSSortDescriptor]? = nil, predicate: NSPredicate? = nil) throws -> [T] {
         let request: NSFetchRequest<NSFetchRequestResult>
         if #available(iOS 10.0, *) {

@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        try? CoreDataStack.saveContext()
+        _ = Persistense.shared.save()
     }
 
     // MARK - Initializers
@@ -52,9 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppConfig.configure()
 
         // core data
-        debugPrint(CoreDataStack.applicationDocumentsDirectory)
-        // reachability
-//        try? Reachability(hostname: AppConfig.baseURL.absoluteString)?.start()
+        _ = Persistense.shared
     }
 
     func setupRootViewController(_ vc: UIViewController? = nil) {

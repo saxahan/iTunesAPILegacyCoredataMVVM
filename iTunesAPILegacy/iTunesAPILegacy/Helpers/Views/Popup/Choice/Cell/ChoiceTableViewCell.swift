@@ -18,7 +18,7 @@ class ChoiceTableViewCell: BaseTableViewCell {
         iconImgView.alpha = selected ? 1 : 0.1
     }
 
-    func setup<T: FilterRowViewModel>(_ data: T?) {
+    override func setup<T: FilterRowViewModel>(_ data: T?) {
         guard let data = data else { return }
         titleLbl.text = data.title
 

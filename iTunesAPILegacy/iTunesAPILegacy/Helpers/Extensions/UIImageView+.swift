@@ -42,7 +42,7 @@ extension UIImageView {
             }
 
             DispatchQueue.main.async { [weak self] in
-                let cache = UIImage(data: data!, scale: UIScreen.main.scale)
+                let cache = UIImage(data: data!)
                 imageCache.setObject(cache!, forKey: urlString as AnyObject)
                 self?.image = cache
                 closure?(cache)

@@ -46,3 +46,8 @@
 "DESCRIPTION" = "Açıklama";
 "MEDIA_TYPES" = "Medya Türleri";
 "GRID_LIST_COUNT" = "Liste Sütün Sayısı";
+"DELETED" = "Silindi";
+"VISITED" = "Görüntülendi";
+"HISTORY" = "Geçmiş";
+"TRACK_ID" = "Kayıt Id";
+"ABOUT_ME" = "Hi!\nMy name is Yunus and I'm a computer engineer. I love Observer Pattern 👌";

@@ -8,6 +8,9 @@
 
 import UIKit
 
+// This is my older navigation class
+// I used a dictionary for properties, but using enum case values will be fit better.
+
 class ColorfulNavigationBar: UINavigationBar {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,7 +84,7 @@ class NavigationController: UINavigationController {
 
     // MARK: Navigation stylers
 
-    func setup() {
+    func setup() {        
         if navbarParams == nil, shouldChangeParams {
             navbarParams = [:]
         }

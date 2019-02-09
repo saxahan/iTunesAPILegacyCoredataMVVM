@@ -41,6 +41,11 @@
 "DESCRIPTION" = "Description";
 "MEDIA_TYPES" = "Media Types";
 "GRID_LIST_COUNT" = "List Column Count";
+"DELETED" = "Deleted";
+"VISITED" = "Visited";
+"HISTORY" = "Histories";
+"TRACK_ID" = "Track Id";
+"ABOUT_ME" = "Hi!\nMy name is Yunus and I'm a computer engineer. I love Observer Pattern 👌";
 
 
 

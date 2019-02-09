@@ -116,6 +116,9 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
     }
 
     @IBAction func trackTapped(_ sender: Any) {
+        // test purposes for playing track
+        let playerVc = AVPlayerViewController()
+
     }
 
     @IBAction func toggleTapped(_ sender: Any) {

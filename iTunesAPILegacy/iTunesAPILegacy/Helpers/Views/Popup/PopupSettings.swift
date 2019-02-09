@@ -11,13 +11,6 @@ import UIKit
 typealias PopupCompletionState = (_ state: PopupStates) -> Void
 typealias PopupCompletion<T> = (_ data: T?) -> Void
 
-enum PopupType: String {
-    case info
-    case warning
-    case error
-    case success
-}
-
 enum PopupStates: String {
     case ok
     case cancel

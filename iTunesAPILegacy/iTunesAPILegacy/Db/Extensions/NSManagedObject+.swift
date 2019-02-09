@@ -10,19 +10,19 @@ import CoreData
 
 extension NSManagedObject {
 
+    // MARK: Generic Methods
+    class func entityName() -> String {
+        return String(describing: self)
+    }
+
     convenience init(context: NSManagedObjectContext) {
         let eName = type(of: self).entityName()
         let entity = NSEntityDescription.entity(forEntityName: eName, in: context)!
         self.init(entity: entity, insertInto: context)
     }
 
-    // MARK: Generic Methods
-    class func entityName() -> String {
-        return String(describing: self)
-    }
-
-    class func countAll(for context: NSManagedObjectContext = CoreDataStack.managedObjectContext) -> Int {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: self))
+    class func countAll(for context: NSManagedObjectContext = Persistense.shared.context) -> Int {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName())
         do {
             return try context.count(for: request)
         } catch {
@@ -38,5 +38,4 @@ extension NSManagedObject {
             debugPrint(error)
         }
     }
-
 }

@@ -25,9 +25,11 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
     override func initNavbar() {
         super.initNavbar()
+        let infoBtn = UIBarButtonItem.createButton(imageName: "info", target: self, action: #selector(infoTapped))
         let filterBtn = UIBarButtonItem.createButton(imageName: "filter", target: self, action: #selector(filterTapped))
         let layoutBtn = UIBarButtonItem.createButton(imageName: "keypad", target: self, action: #selector(layoutTapped))
 
+        navigationItem.leftBarButtonItem = infoBtn
         navigationItem.rightBarButtonItems = [filterBtn, layoutBtn]
     }
 
@@ -179,6 +181,12 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
     @objc func refreshed() {
         viewModel.reload()
+    }
+
+    @objc func infoTapped() {
+        // AlertManager uses system AlertController
+        // I'm adding this example for showing you simple usage :)
+        AlertManager.shared.showAlert(message: "ABOUT_ME".localized)
     }
 }
 

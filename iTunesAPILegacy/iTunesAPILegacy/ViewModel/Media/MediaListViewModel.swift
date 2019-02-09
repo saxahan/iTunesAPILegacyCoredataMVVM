@@ -8,10 +8,10 @@
 
 import Foundation
 
-class MediaListViewModel: BaseListViewModel<Media, MediaService> {
+class MediaListViewModel: BaseListViewModel<Media, MediaService>, HistoryLifeCycle {
     let filter = Observable<MediaFilterViewModel>(MediaFilterViewModel())
     let selectedDetail = Observable<MediaDetailViewModel?>(nil)
-    let histories = Observable<[History]>([])
+    var histories: [History] = []
     let layouts = [1, 2, 3, 4]
     let imageSizes: (width: Int, height: Int) = (400, 400)
 
@@ -46,7 +46,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
     
     func fetchHistories() {
         do {
-            histories.value = try CoreDataStack.managedObjectContext.fetchObjects(History.self)
+            histories = try Persistense.shared.context.fetchObjects(History.self)
         } catch {
             debugPrint(error)
         }
@@ -71,10 +71,10 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                 var cells = [MediaCellViewModel]()
                 for obj in mediaList {
                     if let trackId = obj.trackId {
-                        let deleted = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.removed }
+                        let deleted = self.histories.contains { $0.trackId == Int64(trackId) && $0.removed }
 
                         if !deleted {
-                            let visited = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.visited }
+                            let visited = self.histories.contains { $0.trackId == Int64(trackId) && $0.visited }
                             let cell = MediaCellViewModel(trackId: trackId,
                                                           name: obj.trackName,
                                                           previewUrl: obj.pictureUrl(width: self.imageSizes.width, height: self.imageSizes.height)?.absoluteString,

@@ -1,5 +1,5 @@
 //
-//  History+CoreDataClass.swift
+//  History.swift
 //  iTunesAPILegacy
 //
 //  Created by Yunus Alkan on 6.02.2019.
@@ -19,7 +19,7 @@ public class History: NSManagedObject {
     @NSManaged public var trackId: Int64
 
     convenience init(trackId: Int, isRemoved: Bool, isVisited: Bool) {
-        self.init(context: CoreDataStack.managedObjectContext)
+        self.init(context: Persistense.shared.context)
         self.trackId = Int64(trackId)
         self.removed = isRemoved
         self.visited = isVisited

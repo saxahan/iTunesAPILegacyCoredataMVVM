@@ -10,26 +10,6 @@ import UIKit
 
 class TabController: UITabBarController, UITabBarControllerDelegate {
 
-    class func createTabBased(_ viewControllers: [BaseViewController] = []) -> TabController {
-        let mediaListVc = MediaListViewController.instantiate(with: MediaListViewModel(), title: "TAB_SEARCH".localized, tabImage: #imageLiteral(resourceName: "search"))
-        let settingsVc = SettingsViewController.instantiate(title: "TAB_SETTINGS".localized, tabImage: #imageLiteral(resourceName: "settings"))
-
-        UITabBar.appearance().barTintColor = Constants.Color.tabBarBackground
-        UITabBar.appearance().tintColor = Constants.Color.tabBarSelected
-        UITabBar.appearance().isTranslucent = true
-
-        let viewControllers = [mediaListVc, settingsVc]
-        let tabs = viewControllers.map { (v) -> NavigationController in
-            let navigator = NavigationController(navigationBarClass: ColorfulNavigationBar.self, toolbarClass: nil)
-            navigator.setViewControllers([v], animated: false)
-            return navigator
-        }
-
-        let tabBarController = TabController(tabs)
-
-        return tabBarController
-    }
-
     init(_ tabs: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
         self.viewControllers = tabs
@@ -64,5 +44,27 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: selectedColor], for: .selected)
         UITabBarItem.appearance().setTitleTextAttributes([.font: titleFont], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([.font: titleFont], for: .selected)
+    }
+}
+
+extension TabController {
+    class func createTabBased(_ viewControllers: [BaseViewController] = []) -> TabController {
+        let mediaListVc = MediaListViewController.instantiate(with: MediaListViewModel(), title: "TAB_SEARCH".localized, tabImage: #imageLiteral(resourceName: "search"))
+        let settingsVc = SettingsViewController.instantiate(with: SettingsViewModel(), title: "TAB_SETTINGS".localized, tabImage: #imageLiteral(resourceName: "settings"))
+
+        UITabBar.appearance().barTintColor = Constants.Color.tabBarBackground
+        UITabBar.appearance().tintColor = Constants.Color.tabBarSelected
+        UITabBar.appearance().isTranslucent = true
+
+        let viewControllers = [mediaListVc, settingsVc]
+        let tabs = viewControllers.map { (v) -> NavigationController in
+            let navigator = NavigationController(navigationBarClass: ColorfulNavigationBar.self, toolbarClass: nil)
+            navigator.setViewControllers([v], animated: false)
+            return navigator
+        }
+
+        let tabBarController = TabController(tabs)
+
+        return tabBarController
     }
 }

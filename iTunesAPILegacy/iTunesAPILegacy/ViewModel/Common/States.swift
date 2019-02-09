@@ -18,3 +18,7 @@ protocol DetailLifeCycle {
     var visit: (() -> Void)? { get set }
     var delete: (() -> Void)? { get set }
 }
+
+protocol HistoryLifeCycle {
+    func fetchHistories()
+}
