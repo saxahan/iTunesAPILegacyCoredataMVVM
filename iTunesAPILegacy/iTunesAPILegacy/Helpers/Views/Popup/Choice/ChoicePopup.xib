@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-jZ-wDL" userLabel="contentView">
-                    <rect key="frame" x="48.5" y="167" width="278" height="333.5"/>
+                    <rect key="frame" x="50" y="70" width="220" height="360"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u54-ql-ZGB" customClass="HoldableButton" customModule="iTunesAPILegacy" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="283.5" width="278" height="50"/>
+                            <rect key="frame" x="0.0" y="310" width="220" height="50"/>
                             <color key="backgroundColor" red="0.99607843139999996" green="0.90196078430000004" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="9Ah-38-kBB"/>
@@ -46,7 +46,7 @@
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-aO-obF">
-                            <rect key="frame" x="8" y="8" width="262" height="267.5"/>
+                            <rect key="frame" x="8" y="8" width="204" height="294"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="HJ7-nQ-yoy"/>
@@ -56,7 +56,6 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="hJb-jZ-wDL" secondAttribute="height" multiplier="10:12" id="0ri-ZH-hwo"/>
                         <constraint firstAttribute="trailing" secondItem="pqQ-aO-obF" secondAttribute="trailing" constant="8" id="55K-7h-KXq"/>
                         <constraint firstItem="u54-ql-ZGB" firstAttribute="top" secondItem="pqQ-aO-obF" secondAttribute="bottom" constant="8" id="Utn-p4-Q1R"/>
                         <constraint firstAttribute="trailing" secondItem="u54-ql-ZGB" secondAttribute="trailing" id="Vm0-2z-i5B"/>
@@ -83,9 +82,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="hJb-jZ-wDL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="jGE-w1-Ksw"/>
-                <constraint firstItem="hJb-jZ-wDL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xcV-oC-lGt"/>
-                <constraint firstItem="hJb-jZ-wDL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yNg-i7-aL7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hJb-jZ-wDL" secondAttribute="trailing" constant="50" id="LlV-Ov-ufo"/>
+                <constraint firstItem="hJb-jZ-wDL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="kQI-lR-egI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hJb-jZ-wDL" secondAttribute="bottom" constant="50" id="lsW-rB-aHy"/>
+                <constraint firstItem="hJb-jZ-wDL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="xge-Ms-CeR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>

@@ -103,7 +103,14 @@ class MediaListViewController: BaseViewController, ViewModelBased {
             if let dt = detail {
                 let vc = MediaDetailViewController.instantiate(with: dt, title: nil)
                 vc.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(vc, animated: true)
+
+                let navigator = NavigationController(navigationBarClass: ColorfulNavigationBar.self, toolbarClass: nil)
+                navigator.navbarParams = [
+                    "backgroundColor": UIColor.black,
+                    "foregroundColor": UIColor.white
+                ]
+                navigator.setViewControllers([vc], animated: false)
+                self.navigationController?.present(navigator, animated: true, completion: nil)
                 return
             }
         }

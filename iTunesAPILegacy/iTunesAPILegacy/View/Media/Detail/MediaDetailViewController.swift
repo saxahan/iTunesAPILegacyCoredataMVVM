@@ -18,6 +18,7 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
     @IBOutlet weak var trackButton: HoldableButton!
     @IBOutlet weak var toggleButton: HoldableButton!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
 
     var viewModel: MediaDetailViewModel!
     var playerController: AVPlayerViewController!
@@ -26,6 +27,7 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         super.setup()
 
         trackButton.setImage(trackButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        trackButton.titleLabel?.numberOfLines = 0
 
 //        setupVideoPlayer()
         bindings()
@@ -36,6 +38,11 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         viewModel.visit?()
     }
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        (navigationController as? NavigationController)?.navbarParams = ["backgroundColor": UIColor.clear]
+//    }
+
     func bindings() {
         viewModel.element.addObserver(fireNow: true) { [unowned self] (media) in
             if let m = media {
@@ -44,6 +51,7 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
 
                 self.trackButton.setTitle(m.trackName ?? m.artistName, for: .normal)
                 self.descriptionLabel.text = m.longDescription ?? m.description ?? m.shortDescription
+                self.priceLabel.text = "\(m.currency ?? "") \(m.trackPrice ?? 0)"
 
 //                if let prevUrl = m.previewUrl {
 //                    let playerItem = AVPlayerItem(url: URL(string: prevUrl)!)
@@ -68,6 +76,9 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         super.initNavbar()
 
         let deleteBtn = UIBarButtonItem.createButton(imageName: "trash", target: self, action: #selector(deleteTapped))
+        let closeBtn = UIBarButtonItem.createButton(imageName: "cancel", target: self, action: #selector(close))
+
+        navigationItem.leftBarButtonItem = closeBtn
         navigationItem.rightBarButtonItem = deleteBtn
     }
 
@@ -94,10 +105,14 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         ConfirmationPopup.create(title: "POPUP_ARE_YOU_SURE_WANT_TO_DELETE".localized,
                                  completion: { [weak self] state in
                                     if state == .yes {
-                                        self?.navigationController?.popViewController(animated: true)
+                                        self?.navigationController?.dismiss(animated: true, completion: nil)
                                         self?.viewModel.delete?()
                                     }
         }).show()
+    }
+
+    @objc func close() {
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func trackTapped(_ sender: Any) {

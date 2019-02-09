@@ -15,6 +15,7 @@
                 <outlet property="bottomStackView" destination="sgd-cC-m6o" id="Zoa-CI-pOM"/>
                 <outlet property="descriptionLabel" destination="uIw-BW-9I0" id="99W-zI-Cyp"/>
                 <outlet property="previewView" destination="Zxh-CF-8Zp" id="bMF-D7-lIP"/>
+                <outlet property="priceLabel" destination="saF-VP-VMv" id="0m6-vc-BkW"/>
                 <outlet property="scrollView" destination="X6O-LR-D4x" id="Mc2-04-xVK"/>
                 <outlet property="toggleButton" destination="NXc-6Y-7JS" id="1iX-Oy-hFJ"/>
                 <outlet property="topImageView" destination="P1s-sz-lxp" id="BQZ-ca-XLG"/>
@@ -34,7 +35,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-aS-97E" userLabel="contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="708"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="738"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-sz-lxp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -75,13 +76,19 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-cC-m6o">
-                                            <rect key="frame" x="15" y="675" width="345" height="18"/>
+                                            <rect key="frame" x="15" y="675" width="345" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIw-BW-9I0">
                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saF-VP-VMv">
+                                                    <rect key="frame" x="0.0" y="30" width="345" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.751953125" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -48,7 +48,7 @@ class Popup: BaseViewController {
 //        }
     }
 
-    func show(above viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController, completion: (()-> Void)? = nil) {
+    func show(above viewController: UIViewController? = UIApplication.topMostViewController(), completion: (()-> Void)? = nil) {
         showing = true
         viewController?.present(self, animated: true, completion: completion)
     }
