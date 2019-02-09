@@ -13,8 +13,9 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: SearchBar!
 
-    var numOfColumns: Int = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
+    private let layouts = [1, 2, 3, 4]
     var viewModel: MediaListViewModel!
+    let gridFilter = Observable<Int>(DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2))
 
     override func setup() {
         super.setup()
@@ -124,6 +125,13 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         viewModel.error.addObserver(fireNow: false) { [weak self] (err) in
             self?.collectionView.showPlaceholder(err?.localizedDescription ?? "", image: #imageLiteral(resourceName: "error"))
         }
+
+        // grid filter
+        gridFilter.addObserver(fireNow: false) { [weak self] (_) in
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView?.collectionViewLayout.invalidateLayout()
+            }
+        }
     }
 
     @objc func filterTapped() {
@@ -138,7 +146,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
         let rows = filters.map { return FilterRowViewModel(imageName: "checked", title: $0.rawValue.uppercased()) }
         ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
-                                                                 shouldDismissOnSelection: true,
+                                                                 shouldDismissOnSelection: false,
                                                                  completion: { [weak self] data in
                                                                     _ = self?.viewModel.filter.value.updateSelected(at: data?.selected?.row)
 
@@ -146,7 +154,19 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     }
 
     @objc func layoutTapped() {
-        debugPrint(#function)
+        var selecteds: (Int, Int)?
+
+        if let found = layouts.firstIndex(of: gridFilter.value) {
+            selecteds = (0, found)
+        }
+
+        let rows = layouts.map { return FilterRowViewModel(imageName: "checked", title: "\($0)") }
+        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
+                                                                 shouldDismissOnSelection: true,
+                                                                 completion: { [weak self] data in
+                                                                    self?.gridFilter.value = self?.layouts[data?.selected?.row ?? 0] ?? 0
+
+        }).show()
     }
 
     @objc func refreshed() {
@@ -191,24 +211,27 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
 
 extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        numOfColumns = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
-
-        DispatchQueue.main.async { [weak self] in
-            self?.collectionView?.collectionViewLayout.invalidateLayout()
-        }
-
+        gridFilter.value = DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2)
         super.viewWillTransition(to: size, with: coordinator)
 
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if gridFilter.value >= 3 {
+            return .zero
+        }
+
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var margins: CGFloat = padding * 2 + padding * CGFloat(numOfColumns - 1)
+        var margins: CGFloat = padding * 2 + padding * CGFloat(gridFilter.value - 1)
 
         if #available(iOS 11.0, *) {
             margins += collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right
         }
 
-        let itemWidth = ((collectionView.bounds.size.width - margins) / CGFloat(numOfColumns)).rounded(.down)
+        let itemWidth = ((collectionView.bounds.size.width - margins) / CGFloat(gridFilter.value)).rounded(.down)
         let itemHeight = itemWidth
 
         return CGSize(width: itemWidth, height: itemHeight)

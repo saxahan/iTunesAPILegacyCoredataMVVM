@@ -48,7 +48,11 @@ class ConfirmationPopup: Popup {
     private func initItems() {
         yesButton.setTitle("YES".localized, for: .normal)
         noButton.setTitle("NO".localized, for: .normal)
-        topImageView?.image = topImage
+
+        if let topImage = topImage {
+            topImageView?.image = topImage
+        }
+
         titleLabel?.text = textTitle
         messageLabel?.text = textMessage
     }

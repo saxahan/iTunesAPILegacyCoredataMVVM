@@ -19,7 +19,7 @@ class SectionViewModel<T> {
         self.selected = selected
     }
 
-    // write a build method for as a helper
+    // write a build method as a helper
     class func build() -> [SectionViewModel] {
         return []
     }

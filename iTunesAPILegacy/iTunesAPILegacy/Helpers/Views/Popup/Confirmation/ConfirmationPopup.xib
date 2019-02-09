@@ -69,20 +69,20 @@
                                 <constraint firstItem="9QS-Dg-gek" firstAttribute="top" secondItem="zLf-oE-z8i" secondAttribute="top" constant="8" id="wEg-OB-sf5"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-Ns-u8q" userLabel="topStackView">
+                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-Ns-u8q" userLabel="topStackView">
                             <rect key="frame" x="8" y="8" width="317.5" height="267.5"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-nx-aY4" userLabel="topImageview">
-                                    <rect key="frame" x="0.0" y="0.0" width="317.5" height="251.5"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-nx-aY4" userLabel="topImageview">
+                                    <rect key="frame" x="0.0" y="0.0" width="317.5" height="83.5"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veX-qO-LAJ" userLabel="titleLabel">
-                                    <rect key="frame" x="0.0" y="259.5" width="317.5" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="91.5" width="317.5" height="84"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="textColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9I-VL-ShL" userLabel="messageLabel">
-                                    <rect key="frame" x="0.0" y="267.5" width="317.5" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="183.5" width="317.5" height="84"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                     <color key="textColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -127,4 +127,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
         </view>
     </objects>
+    <resources>
+        <image name="question" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

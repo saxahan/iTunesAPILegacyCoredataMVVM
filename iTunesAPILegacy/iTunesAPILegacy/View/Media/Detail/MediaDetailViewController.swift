@@ -34,7 +34,6 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
 
     @objc func deleteTapped() {
         ConfirmationPopup.create(title: "POPUP_ARE_YOU_SURE_WANT_TO_DELETE".localized,
-                                 topImage: #imageLiteral(resourceName: "error"),
                                  completion: { [weak self] state in
                                     if state == .yes {
                                         self?.navigationController?.popViewController(animated: true)

@@ -9,7 +9,7 @@
 import UIKit
 
 class PopupPresentationController: UIPresentationController {
-    var backViewColor = UIColor(white: 0.1, alpha: 0.5) {
+    var backViewColor = PopupAnimationProps.Color.backViewColor {
         didSet {
             backgroundView.backgroundColor = backViewColor
         }
@@ -31,12 +31,12 @@ class PopupPresentationController: UIPresentationController {
                 backgroundView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
                 ])
 
-            excuteBackgroundAnimation()
+            runBackgroundAnimation()
         }
     }
 
     override func dismissalTransitionWillBegin() {
-        excuteBackgroundDismissAnimation()
+        runBackgroundAnimation()
     }
 
     override var shouldRemovePresentersView: Bool {
@@ -45,7 +45,7 @@ class PopupPresentationController: UIPresentationController {
 
     // MARK: Private Methods
 
-    fileprivate func excuteBackgroundAnimation() {
+    fileprivate func runBackgroundAnimation() {
         backgroundView.alpha = 0
         if let coordinator = presentedViewController.transitionCoordinator {
             coordinator.animate(alongsideTransition: { (_) in
