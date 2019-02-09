@@ -39,6 +39,8 @@
 "DETAIL" = "Detail";
 "TRACK_NAME" = "Track Name";
 "DESCRIPTION" = "Description";
+"MEDIA_TYPES" = "Media Types";
+"GRID_LIST_COUNT" = "List Column Count";
 
 
 

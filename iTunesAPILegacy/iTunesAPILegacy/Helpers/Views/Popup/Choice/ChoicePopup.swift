@@ -21,10 +21,7 @@ class ChoicePopup<T: SectionViewModel<FilterRowViewModel>>: Popup, UITableViewDe
     override func setup() {
         super.setup()
 
-        selectButton.setTitle("OK".localized, for: .normal)
-        
         tableView.register(ChoiceTableViewCell.self)
-//        tableView.allowsMultipleSelection = allowsMultiSelection
 
         DispatchQueue.main.async { [unowned self] in
             if let row = self.filters[0].selected?.row {
@@ -39,6 +36,17 @@ class ChoicePopup<T: SectionViewModel<FilterRowViewModel>>: Popup, UITableViewDe
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filters[section].cells.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return filters[section].title
+    }
+
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+            header.backgroundView?.cornerRadius = 5
+            header.textLabel?.textAlignment = .center
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

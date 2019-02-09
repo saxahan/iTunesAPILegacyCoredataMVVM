@@ -10,6 +10,8 @@ import Foundation
 
 class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
 
+    let collapsed = Observable<Bool>(true)
+    
     override init(_ element: Media? = nil) {
         super.init(element)
 

@@ -12,6 +12,8 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
     let filter = Observable<MediaFilterViewModel>(MediaFilterViewModel())
     let selectedDetail = Observable<MediaDetailViewModel?>(nil)
     let histories = Observable<[History]>([])
+    let layouts = [1, 2, 3, 4]
+    let imageSizes: (width: Int, height: Int) = (400, 400)
 
     override init(_ element: Media? = nil) {
         super.init(element)
@@ -75,7 +77,7 @@ class MediaListViewModel: BaseListViewModel<Media, MediaService> {
                             let visited = self.histories.value.contains { $0.trackId == Int64(trackId) && $0.visited }
                             let cell = MediaCellViewModel(trackId: trackId,
                                                           name: obj.trackName,
-                                                          previewUrl: obj.artworkUrl600 ?? obj.artworkUrl100,
+                                                          previewUrl: obj.pictureUrl(width: self.imageSizes.width, height: self.imageSizes.height)?.absoluteString,
                                                           price: obj.trackPrice,
                                                           isVisited: visited,
                                                           isDeleted: deleted)

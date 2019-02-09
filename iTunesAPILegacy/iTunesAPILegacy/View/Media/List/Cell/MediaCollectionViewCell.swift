@@ -14,7 +14,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
 
     @IBOutlet weak var imgViewPreview: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var bottomVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var bottomView: UIView!
 
     override var isSelected: Bool {
         didSet {
@@ -26,7 +26,7 @@ class MediaCollectionViewCell: BaseCollectionViewCell, Settable {
         super.layoutSubviews()
 
         DispatchQueue.main.async { [weak self] in
-            self?.bottomVisualEffectView?.roundCorners([.bottomLeft, .bottomRight])
+            self?.bottomView?.roundCorners([.bottomLeft, .bottomRight])
         }
         self.layoutIfNeeded()
     }

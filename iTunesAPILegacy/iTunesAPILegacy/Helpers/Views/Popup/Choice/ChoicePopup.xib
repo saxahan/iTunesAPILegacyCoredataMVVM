@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-jZ-wDL" userLabel="contentView">
-                    <rect key="frame" x="21" y="167" width="333.5" height="333.5"/>
+                    <rect key="frame" x="48.5" y="167" width="278" height="333.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u54-ql-ZGB" customClass="HoldableButton" customModule="iTunesAPILegacy" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="283.5" width="333.5" height="50"/>
+                            <rect key="frame" x="0.0" y="283.5" width="278" height="50"/>
                             <color key="backgroundColor" red="0.99607843139999996" green="0.90196078430000004" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="9Ah-38-kBB"/>
@@ -38,13 +38,16 @@
                             <state key="disabled">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizable" value="OK"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="okTapped:" destination="-1" eventType="touchUpInside" id="mk5-t7-s17"/>
                             </connections>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-aO-obF">
-                            <rect key="frame" x="8" y="8" width="317.5" height="267.5"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-aO-obF">
+                            <rect key="frame" x="8" y="8" width="262" height="267.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="HJ7-nQ-yoy"/>
                                 <outlet property="delegate" destination="-1" id="yi2-Cu-SK4"/>
@@ -53,7 +56,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="hJb-jZ-wDL" secondAttribute="height" multiplier="1:1" id="0ri-ZH-hwo"/>
+                        <constraint firstAttribute="width" secondItem="hJb-jZ-wDL" secondAttribute="height" multiplier="10:12" id="0ri-ZH-hwo"/>
                         <constraint firstAttribute="trailing" secondItem="pqQ-aO-obF" secondAttribute="trailing" constant="8" id="55K-7h-KXq"/>
                         <constraint firstItem="u54-ql-ZGB" firstAttribute="top" secondItem="pqQ-aO-obF" secondAttribute="bottom" constant="8" id="Utn-p4-Q1R"/>
                         <constraint firstAttribute="trailing" secondItem="u54-ql-ZGB" secondAttribute="trailing" id="Vm0-2z-i5B"/>

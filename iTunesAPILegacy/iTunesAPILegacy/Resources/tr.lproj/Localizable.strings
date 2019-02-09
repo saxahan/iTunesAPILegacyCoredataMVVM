@@ -44,3 +44,5 @@
 "DETAIL" = "Detay";
 "TRACK_NAME" = "Parça Adı";
 "DESCRIPTION" = "Açıklama";
+"MEDIA_TYPES" = "Medya Türleri";
+"GRID_LIST_COUNT" = "Liste Sütün Sayısı";

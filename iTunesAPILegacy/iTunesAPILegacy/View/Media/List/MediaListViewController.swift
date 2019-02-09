@@ -13,7 +13,6 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: SearchBar!
 
-    private let layouts = [1, 2, 3, 4]
     var viewModel: MediaListViewModel!
     let gridFilter = Observable<Int>(DeviceManager.shared.isLandscape() ? 2 : (DeviceManager.shared.isPhone() ? 1 : 2))
 
@@ -146,7 +145,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         }
 
         let rows = filters.map { return FilterRowViewModel(imageName: "checked", title: $0.rawValue.uppercased()) }
-        let dataSource = [SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)]
+        let dataSource = [SectionViewModel<FilterRowViewModel>(title: "MEDIA_TYPES".localized, cells: rows, selected: selecteds)]
         ChoicePopup<SectionViewModel<FilterRowViewModel>>.create(dataSource,
                                                                  shouldDismissOnSelection: false,
                                                                  completion: { [weak self] data in
@@ -158,15 +157,15 @@ class MediaListViewController: BaseViewController, ViewModelBased {
     @objc func layoutTapped() {
         var selecteds: (Int, Int)?
 
-        if let found = layouts.firstIndex(of: gridFilter.value) {
+        if let found = viewModel.layouts.firstIndex(of: gridFilter.value) {
             selecteds = (0, found)
         }
 
-        let rows = layouts.map { return FilterRowViewModel(imageName: "checked", title: "\($0)") }
-        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
+        let rows = viewModel.layouts.map { return FilterRowViewModel(imageName: "checked", title: "\($0)") }
+        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: "GRID_LIST_COUNT".localized, cells: rows, selected: selecteds)],
                                                                  shouldDismissOnSelection: true,
                                                                  completion: { [weak self] data in
-                                                                    self?.gridFilter.value = self?.layouts[data?.selected?.row ?? 0] ?? 0
+                                                                    self?.gridFilter.value = self?.viewModel.layouts[data?.selected?.row ?? 0] ?? 0
 
         }).show()
     }
@@ -192,6 +191,7 @@ extension MediaListViewController: UICollectionViewDelegate, UICollectionViewDat
         let cellViewModel = sectionViewModel.cells[indexPath.row]
 
         cell.setup(cellViewModel)
+        cell.bottomView.isHidden = gridFilter.value >= 3
         cell.setNeedsDisplay()
         cell.layoutIfNeeded()
 
@@ -235,8 +235,9 @@ extension MediaListViewController: UICollectionViewDelegateFlowLayout {
 
         let itemWidth = ((collectionView.bounds.size.width - margins) / CGFloat(gridFilter.value)).rounded(.down)
         let itemHeight = itemWidth
-
-        return CGSize(width: itemWidth, height: itemHeight)
+        let cellSize = CGSize(width: itemWidth, height: itemHeight)
+        
+        return cellSize
     }
 }
 

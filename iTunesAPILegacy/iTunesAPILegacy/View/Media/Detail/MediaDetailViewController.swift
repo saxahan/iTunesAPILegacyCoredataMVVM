@@ -11,8 +11,12 @@ import AVKit
 
 class MediaDetailViewController: BaseViewController, ViewModelBased {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bottomStackView: UIStackView!
+    @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var previewView: UIView!
-    @IBOutlet weak var trackNameLabel: UILabel!
+    @IBOutlet weak var trackButton: HoldableButton!
+    @IBOutlet weak var toggleButton: HoldableButton!
     @IBOutlet weak var descriptionLabel: UILabel!
 
     var viewModel: MediaDetailViewModel!
@@ -21,7 +25,9 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
     override func setup() {
         super.setup()
 
-        setupVideoPlayer()
+        trackButton.setImage(trackButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+
+//        setupVideoPlayer()
         bindings()
     }
 
@@ -34,16 +40,26 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         viewModel.element.addObserver(fireNow: true) { [unowned self] (media) in
             if let m = media {
                 self.title = "\(m.currency ?? "") \(m.trackPrice ?? 0.0)"
-                self.trackNameLabel.text = m.trackName ?? m.artistName
+                self.topImageView.setImage(m.pictureUrl(width: Int(self.view.frame.width), height: Int(self.view.frame.height))?.absoluteString ?? "")
+
+                self.trackButton.setTitle(m.trackName ?? m.artistName, for: .normal)
                 self.descriptionLabel.text = m.longDescription ?? m.description ?? m.shortDescription
 
-                if let prevUrl = m.previewUrl {
-                    let playerItem = AVPlayerItem(url: URL(string: prevUrl)!)
-                    let videoPlayer = AVPlayer(playerItem: playerItem)
-                    videoPlayer.actionAtItemEnd = .none
-                    self.playerController.player = videoPlayer
-                    self.playerController.player?.play()
-                }
+//                if let prevUrl = m.previewUrl {
+//                    let playerItem = AVPlayerItem(url: URL(string: prevUrl)!)
+//                    let videoPlayer = AVPlayer(playerItem: playerItem)
+//                    videoPlayer.actionAtItemEnd = .none
+//                    self.playerController.player = videoPlayer
+//                    self.playerController.player?.play()
+//                }
+            }
+        }
+
+        viewModel.collapsed.addObserver(fireNow: true) { [unowned self] (collapsed) in
+            DispatchQueue.main.async {
+                self.scrollView.isScrollEnabled = !collapsed
+                self.scrollView.setContentOffset(collapsed ? .zero : CGPoint(x: 0, y: self.scrollView.contentOffset.y + 150), animated: true)
+                self.toggleButton.setImage(UIImage(named: collapsed ? "down" : "up")?.withRenderingMode(.alwaysTemplate), for: .normal)
             }
         }
     }
@@ -83,4 +99,12 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
                                     }
         }).show()
     }
+
+    @IBAction func trackTapped(_ sender: Any) {
+    }
+
+    @IBAction func toggleTapped(_ sender: Any) {
+        viewModel.collapsed.value = !viewModel.collapsed.value
+    }
+
 }
