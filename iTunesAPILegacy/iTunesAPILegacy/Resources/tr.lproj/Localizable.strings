@@ -41,3 +41,6 @@
 "PLACEHOLDER_SEARCHED_NO_RESULT" = "Hiçbir arama sonucu bulunamadı.";
 
 "POPUP_ARE_YOU_SURE_WANT_TO_DELETE" = "Silmek istediğinizden emin misiniz?";
+"DETAIL" = "Detay";
+"TRACK_NAME" = "Parça Adı";
+"DESCRIPTION" = "Açıklama";

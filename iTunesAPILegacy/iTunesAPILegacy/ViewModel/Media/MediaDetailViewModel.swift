@@ -9,9 +9,14 @@
 import Foundation
 
 class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
-    
+
     override init(_ element: Media? = nil) {
         super.init(element)
+
+//        name = element?.trackName ?? ""
+//        previewUrl = element?.previewUrl ?? element?.artworkUrl60
+//        description = element?.longDescription ?? element?.description ?? element?.shortDescription ?? ""
+//        price = element?.trackPrice ?? 0.0
 
         visit = { [weak self] in
             if let el = element, let trackId = el.trackId {

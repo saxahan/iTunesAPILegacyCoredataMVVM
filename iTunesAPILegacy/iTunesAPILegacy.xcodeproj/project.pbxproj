@@ -28,6 +28,9 @@
 		B62D515C220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
 		B62D515D220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
 		B62D515E220E10A700FE66D7 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D515B220E10A700FE66D7 /* FilterViewModel.swift */; };
+		B62D516C220E628100FE66D7 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D516B220E628100FE66D7 /* XIBLocalizable.swift */; };
+		B62D516D220E628100FE66D7 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D516B220E628100FE66D7 /* XIBLocalizable.swift */; };
+		B62D516E220E628100FE66D7 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D516B220E628100FE66D7 /* XIBLocalizable.swift */; };
 		B6407BF8220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BF9220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
 		B6407BFA220CE549008C998F /* HoldableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6407BF7220CE549008C998F /* HoldableButton.swift */; };
@@ -292,6 +295,7 @@
 		B628A7EE220DA419005FB103 /* ConfirmationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationPopup.xib; sourceTree = "<group>"; };
 		B62D5153220E070B00FE66D7 /* MediaFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilterViewModel.swift; sourceTree = "<group>"; };
 		B62D515B220E10A700FE66D7 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		B62D516B220E628100FE66D7 /* XIBLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBLocalizable.swift; sourceTree = "<group>"; };
 		B6407BF7220CE549008C998F /* HoldableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldableButton.swift; sourceTree = "<group>"; };
 		B6407BFB220CE56F008C998F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B64C257B220975DE0034C01B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -768,6 +772,7 @@
 				B6B617AE220A2B8800E7F372 /* UIApplication+.swift */,
 				B6B617C9220A337500E7F372 /* UIViewController+.swift */,
 				B66384EA220B20FB00FBAEFC /* UIBarButtonItem+.swift */,
+				B62D516B220E628100FE66D7 /* XIBLocalizable.swift */,
 			);
 			name = Extensions;
 			path = ../Helpers/Extensions;
@@ -1054,6 +1059,7 @@
 				B64C25CF2209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F62209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458862208FEB000153920 /* Date+.swift in Sources */,
+				B62D516C220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25E82209B6170034C01B /* Settable.swift in Sources */,
 				B64C257C220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458822208FEA300153920 /* DateFormatter+.swift in Sources */,
@@ -1139,6 +1145,7 @@
 				B64C25D02209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F72209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458872208FEB000153920 /* Date+.swift in Sources */,
+				B62D516D220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25E92209B6170034C01B /* Settable.swift in Sources */,
 				B64C257D220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458832208FEA300153920 /* DateFormatter+.swift in Sources */,
@@ -1216,6 +1223,7 @@
 				B64C25D12209A4570034C01B /* BaseListViewModel.swift in Sources */,
 				B64C25F82209CBDE0034C01B /* UIView+.swift in Sources */,
 				B6C458882208FEB000153920 /* Date+.swift in Sources */,
+				B62D516E220E628100FE66D7 /* XIBLocalizable.swift in Sources */,
 				B64C25EA2209B6170034C01B /* Settable.swift in Sources */,
 				B64C257E220975DE0034C01B /* Identifiable.swift in Sources */,
 				B6C458842208FEA300153920 /* DateFormatter+.swift in Sources */,

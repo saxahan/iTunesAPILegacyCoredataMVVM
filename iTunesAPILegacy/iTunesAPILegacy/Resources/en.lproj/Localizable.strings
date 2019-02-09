@@ -36,6 +36,9 @@
 "PLACEHOLDER_SEARCHED_NO_RESULT" = "There is no result of searching.";
 
 "POPUP_ARE_YOU_SURE_WANT_TO_DELETE" = "Are you sure want to delete?";
+"DETAIL" = "Detail";
+"TRACK_NAME" = "Track Name";
+"DESCRIPTION" = "Description";
 
 
 

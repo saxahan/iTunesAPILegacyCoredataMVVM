@@ -103,6 +103,7 @@ class MediaListViewController: BaseViewController, ViewModelBased {
 
             if let dt = detail {
                 let vc = MediaDetailViewController.instantiate(with: dt, title: nil)
+                vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
                 return
             }
