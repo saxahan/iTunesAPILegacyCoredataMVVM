@@ -21,7 +21,6 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
     @IBOutlet weak var priceLabel: UILabel!
 
     var viewModel: MediaDetailViewModel!
-    var playerController: AVPlayerViewController!
 
     override func setup() {
         super.setup()
@@ -38,11 +37,6 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
         viewModel.visit?()
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        (navigationController as? NavigationController)?.navbarParams = ["backgroundColor": UIColor.clear]
-//    }
-
     func bindings() {
         viewModel.element.addObserver(fireNow: true) { [unowned self] (media) in
             if let m = media {
@@ -52,14 +46,6 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
                 self.trackButton.setTitle(m.trackName ?? m.artistName, for: .normal)
                 self.descriptionLabel.text = m.longDescription ?? m.description ?? m.shortDescription
                 self.priceLabel.text = "\(m.currency ?? "") \(m.trackPrice ?? 0)"
-
-//                if let prevUrl = m.previewUrl {
-//                    let playerItem = AVPlayerItem(url: URL(string: prevUrl)!)
-//                    let videoPlayer = AVPlayer(playerItem: playerItem)
-//                    videoPlayer.actionAtItemEnd = .none
-//                    self.playerController.player = videoPlayer
-//                    self.playerController.player?.play()
-//                }
             }
         }
 
@@ -83,22 +69,22 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
     }
 
     func setupVideoPlayer() {
-        playerController = AVPlayerViewController()
-        playerController.view.backgroundColor = .clear
-        
-        self.addChild(playerController)
-        previewView.addSubview(playerController.view)
-        playerController.view.frame = previewView.frame
-
-        // layout
-        previewView.translatesAutoresizingMaskIntoConstraints = false
-        playerController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            playerController.view.leadingAnchor.constraint(equalTo: previewView.leadingAnchor),
-            playerController.view.trailingAnchor.constraint(equalTo: previewView.trailingAnchor),
-            playerController.view.topAnchor.constraint(equalTo: previewView.topAnchor),
-            playerController.view.bottomAnchor.constraint(equalTo: previewView.bottomAnchor)
-            ])
+//        playerController = AVPlayerViewController()
+//        playerController.view.backgroundColor = .clear
+//
+//        self.addChild(playerController)
+//        previewView.addSubview(playerController.view)
+//        playerController.view.frame = previewView.frame
+//
+//        // layout
+//        previewView.translatesAutoresizingMaskIntoConstraints = false
+//        playerController.view.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            playerController.view.leadingAnchor.constraint(equalTo: previewView.leadingAnchor),
+//            playerController.view.trailingAnchor.constraint(equalTo: previewView.trailingAnchor),
+//            playerController.view.topAnchor.constraint(equalTo: previewView.topAnchor),
+//            playerController.view.bottomAnchor.constraint(equalTo: previewView.bottomAnchor)
+//            ])
     }
 
     @objc func deleteTapped() {
@@ -117,8 +103,28 @@ class MediaDetailViewController: BaseViewController, ViewModelBased {
 
     @IBAction func trackTapped(_ sender: Any) {
         // test purposes for playing track
-        let playerVc = AVPlayerViewController()
 
+        if let prevUrl = viewModel.element.value?.previewUrl, let videoUrl = URL(string: prevUrl) {
+            let vc = MediaPlayerViewController.initFromNib()
+            vc.videoUrl = videoUrl
+            self.present(vc, animated: true, completion: nil)
+//            let playerItem = AVPlayerItem(url: URL(string: prevUrl)!)
+//            let videoPlayer = AVPlayer(playerItem: playerItem)
+//            videoPlayer.actionAtItemEnd = .none
+//
+//            let playerController = AVPlayerViewController()
+//            playerController.view.frame = view.frame
+//
+//            let vc = UIViewController()
+//            vc.view.frame = view.frame
+//            vc.view.backgroundColor = .black
+//
+//            vc.addChild(playerController)
+//            vc.view.addSubview(playerController.view)
+//
+//            playerController.player = videoPlayer
+//            playerController.player?.play()
+        }
     }
 
     @IBAction func toggleTapped(_ sender: Any) {

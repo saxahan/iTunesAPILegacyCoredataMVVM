@@ -175,6 +175,12 @@
 		B69E681A220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
 		B69E681B220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
 		B69E681C220F7A2A00FE3583 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6819220F7A2A00FE3583 /* AlertManager.swift */; };
+		B69E6823220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6821220F8B9E00FE3583 /* MediaPlayerViewController.swift */; };
+		B69E6824220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6821220F8B9E00FE3583 /* MediaPlayerViewController.swift */; };
+		B69E6825220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E6821220F8B9E00FE3583 /* MediaPlayerViewController.swift */; };
+		B69E6826220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E6822220F8B9E00FE3583 /* MediaPlayerViewController.xib */; };
+		B69E6827220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E6822220F8B9E00FE3583 /* MediaPlayerViewController.xib */; };
+		B69E6828220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69E6822220F8B9E00FE3583 /* MediaPlayerViewController.xib */; };
 		B6B61786220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61787220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
 		B6B61788220A030200E7F372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6B6178A220A030200E7F372 /* Localizable.strings */; };
@@ -350,6 +356,8 @@
 		B69E680C220F6EFB00FE3583 /* NSPersistentStoreCoordinator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentStoreCoordinator+.swift"; sourceTree = "<group>"; };
 		B69E6810220F702100FE3583 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B69E6819220F7A2A00FE3583 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		B69E6821220F8B9E00FE3583 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		B69E6822220F8B9E00FE3583 /* MediaPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaPlayerViewController.xib; sourceTree = "<group>"; };
 		B6B61789220A030200E7F372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178B220A032600E7F372 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6B6178C220A0E4800E7F372 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -552,6 +560,8 @@
 			children = (
 				B650D25C220B76EB004EF756 /* MediaDetailViewController.swift */,
 				B650D25D220B76EB004EF756 /* MediaDetailViewController.xib */,
+				B69E6821220F8B9E00FE3583 /* MediaPlayerViewController.swift */,
+				B69E6822220F8B9E00FE3583 /* MediaPlayerViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -959,6 +969,7 @@
 			files = (
 				B6C458262208CFB900153920 /* Config-Develop.plist in Resources */,
 				B628A7F2220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
+				B69E6826220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */,
 				B6C457EC2208BD4100153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D82209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D2220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -990,6 +1001,7 @@
 			files = (
 				B6C458362208D07500153920 /* Config-Develop.plist in Resources */,
 				B628A7F3220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
+				B69E6827220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */,
 				B6C458382208D07500153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25D92209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D3220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -1014,6 +1026,7 @@
 			files = (
 				B6C4584C2208D0DD00153920 /* Config-Develop.plist in Resources */,
 				B628A7F4220DA419005FB103 /* ConfirmationPopup.xib in Resources */,
+				B69E6828220F8B9E00FE3583 /* MediaPlayerViewController.xib in Resources */,
 				B6C4584E2208D0DD00153920 /* LaunchScreen.storyboard in Resources */,
 				B64C25DA2209AF480034C01B /* MediaCollectionViewCell.xib in Resources */,
 				B6B617D4220A364F00E7F372 /* SettingsViewController.xib in Resources */,
@@ -1066,6 +1079,7 @@
 				B64C25E02209B1810034C01B /* UIImageView+.swift in Sources */,
 				B650D24E220B681F004EF756 /* History.swift in Sources */,
 				B6C458062208BE7100153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B69E6823220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */,
 				B64C25E42209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E5220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FE2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -1153,6 +1167,7 @@
 				B64C25E12209B1810034C01B /* UIImageView+.swift in Sources */,
 				B650D24F220B681F004EF756 /* History.swift in Sources */,
 				B6C4582F2208D07500153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B69E6824220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */,
 				B64C25E52209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E6220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C25FF2209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -1232,6 +1247,7 @@
 				B64C25E22209B1810034C01B /* UIImageView+.swift in Sources */,
 				B650D250220B681F004EF756 /* History.swift in Sources */,
 				B6C458452208D0DD00153920 /* iTunesAPILegacy.xcdatamodeld in Sources */,
+				B69E6825220F8B9E00FE3583 /* MediaPlayerViewController.swift in Sources */,
 				B64C25E62209B5930034C01B /* CellViewModel.swift in Sources */,
 				B628A7E7220DA14F005FB103 /* PopupPresentationController.swift in Sources */,
 				B64C26002209D5200034C01B /* BaseCollectionViewCell.swift in Sources */,
@@ -1434,8 +1450,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3P885F7259;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1455,8 +1471,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3P885F7259;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iTunesAPILegacy/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
