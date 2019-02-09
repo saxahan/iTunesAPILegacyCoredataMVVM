@@ -18,9 +18,4 @@ class SectionViewModel<T> {
         self.cells = cells
         self.selected = selected
     }
-
-    // write a build method as a helper
-    class func build() -> [SectionViewModel] {
-        return []
-    }
 }

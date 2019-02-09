@@ -145,7 +145,8 @@ class MediaListViewController: BaseViewController, ViewModelBased {
         }
 
         let rows = filters.map { return FilterRowViewModel(imageName: "checked", title: $0.rawValue.uppercased()) }
-        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create([SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)],
+        let dataSource = [SectionViewModel<FilterRowViewModel>(title: nil, cells: rows, selected: selecteds)]
+        ChoicePopup<SectionViewModel<FilterRowViewModel>>.create(dataSource,
                                                                  shouldDismissOnSelection: false,
                                                                  completion: { [weak self] data in
                                                                     _ = self?.viewModel.filter.value.updateSelected(at: data?.selected?.row)

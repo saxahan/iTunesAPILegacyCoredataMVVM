@@ -26,8 +26,13 @@ class FilterRowViewModel: CellViewModel {
         self.title = title
     }
 
-    static func build() {
-
+    static func build(imagesNames: [String?], titles: [String]) -> [FilterRowViewModel] {
+        var rows = [FilterRowViewModel]()
+        for i in 0..<imagesNames.count - 1 {
+            rows.append(FilterRowViewModel(imageName: imagesNames[i], title: titles[i]))
+        }
+        
+        return rows
     }
 }
 
