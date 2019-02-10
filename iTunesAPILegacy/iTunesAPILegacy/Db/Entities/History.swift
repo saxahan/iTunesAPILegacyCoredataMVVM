@@ -18,7 +18,7 @@ public class History: NSManagedObject {
     @NSManaged public var removedDate: NSDate?
     @NSManaged public var trackId: Int64
 
-    convenience init(trackId: Int, isRemoved: Bool, isVisited: Bool) {
+    convenience init(trackId: Int, isRemoved: Bool = false, isVisited: Bool = false) {
         self.init(context: Persistense.shared.context)
         self.trackId = Int64(trackId)
         self.removed = isRemoved

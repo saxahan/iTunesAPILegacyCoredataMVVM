@@ -21,4 +21,10 @@ protocol DetailLifeCycle {
 
 protocol HistoryLifeCycle {
     func fetchHistories()
+    func fetchHistory(trackId: Int)
+}
+
+extension HistoryLifeCycle {
+    func fetchHistories() {}
+    func fetchHistory(trackId: Int) {}
 }

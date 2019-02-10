@@ -8,19 +8,26 @@
 
 import Foundation
 
-class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
-
+class MediaDetailViewModel: BaseViewModel<Media, MediaService>, HistoryLifeCycle {
     let collapsed = Observable<Bool>(true)
-    
+    private var history: History?
+
     override init(_ element: Media? = nil) {
         super.init(element)
 
         visit = { [weak self] in
             if let el = element, let trackId = el.trackId {
-                let history = History(trackId: trackId, isRemoved: false, isVisited: true)
-                
+
+                self?.fetchHistory(trackId: trackId)
+                if self?.history == nil {
+                    self?.history = History(trackId: trackId, isRemoved: false, isVisited: true)
+                }
+
+                self?.history?.removed = false
+                self?.history?.visited = true
+
                 do {
-                    try history.save()
+                    try self?.history?.save()
                     self?.state.value = .isVisited(true)
                 }
                 catch {
@@ -31,10 +38,16 @@ class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
 
         delete = { [weak self] in
             if let el = element, let trackId = el.trackId {
-                let history = History(trackId: trackId, isRemoved: true, isVisited: false)
+                self?.fetchHistory(trackId: trackId)
+                if self?.history == nil {
+                    self?.history = History(trackId: trackId, isRemoved: true, isVisited: false)
+                }
+
+                self?.history?.removed = true
+                self?.history?.visited = false
 
                 do {
-                    try history.save()
+                    try self?.history?.save()
                     self?.state.value = .isDeleted(true)
                 }
                 catch {
@@ -43,4 +56,14 @@ class MediaDetailViewModel: BaseViewModel<Media, MediaService> {
             }
         }
     }
+
+    func fetchHistory(trackId: Int) {
+        do {
+            let predicate = NSPredicate(format: "trackId = %d", trackId)
+            history = try Persistense.shared.context.fetchObjects(History.self, predicate: predicate).first
+        } catch {
+            debugPrint(error)
+        }
+    }
 }
+
